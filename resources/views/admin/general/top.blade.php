@@ -95,13 +95,12 @@
                                     </a>
 
                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated flipInX">
-                                        <li><a href="#"><span class="adminpro-icon adminpro-home-admin author-log-ic"></span>My Account</a>
+                                        <li><a href="#"><span class="adminpro-icon adminpro-home-admin author-log-ic"></span>Quản Lý Tài Khoản</a>
                                         </li>
-                                        <li><a href="#"><span class="adminpro-icon adminpro-user-rounded author-log-ic"></span>My Profile</a>
+                                        <li><a href="#"><span class="adminpro-icon adminpro-user-rounded author-log-ic"></span>Trang Của Tôi</a>
                                         </li>
-                                        <li><a href="#"><span class="adminpro-icon adminpro-money author-log-ic"></span>User Billing</a>
                                         </li>
-                                        <li><a href="#"><span class="adminpro-icon adminpro-settings author-log-ic"></span>Settings</a>
+                                        <li><a href="#"><span class="adminpro-icon adminpro-settings author-log-ic"></span>Cài Đặt</a>
                                         </li>
                                         <li><a href="{{route('logoutAdmin')}}"><span class="adminpro-icon adminpro-locked author-log-ic"></span>Đăng Xuất</a>
                                         </li>

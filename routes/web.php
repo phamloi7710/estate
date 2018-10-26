@@ -8,3 +8,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix'=>'admin'], function(){
 	Route::get('', 'Admin\IndexController@getIndex')->name('getIndexAdmin');
 });
+Route::get('', function (){
+	return view('frontend.index');
+});
