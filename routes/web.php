@@ -11,3 +11,4 @@ Route::group(['prefix'=>'admin'], function(){
 Route::get('', function (){
 	return view('frontend.index');
 });
+Route::get('lien-he.html', 'Frontend\FrontendController@getLienHe')->name('getLienHeFrontend');
