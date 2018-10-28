@@ -223,8 +223,8 @@ $(document).ready(function(){
 			position	: "top",
 			type		: "tabs",
 			content		: [ 
-				"<a href='#panel-menu'><i class='fa fa-bars'></i> <span>Danh má»¥c</span></a>"
-				,"<a href='#panel-account'><i class='fa fa-user'></i> <span>TĂ i khoáº£n</span></a>"
+				"<a href='#panel-menu'><i class='fa fa-bars'></i> <span>Danh Mục</span></a>"
+				,"<a href='#panel-account'><i class='fa fa-user'></i> <span>Tài Khoản</span></a>"
 			]
 		}, {
 			content		: [ "prev", "close" ]
