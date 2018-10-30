@@ -72,7 +72,7 @@
             </div>
             <aside class="dqdt-sidebar sidebar left left-content col-lg-3 col-md-3 col-sm-12 col-xs-12 col-lg-pull-9 col-md-pull-9 col-sm-12 col-xs-12">
                 <!-- DANH MỤC SẢN PHẨM -->
-                <div class="sidebar-item sidebar-menu sidebar-collection-menu hidden-lg hidden-md">
+                <!-- <div class="sidebar-item sidebar-menu sidebar-collection-menu hidden-lg hidden-md">
                     <div class="module-header">
                         <h2 class="module-title libra-health___title">
                             <span>Danh mục Tin Tức</span>
@@ -84,7 +84,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- FILTERS -->
                 <div class="aside-filter sidebar-item">
                     <div class="sidebar-item sidebar-menu sidebar-blog-menu item-border">
@@ -120,8 +120,8 @@
                 </div>  
             </aside>
             <div id="open-filters" class="open-filters hidden-lg hidden-md">
-                <i class="fa fa-filter"></i>
-                <span>Lọc</span>
+                <i class="fa fa-align-justify"></i>
+                <span>Menu</span>
             </div>
         </div>
     </div>

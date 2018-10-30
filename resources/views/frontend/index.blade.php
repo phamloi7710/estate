@@ -6,7 +6,7 @@
     <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
         <!-- Loading Screen -->
         <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="{{url('')}}/assets/frontend/img/spin.svg" />
         </div>
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
             <a href="{{route('getChiTietDuAn')}}">
@@ -163,344 +163,6 @@
         </div>
     </div>
 </section>
-<!-- tab -->
-<!-- <section class="lib-section-6">
-    <div class="section_product section_tab_products">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="module-header">
-                        <h2 class="module-title libra-health___title-index">
-                            <a href="/cua-hang">
-                            <span>
-                            Cửa hàng
-                            </span>
-                            </a>
-                        </h2>
-                    </div>
-                    <div class="module-content">
-                        <div class="section_product_type_1 e-tabs not-coltabs ajax-tab-1" data-section="ajax-tab-1">
-                            <div class="content">
-                                <ul class="tabs tabs-title tab-mobile clearfix hidden-md hidden-lg">
-                                    <li class="prev"><i class="fa fa-angle-left"></i></li>
-                                    <li class="tab-link tab-title hidden-md hidden-lg current tab-titlexs" data-tab="tab-1">
-                                        <span>Máy móc y tế</span>
-                                    </li>
-                                    <li class="next"><i class="fa fa-angle-right"></i></li>
-                                </ul>
-                                <ul class="tabs tabs-title ajax clearfix hidden-xs hidden-sm">
-                                    <li class="tab-link has-content" data-tab="tab-1" data-url="/may-moc-y-te">
-                                        <span>Máy móc y tế</span>
-                                    </li>
-                                    <li class="tab-link " data-tab="tab-2" data-url="/thiet-bi-y-te">
-                                        <span>Thiết bị y tế</span>
-                                    </li>
-                                    <li class="tab-link " data-tab="tab-3" data-url="/thuoc-y-te">
-                                        <span>Thuốc y tế</span>
-                                    </li>
-                                </ul>
-                                <div class="tab-1 tab-content">
-                                    <div class="products products-view-grid owl-carousel owl-nav nav-left-right" data-lg-items='5' data-md-items='4' data-sm-items='3' data-xs-items="2" data-xxs-items="2" data-margin='30' data-nav="true">
-                                        <div class="item">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <div class="tag-item tag-sale sale-flash">-14%</div>
-                                                    <a href="/may-do-huyet-ap-microlife-bp-a6-basic" title="Máy Đo Huyết Áp Microlife BP A6 Basic">
-                                                    <img class="img-responsive" src="https://bizweb.dktcdn.net/thumb/medium/100/326/299/themes/691188/assets/libra-health___product.png" data-lazyload="https://bizweb.dktcdn.net/100/326/299/products/w2slimwristbpu2409d20160425t14.jpg?v=1533783868403" alt="may-do-huyet-ap-microlife-bp-a6-basic">
-                                                    </a>
-                                                    <div class="product-action hidden-xs">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-12361255" enctype="multipart/form-data">
-                                                            <input type="hidden" name="variantId" value="19946249">
-                                                            <button class="btn-buy btn-cart btn libra-health___button left-to add_to_cart" title="Thêm vào giỏ hàng">
-                                                            <span><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-                                                    <div class="fw product-review">
-                                                        <div class="bizweb-product-reviews-badge" data-id="12361255"></div>
-                                                    </div>
-                                                    <h3 class="product-name">
-                                                        <a href="/may-do-huyet-ap-microlife-bp-a6-basic" title="Máy Đo Huyết Áp Microlife BP A6 Basic">
-                                                        Máy Đo Huyết Áp Microlife BP A6 Basic
-                                                        </a>
-                                                    </h3>
-                                                    <div class="price-box price-loop-style res-item">
-                                                        <span class="special-price">
-                                                        <span class="price">1.900.000₫</span>
-                                                        </span>
-                                                        <span class="old-price">
-                                                        <span class="price">
-                                                        2.200.000₫
-                                                        </span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="/may-do-huyet-ap-24h-watchbp-o3-holter-huyet-ap" title="Máy Đo Huyết Áp 24h WatchBP O3 (Holter huyết áp)">
-                                                    <img class="img-responsive" src="https://bizweb.dktcdn.net/thumb/medium/100/326/299/themes/691188/assets/libra-health___product.png" data-lazyload="https://bizweb.dktcdn.net/100/326/299/products/maydohuyetapomronhem7320.jpg?v=1533783866513" alt="may-do-huyet-ap-24h-watchbp-o3-holter-huyet-ap">
-                                                    </a>
-                                                    <div class="product-action hidden-xs">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-12361254" enctype="multipart/form-data">
-                                                            <input type="hidden" name="variantId" value="19946248">
-                                                            <button class="btn-buy btn-cart btn libra-health___button left-to add_to_cart" title="Thêm vào giỏ hàng">
-                                                            <span><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-                                                    <div class="fw product-review">
-                                                        <div class="bizweb-product-reviews-badge" data-id="12361254"></div>
-                                                    </div>
-                                                    <h3 class="product-name">
-                                                        <a href="/may-do-huyet-ap-24h-watchbp-o3-holter-huyet-ap" title="Máy Đo Huyết Áp 24h WatchBP O3 (Holter huyết áp)">
-                                                        Máy Đo Huyết Áp 24h WatchBP O3 (Holter huyết áp)
-                                                        </a>
-                                                    </h3>
-                                                    <div class="price-box price-loop-style res-item">
-                                                        <span class="special-price">
-                                                        <span class="price">40.000.000₫</span>
-                                                        </span>
-                                                        <span class="old-price">
-                                                        <span class="price">
-                                                        </span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="/dai-lung-microlife-bonbone-size-s" title="Đai Lưng Microlife Bonbone - Size S">
-                                                    <img class="img-responsive" src="https://bizweb.dktcdn.net/thumb/medium/100/326/299/themes/691188/assets/libra-health___product.png" data-lazyload="https://bizweb.dktcdn.net/100/326/299/products/1300pro01u2409d20160504t154551.jpg?v=1533783865287" alt="dai-lung-microlife-bonbone-size-s">
-                                                    </a>
-                                                    <div class="product-action hidden-xs">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-12361253" enctype="multipart/form-data">
-                                                            <input type="hidden" name="variantId" value="19946247">
-                                                            <button class="btn-buy btn-cart btn libra-health___button left-to add_to_cart" title="Thêm vào giỏ hàng">
-                                                            <span><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-                                                    <div class="fw product-review">
-                                                        <div class="bizweb-product-reviews-badge" data-id="12361253"></div>
-                                                    </div>
-                                                    <h3 class="product-name">
-                                                        <a href="/dai-lung-microlife-bonbone-size-s" title="Đai Lưng Microlife Bonbone - Size S">
-                                                        Đai Lưng Microlife Bonbone - Size S
-                                                        </a>
-                                                    </h3>
-                                                    <div class="price-box price-loop-style res-item">
-                                                        <span class="special-price">
-                                                        <span class="price">899.000₫</span>
-                                                        </span>
-                                                        <span class="old-price">
-                                                        <span class="price">
-                                                        </span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="/dung-cu-do-huyet-ap-microlife-ag1-20" title="Dụng Cụ Đo Huyết Áp Microlife AG1-20">
-                                                    <img class="img-responsive" src="https://bizweb.dktcdn.net/thumb/medium/100/326/299/themes/691188/assets/libra-health___product.png" data-lazyload="https://bizweb.dktcdn.net/100/326/299/products/microlifeag1201u2409d20160425t.jpg?v=1533783861747" alt="dung-cu-do-huyet-ap-microlife-ag1-20">
-                                                    </a>
-                                                    <div class="product-action hidden-xs">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-12361252" enctype="multipart/form-data">
-                                                            <input type="hidden" name="variantId" value="19946246">
-                                                            <button class="btn-buy btn-cart btn libra-health___button left-to add_to_cart" title="Thêm vào giỏ hàng">
-                                                            <span><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-                                                    <div class="fw product-review">
-                                                        <div class="bizweb-product-reviews-badge" data-id="12361252"></div>
-                                                    </div>
-                                                    <h3 class="product-name">
-                                                        <a href="/dung-cu-do-huyet-ap-microlife-ag1-20" title="Dụng Cụ Đo Huyết Áp Microlife AG1-20">
-                                                        Dụng Cụ Đo Huyết Áp Microlife AG1-20
-                                                        </a>
-                                                    </h3>
-                                                    <div class="price-box price-loop-style res-item">
-                                                        <span class="special-price">
-                                                        <span class="price">388.000₫</span>
-                                                        </span>
-                                                        <span class="old-price">
-                                                        <span class="price">
-                                                        </span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="/may-do-huyet-ap-bap-tay-microlife-a3l-comfort" title="Máy Đo Huyết Áp Bắp Tay Microlife A3L Comfort">
-                                                    <img class="img-responsive" src="https://bizweb.dktcdn.net/thumb/medium/100/326/299/themes/691188/assets/libra-health___product.png" data-lazyload="https://bizweb.dktcdn.net/100/326/299/products/microlifea3lu2409d20160818t150.jpg?v=1533783859777" alt="may-do-huyet-ap-bap-tay-microlife-a3l-comfort">
-                                                    </a>
-                                                    <div class="product-action hidden-xs">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-12361251" enctype="multipart/form-data">
-                                                            <input type="hidden" name="variantId" value="19946245">
-                                                            <button class="btn-buy btn-cart btn libra-health___button left-to add_to_cart" title="Thêm vào giỏ hàng">
-                                                            <span><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-                                                    <div class="fw product-review">
-                                                        <div class="bizweb-product-reviews-badge" data-id="12361251"></div>
-                                                    </div>
-                                                    <h3 class="product-name">
-                                                        <a href="/may-do-huyet-ap-bap-tay-microlife-a3l-comfort" title="Máy Đo Huyết Áp Bắp Tay Microlife A3L Comfort">
-                                                        Máy Đo Huyết Áp Bắp Tay Microlife A3L Comfort
-                                                        </a>
-                                                    </h3>
-                                                    <div class="price-box price-loop-style res-item">
-                                                        <span class="special-price">
-                                                        <span class="price">1.170.000₫</span>
-                                                        </span>
-                                                        <span class="old-price">
-                                                        <span class="price">
-                                                        </span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="/nhiet-ke-do-tai-tran-6-trong-1-beurer-ft65" title="Nhiệt Kế Đo Tai - Trán 6 Trong 1 Beurer FT65">
-                                                    <img class="img-responsive" src="https://bizweb.dktcdn.net/thumb/medium/100/326/299/themes/691188/assets/libra-health___product.png" data-lazyload="https://bizweb.dktcdn.net/100/326/299/products/beurerft7011.jpg?v=1533783856737" alt="nhiet-ke-do-tai-tran-6-trong-1-beurer-ft65">
-                                                    </a>
-                                                    <div class="product-action hidden-xs">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-12361250" enctype="multipart/form-data">
-                                                            <input type="hidden" name="variantId" value="19946244">
-                                                            <button class="btn-buy btn-cart btn libra-health___button left-to add_to_cart" title="Thêm vào giỏ hàng">
-                                                            <span><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-                                                    <div class="fw product-review">
-                                                        <div class="bizweb-product-reviews-badge" data-id="12361250"></div>
-                                                    </div>
-                                                    <h3 class="product-name">
-                                                        <a href="/nhiet-ke-do-tai-tran-6-trong-1-beurer-ft65" title="Nhiệt Kế Đo Tai - Trán 6 Trong 1 Beurer FT65">
-                                                        Nhiệt Kế Đo Tai - Trán 6 Trong 1 Beurer FT65
-                                                        </a>
-                                                    </h3>
-                                                    <div class="price-box price-loop-style res-item">
-                                                        <span class="special-price">
-                                                        <span class="price">800.000₫</span>
-                                                        </span>
-                                                        <span class="old-price">
-                                                        <span class="price">
-                                                        </span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="/may-do-huyet-ap-bap-tay-beurer-bm44-co-adapter" title="Máy Đo Huyết Áp Bắp Tay Beurer BM44 (Có Adapter)">
-                                                    <img class="img-responsive" src="https://bizweb.dktcdn.net/thumb/medium/100/326/299/themes/691188/assets/libra-health___product.png" data-lazyload="https://bizweb.dktcdn.net/100/326/299/products/se3339343337.jpg?v=1533783855490" alt="may-do-huyet-ap-bap-tay-beurer-bm44-co-adapter">
-                                                    </a>
-                                                    <div class="product-action hidden-xs">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-12361249" enctype="multipart/form-data">
-                                                            <input type="hidden" name="variantId" value="19946243">
-                                                            <button class="btn-buy btn-cart btn libra-health___button left-to add_to_cart" title="Thêm vào giỏ hàng">
-                                                            <span><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>
-                                                            </button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-                                                    <div class="fw product-review">
-                                                        <div class="bizweb-product-reviews-badge" data-id="12361249"></div>
-                                                    </div>
-                                                    <h3 class="product-name">
-                                                        <a href="/may-do-huyet-ap-bap-tay-beurer-bm44-co-adapter" title="Máy Đo Huyết Áp Bắp Tay Beurer BM44 (Có Adapter)">
-                                                        Máy Đo Huyết Áp Bắp Tay Beurer BM44 (Có Adapter)
-                                                        </a>
-                                                    </h3>
-                                                    <div class="price-box price-loop-style res-item">
-                                                        <span class="special-price">
-                                                        <span class="price">1.400.000₫</span>
-                                                        </span>
-                                                        <span class="old-price">
-                                                        <span class="price">
-                                                        </span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="product-box">
-                                                <div class="product-thumbnail">
-                                                    <a href="/den-phun-tinh-dau-diet-khuan-lam-sach-khong-khi-beurer-la30" title="Đèn Phun Tinh Dầu, Diệt Khuẩn, Làm Sạch Không Khí Beurer LA30">
-                                                    <img class="img-responsive" src="https://bizweb.dktcdn.net/thumb/medium/100/326/299/themes/691188/assets/libra-health___product.png" data-lazyload="https://bizweb.dktcdn.net/100/326/299/products/beurerla30aromadiffusordenphun.jpg?v=1533783851447" alt="den-phun-tinh-dau-diet-khuan-lam-sach-khong-khi-beurer-la30">
-                                                    </a>
-                                                    <div class="product-action hidden-xs">
-                                                        <form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-12361248" enctype="multipart/form-data">
-                                                            <a href="/den-phun-tinh-dau-diet-khuan-lam-sach-khong-khi-beurer-la30" class="btn libra-health___button" title="Xem chi tiết">
-                                                            <span><i class="fa fa-info-circle" aria-hidden="true"></i></span>
-                                                            </a>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info">
-                                                    <div class="fw product-review">
-                                                        <div class="bizweb-product-reviews-badge" data-id="12361248"></div>
-                                                    </div>
-                                                    <h3 class="product-name">
-                                                        <a href="/den-phun-tinh-dau-diet-khuan-lam-sach-khong-khi-beurer-la30" title="Đèn Phun Tinh Dầu, Diệt Khuẩn, Làm Sạch Không Khí Beurer LA30">
-                                                        Đèn Phun Tinh Dầu, Diệt Khuẩn, Làm Sạch Không Khí Beurer LA30
-                                                        </a>
-                                                    </h3>
-                                                    <div class="price-box price-loop-style res-item">
-                                                        <span class="special-price">
-                                                        <span class="price">Liên hệ</span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-2 tab-content">
-                                </div>
-                                <div class="tab-3 tab-content">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- tab -->
 <section class="lib-section-7">
     <div class="section_feedback">
         <div class="container">
@@ -510,7 +172,7 @@
                         <h2 class="module-title libra-health___title-index">
                             <a href="javascript:;">
                             <span>
-                            Càm Nghĩ Của Khách Hàng
+                            Đối Tác Chiến Lược
                             </span>
                             </a>
                         </h2>
@@ -518,193 +180,124 @@
                     <div class="module-content">
                         <div class="section_feedback___list owl-theme owl-carousel nav-enable nav-left-right" data-lg-items="3" data-md-items="3" data-sm-items="2" data-xs-items="2" data-xxs-items="1" data-margin="30" data-nav="true">
                             <div class="item">
-                                <div class="section_feedback___header item___1">
-                                    <div class="section_feedback___image">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <img src="{{url('')}}/assets/frontend/img/feedback_1_image.png" class="img-responsive" alt="allison-argent">
-                                        </picture>
-                                    </div>
-                                    <div class="section_feedback___info">
-                                        <div class="section_feedback___title">
-                                            <strong>Allison Argent</strong>
-                                        </div>
-                                        <div class="section_feedback___sub">
-                                            <span>Diễn viên điện ảnh<br>24 tuổi</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="section_feedback___content">
-                                    <span>
-                                    <i class="fa fa-quote-left" aria-hidden="true"></i> Đây là nội dung 
-                                    </span>
-                                </div>
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/ACBank.gif">
+                                    <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/ACBank.gif">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/ACBank.gif">
+                                    <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/ACBank.gif">
+                                    <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/ACBank.gif">
+                                    <img src="{{url('')}}/assets/frontend/doitacchienluoc/ACBank.gif" class="img-responsive" alt="allison-argent">
+                                </picture>
                             </div>
                             <div class="item">
-                                <div class="section_feedback___header item___1">
-                                    <div class="section_feedback___image">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <img src="{{url('')}}/assets/frontend/img/feedback_1_image.png" class="img-responsive" alt="allison-argent">
-                                        </picture>
-                                    </div>
-                                    <div class="section_feedback___info">
-                                        <div class="section_feedback___title">
-                                            <strong>Allison Argent</strong>
-                                        </div>
-                                        <div class="section_feedback___sub">
-                                            <span>Diễn viên điện ảnh<br>24 tuổi</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="section_feedback___content">
-                                    <span>
-                                    <i class="fa fa-quote-left" aria-hidden="true"></i> Đây là nội dung 
-                                    </span>
-                                </div>
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/BIDV.gif">
+                                    <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/BIDV.gif">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/BIDV.gif">
+                                    <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/BIDV.gif">
+                                    <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/BIDV.gif">
+                                    <img src="{{url('')}}/assets/frontend/doitacchienluoc/BIDV.gif" class="img-responsive" alt="allison-argent">
+                                </picture>
                             </div>
                             <div class="item">
-                                <div class="section_feedback___header item___1">
-                                    <div class="section_feedback___image">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <img src="{{url('')}}/assets/frontend/img/feedback_1_image.png" class="img-responsive" alt="allison-argent">
-                                        </picture>
-                                    </div>
-                                    <div class="section_feedback___info">
-                                        <div class="section_feedback___title">
-                                            <strong>Allison Argent</strong>
-                                        </div>
-                                        <div class="section_feedback___sub">
-                                            <span>Diễn viên điện ảnh<br>24 tuổi</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="section_feedback___content">
-                                    <span>
-                                    <i class="fa fa-quote-left" aria-hidden="true"></i> Đây là nội dung 
-                                    </span>
-                                </div>
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Cap-Nuoc.jpg">
+                                    <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Cap-Nuoc.jpg">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Cap-Nuoc.jpg">
+                                    <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Cap-Nuoc.jpg">
+                                    <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Cap-Nuoc.jpg">
+                                    <img src="{{url('')}}/assets/frontend/doitacchienluoc/Cap-Nuoc.jpg" class="img-responsive" alt="allison-argent">
+                                </picture>
                             </div>
                             <div class="item">
-                                <div class="section_feedback___header item___1">
-                                    <div class="section_feedback___image">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <img src="{{url('')}}/assets/frontend/img/feedback_1_image.png" class="img-responsive" alt="allison-argent">
-                                        </picture>
-                                    </div>
-                                    <div class="section_feedback___info">
-                                        <div class="section_feedback___title">
-                                            <strong>Allison Argent</strong>
-                                        </div>
-                                        <div class="section_feedback___sub">
-                                            <span>Diễn viên điện ảnh<br>24 tuổi</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="section_feedback___content">
-                                    <span>
-                                    <i class="fa fa-quote-left" aria-hidden="true"></i> Đây là nội dung 
-                                    </span>
-                                </div>
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Kim-Eng.jpg">
+                                    <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Kim-Eng.jpg">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Kim-Eng.jpg">
+                                    <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Kim-Eng.jpg">
+                                    <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Kim-Eng.jpg">
+                                    <img src="{{url('')}}/assets/frontend/doitacchienluoc/Kim-Eng.jpg" class="img-responsive" alt="allison-argent">
+                                </picture>
                             </div>
                             <div class="item">
-                                <div class="section_feedback___header item___1">
-                                    <div class="section_feedback___image">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <img src="{{url('')}}/assets/frontend/img/feedback_1_image.png" class="img-responsive" alt="allison-argent">
-                                        </picture>
-                                    </div>
-                                    <div class="section_feedback___info">
-                                        <div class="section_feedback___title">
-                                            <strong>Allison Argent</strong>
-                                        </div>
-                                        <div class="section_feedback___sub">
-                                            <span>Diễn viên điện ảnh<br>24 tuổi</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="section_feedback___content">
-                                    <span>
-                                    <i class="fa fa-quote-left" aria-hidden="true"></i> Đây là nội dung 
-                                    </span>
-                                </div>
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/OCB.jpg">
+                                    <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/OCB.jpg">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/OCB.jpg">
+                                    <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/OCB.jpg">
+                                    <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/OCB.jpg">
+                                    <img src="{{url('')}}/assets/frontend/doitacchienluoc/OCB.jpg" class="img-responsive" alt="allison-argent">
+                                </picture>
                             </div>
                             <div class="item">
-                                <div class="section_feedback___header item___1">
-                                    <div class="section_feedback___image">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <img src="{{url('')}}/assets/frontend/img/feedback_1_image.png" class="img-responsive" alt="allison-argent">
-                                        </picture>
-                                    </div>
-                                    <div class="section_feedback___info">
-                                        <div class="section_feedback___title">
-                                            <strong>Allison Argent</strong>
-                                        </div>
-                                        <div class="section_feedback___sub">
-                                            <span>Diễn viên điện ảnh<br>24 tuổi</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="section_feedback___content">
-                                    <span>
-                                    <i class="fa fa-quote-left" aria-hidden="true"></i> Đây là nội dung 
-                                    </span>
-                                </div>
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Phuc-Hung.jpg">
+                                    <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Phuc-Hung.jpg">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Phuc-Hung.jpg">
+                                    <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Phuc-Hung.jpg">
+                                    <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Phuc-Hung.jpg">
+                                    <img src="{{url('')}}/assets/frontend/doitacchienluoc/Phuc-Hung.jpg" class="img-responsive" alt="allison-argent">
+                                </picture>
                             </div>
                             <div class="item">
-                                <div class="section_feedback___header item___1">
-                                    <div class="section_feedback___image">
-                                        <picture>
-                                            <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/img/feedback_1_image.png">
-                                            <img src="{{url('')}}/assets/frontend/img/feedback_1_image.png" class="img-responsive" alt="allison-argent">
-                                        </picture>
-                                    </div>
-                                    <div class="section_feedback___info">
-                                        <div class="section_feedback___title">
-                                            <strong>Allison Argent</strong>
-                                        </div>
-                                        <div class="section_feedback___sub">
-                                            <span>Diễn viên điện ảnh<br>24 tuổi</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="section_feedback___content">
-                                    <span>
-                                    <i class="fa fa-quote-left" aria-hidden="true"></i> Đây là nội dung 
-                                    </span>
-                                </div>
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/vibBank.gif">
+                                    <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/vibBank.gif">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/vibBank.gif">
+                                    <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/vibBank.gif">
+                                    <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/vibBank.gif">
+                                    <img src="{{url('')}}/assets/frontend/doitacchienluoc/vibBank.gif" class="img-responsive" alt="allison-argent">
+                                </picture>
+                            </div>
+                            <div class="item">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Vietcombank.jpg">
+                                    <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Vietcombank.jpg">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Vietcombank.jpg">
+                                    <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Vietcombank.jpg">
+                                    <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Vietcombank.jpg">
+                                    <img src="{{url('')}}/assets/frontend/doitacchienluoc/Vietcombank.jpg" class="img-responsive" alt="allison-argent">
+                                </picture>
+                            </div>
+                            <div class="item">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/vietinbank.gif">
+                                    <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/vietinbank.gif">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/vietinbank.gif">
+                                    <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/vietinbank.gif">
+                                    <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/vietinbank.gif">
+                                    <img src="{{url('')}}/assets/frontend/doitacchienluoc/vietinbank.gif" class="img-responsive" alt="allison-argent">
+                                </picture>
+                            </div>
+                            <div class="item">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/VRBank.gif">
+                                    <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/VRBank.gif">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/VRBank.gif">
+                                    <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/VRBank.gif">
+                                    <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/VRBank.gif">
+                                    <img src="{{url('')}}/assets/frontend/doitacchienluoc/VRBank.gif" class="img-responsive" alt="allison-argent">
+                                </picture>
+                            </div>
+                            <div class="item">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/WooriCBV.gif">
+                                    <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/WooriCBV.gif">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/WooriCBV.gif">
+                                    <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/WooriCBV.gif">
+                                    <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/WooriCBV.gif">
+                                    <img src="{{url('')}}/assets/frontend/doitacchienluoc/WooriCBV.gif" class="img-responsive" alt="allison-argent">
+                                </picture>
+                            </div>
+                            <div class="item">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Xay-Lap-Hue.jpg">
+                                    <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Xay-Lap-Hue.jpg">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Xay-Lap-Hue.jpg">
+                                    <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Xay-Lap-Hue.jpg">
+                                    <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/frontend/doitacchienluoc/Xay-Lap-Hue.jpg">
+                                    <img src="{{url('')}}/assets/frontend/doitacchienluoc/Xay-Lap-Hue.jpg" class="img-responsive" alt="allison-argent">
+                                </picture>
                             </div>
                         </div>
                     </div>

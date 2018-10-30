@@ -224,7 +224,7 @@ $(document).ready(function(){
 			type		: "tabs",
 			content		: [ 
 				"<a href='#panel-menu'><i class='fa fa-bars'></i> <span>Danh Mục</span></a>"
-				,"<a href='#panel-account'><i class='fa fa-user'></i> <span>Tài Khoản</span></a>"
+				,"<a href='#panel-account'><i class='fa fa-search'></i> <span>Tìm Kiếm</span></a>"
 			]
 		}, {
 			content		: [ "prev", "close" ]

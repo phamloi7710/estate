@@ -179,10 +179,10 @@
             </div>
             <aside class="dqdt-sidebar sidebar left left-content col-lg-3 col-md-3 col-sm-12 col-xs-12 col-lg-pull-9 col-md-pull-9 col-sm-12 col-xs-12">
                 <!-- DANH MỤC SẢN PHẨM -->
-                <div class="sidebar-item sidebar-menu sidebar-collection-menu hidden-lg hidden-md">
+                <div class="sidebar-item sidebar-menu sidebar-collection-menu">
                     <div class="module-header">
                         <h2 class="module-title libra-health___title">
-                            <span>Danh mục sản phẩm</span>
+                            <span>Danh mục Dự Án</span>
                         </h2>
                     </div>
                     <div class="sidebar-menu-content module-content">
@@ -195,28 +195,21 @@
                 <!-- FILTERS -->
                 <div class="aside-filter sidebar-item">
                     <div class="sidebar-item sidebar-menu sidebar-blog-menu item-border">
-                        <div class="module-header">
-                            <h2 class="module-title libra-health___title">
-                                <span>
-                                    <i class="fa fa-newspaper-o" aria-hidden="true"></i> Danh Mục Dự Án
-                                </span>
-                            </h2>
-                        </div>
                         <div class="sidebar-menu-content module-content">
                             <div class="sidebar-linklists">
                                 <ul>
                                     <li class="sidebar-menu-list blog-sidebar-menu">
-                                        <a class="ajaxLayer" href="#" title="Dự Án Đang Thực Hiện">
+                                        <a class="ajaxLayer" href="{{route('getDuAn')}}" title="Dự Án Đang Thực Hiện">
                                             <span>Dự Án Đang Thực Hiện</span>
                                         </a>
                                     </li>
                                     <li class="sidebar-menu-list blog-sidebar-menu">
-                                        <a class="ajaxLayer" href="#" title="Dự Án Sắp Hoàn Thành">
+                                        <a class="ajaxLayer" href="{{route('getDuAn')}}" title="Dự Án Sắp Hoàn Thành">
                                             <span>Dự Án Sắp Hoàn Thành</span>
                                         </a>
                                     </li>
                                     <li class="sidebar-menu-list blog-sidebar-menu">
-                                        <a class="ajaxLayer" href="#" title="Dự Án Đã Thực Hiện">
+                                        <a class="ajaxLayer" href="{{route('getDuAn')}}" title="Dự Án Đã Thực Hiện">
                                             <span>Dự Án Đã Thực Hiện</span>
                                         </a>
                                     </li>
@@ -227,8 +220,8 @@
                 </div>  
             </aside>
             <div id="open-filters" class="open-filters hidden-lg hidden-md">
-                <i class="fa fa-filter"></i>
-                <span>Lọc</span>
+                <i class="fa fa-align-justify"></i>
+                <span>Menu</span>
             </div>
         </div>
     </div>

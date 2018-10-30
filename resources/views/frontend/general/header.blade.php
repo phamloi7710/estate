@@ -7,58 +7,24 @@
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
         <title>
-            Bệnh viện đa khoa Libra Health - Luôn tận tâm, ân cần, cố gắng      
+            Site Title
         </title>
         <!-- ================= Page description ================== -->
-        <meta name="description" content="Bệnh viện đa khoa Libra Health - Luôn tận tâm, ân cần, cố gắng">
+        <meta name="description" content="Site Title">
         <!-- ================= Meta ================== -->
-        <meta name="keywords" content="libra, libra team, lib team, lib health, libra health, bệnh viện, phòng khám, libra bệnh viện, libra phòng khám, libra tin tức, libra tin tuc, libra sức khoẻ, libra suc khoe>
-        <link rel="canonical" href="https://libra-health.bizwebvietnam.net>
-            <meta name='revisit-after' content='1 days'>
-            <meta name="robots" content="noodp,index,follow">
+        <meta name="keywords" content="Site Title">
+        <link rel="canonical" href="">
+        <meta name='revisit-after' content='1 days'>
+        <meta name="robots" content="noodp,index,follow">
         <!-- Facebook Open Graph meta tags -->
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Bệnh viện đa khoa Libra Health - Luôn tận tâm, ân cần, cố gắng">
+        <meta property="og:title" content="Site Title">
         <meta property="og:image" content="{{url('')}}/assets/logo-1.png">
         <meta property="og:image:secure_url" content="{{url('')}}/assets/logo-1.png">
-        <meta property="og:description" content="Bệnh viện đa khoa Libra Health - Luôn tận tâm, ân cần, cố gắng">
-        <meta property="og:url" content="https://libra-health.bizwebvietnam.net">
-        <meta property="og:site_name" content="Libra Health">
-        <script>
-            var template = 'index';
-        </script>
-        <!-- Bizweb conter for header -->
-        <script>
-            var Bizweb = Bizweb || {};
-            Bizweb.store = 'libra-health.bizwebvietnam.net';
-            Bizweb.id='326299';
-            Bizweb.theme = {"id":691188,"role":"main","name":"Libra Health --- 2018-10-23"};
-            Bizweb.template = 'index';
-        </script>
-        <script>
-            (function() {
-            function asyncLoad() {
-            var urls = ["//productreviews.bizwebapps.vn/assets/js/productreviews.min.js?store=libra-health.bizwebvietnam.net"];
-            for (var i = 0; i < urls.length; i++) {
-            var s = document.createElement('script');
-            s.type = 'text/javascript';
-            s.async = true;
-            s.src = urls[i];
-            s.src = urls[i];
-            var x = document.getElementsByTagName('script')[0];
-            x.parentNode.insertBefore(s, x);
-            }
-            }
-            window.attachEvent ? window.attachEvent('onload', asyncLoad) : window.addEventListener('load', asyncLoad, false);
-            })();
-        </script>
-        <script type="text/javascript">
-            (function() {
-            var log = document.createElement('script'); log.type = 'text/javascript'; log.async = true;
-            log.src = '//stats.bizweb.vn/delivery/326299.js?lang=vi';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(log, s);
-            })();
-        </script>
+        <meta property="og:description" content="Site Title">
+        <meta property="og:url" content="#">
+        <meta property="og:site_name" content="Site Title">
+        <link rel="icon" href="{{url('')}}/assets/logo-2.png" type="image/x-icon" />
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123748707-1"></script>
         <script async src="{{url('')}}/assets/frontend/slider/jssor.slider-27.5.0.min.js"></script>
@@ -228,7 +194,7 @@
             .jssora053.jssora053dn {opacity:.5;}
             .jssora053.jssora053ds {opacity:.3;pointer-events:none;}
         </style>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Plugin CSS -->
         <link href="{{url('')}}/assets/frontend/100/326/299/themes/691188/assets/plugin.scss.css" rel="stylesheet" type="text/css">
         <!-- Build Main CSS -->                             
@@ -245,6 +211,7 @@
 
 <style>
     .scrollq{ z-index: 9999; position: fixed; left: 0; top: 0; width: 100%;}
+    
 </style>
     </head>
     <body>
@@ -253,91 +220,41 @@
         <div class="opacity_filter"></div>
         <div class="op_login"></div>
         <script src="{{url('')}}/assets/frontend/100/326/299/themes/691188/assets/jquery-2.2.3.min.js" type="text/javascript"></script> 
-        <header class="header">
-            <div class="topbar hidden-xs">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12  col-lg-8 ">
-                            <ul class="topbar_info">
-                                <li class="topbar_info_item">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i> Email: <a href="mailto:demo@demo.com">demo@demo.com</a>
-                                </li>
-                                <li class="topbar_info_item">
-                                    <i class="fa fa-facebook-official" aria-hidden="true"></i> Tư vấn trực tuyến: <a href="https://www.messenger.com/t/facebook">0123456789</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="hidden-sm hidden-md col-lg-4">
-                            <div class="topbar_right">
-                                <div class="topbar_account_info">
-                                    <div class="topbar_account">
-                                        <i class="fa fa-user" aria-hidden="true"></i> Tài khoản <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </div>
-                                    <ul class="account_box">
-                                        <li class="account_item">
-                                            <a href="{{route('dangnhap')}}" title="Đăng nhập" class="btn-transition">
-                                            <span>Đăng nhập</span>
-                                            </a>
-                                        </li>
-                                        <li class="account_item">
-                                            <a href="{{route('dangky')}}" title="Đăng ký" class="btn-transition">
-                                            <span>Đăng ký</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <header id="header" class="header">
             <div class="mainbar">
                 <div class="container">
                     <div class="row">
-                        <div class="menu-bar hidden-lg">
+                        <div id="menu-bar" class="menu-bar hidden-lg">
                             <a href="#nav-mobile">
-                            <i class="fa fa-align-justify"></i>
+                                <i class="fa fa-align-justify"></i>
                             </a>
                         </div>
                         <div class="col-xs-8 col-xs-offset-2 col-sm-offset-3 col-sm-6 col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-0 logo">
                             <a title="Libra Health" href="/">
-                            <img class="img-responsive" src="{{url('')}}/assets/logo-1.png" alt="Logo">                  
+                            <img width="150" class="img-responsive" src="{{url('')}}/assets/logo-1.png" alt="Logo">                  
                             </a> 
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-6">
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-6 searchBar hidden-sm">
                             <div class="searchbar">
-                                <div class="search_bar search-auto">
-                                    <form action="/search" method="get">
+                                <div class="search_bar search-auto hidden-xs">
+                                    <form action="#" method="get">
                                         <input type="text" class="form-control smartsearch_input" autocomplete="off" maxlength="70" name="query" id="search" title="Nhập từ khoá cần tìm" placeholder="Tìm kiếm" required>
-                                        <input type="hidden" name="type" value="article">
                                         <button class="btn button-hover-3" type="submit">
                                         <i class="fa fa-search"></i>
                                         </button>
                                     </form>
-                                    <!-- <div class="search_choice">
-                                        <label class="search_choice___label hidden-md">Tìm kiếm theo</label>
-                                        <div class="search_choice___input">
-                                            <div class="search_choice___input_index">
-                                                <input type="radio" class="search_product" name="search_type" value="product">
-                                                <span>Sản phẩm & Dịch vụ</span>
-                                            </div>
-                                            <div class="search_choice___input_index margin-left-15">
-                                                <input type="radio" class="search_article" name="search_type" checked="checked" value="article">
-                                                <span>Bài viết</span>
-                                            </div>
-                                        </div>
-                                    </div> -->
+                                    
                                 </div>
                             </div>
                         </div>
                         <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3 hotline-mobile">
                             <a class="hotline" href="tel:0123.456.789">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="tiny" id="Icons" x="0px" y="0px" viewBox="0 0 395.5 347.5" xml:space="preserve">
-                            <g id="_x34_">
-                                <path fill="#CA1319" d="M394.9,104.6l-2.5-17.9c-3.5-30.1-27.5-53.8-69.3-68.6C290.4,6.4,245.8,0,197.6,0   c-47.8,0-92.3,6.3-125.2,17.7C29.5,32.6,5.4,56.5,2.7,86.8l-2.5,17.8c-1,7.3,1.2,14.6,6,20.2c4.8,5.5,11.8,8.7,19.2,8.7h60.2   c12,0,22.4-9,24.2-20.8l5.6-30.8c4.7-2.9,23.9-11.7,82.2-11.7c58.7,0,77.6,8.8,82.2,11.7l5.6,30.9c1.8,11.9,12.2,20.8,24.2,20.8   h60.2c7.3,0,14.3-3.2,19.2-8.7C393.7,119.3,395.9,111.9,394.9,104.6z"></path>
-                                <path fill="#CA1319" d="M369.4,201.8c-3.8-21.4-21.6-38-43.3-40.3l-40.5-4.3c-10.3-1.1-18.6-9-20.1-19.3l-4-26.9   c-1.8-12.4-12.7-21.7-25.2-21.7h-77.3c-12.5,0-23.4,9.3-25.2,21.7l-4,26.9c-1.5,10.3-9.8,18.2-20.1,19.3l-40.5,4.3   c-21.7,2.3-39.5,18.8-43.3,40.3l-15.6,87.5c-2.6,14.4,1.3,29,10.7,40.2c9.4,11.2,23.1,17.6,37.7,17.6h277.9   c14.6,0,28.3-6.4,37.7-17.6c9.4-11.2,13.3-25.8,10.7-40.2L369.4,201.8z M197.6,172.7c30.6,0,55.5,24.8,55.5,55.5   c0,30.6-24.8,55.5-55.5,55.5s-55.5-24.8-55.5-55.5C142.1,197.6,166.9,172.7,197.6,172.7z"></path>
-                            </g>
-                        </svg>
+                                    <g id="_x34_">
+                                        <path fill="#CA1319" d="M394.9,104.6l-2.5-17.9c-3.5-30.1-27.5-53.8-69.3-68.6C290.4,6.4,245.8,0,197.6,0   c-47.8,0-92.3,6.3-125.2,17.7C29.5,32.6,5.4,56.5,2.7,86.8l-2.5,17.8c-1,7.3,1.2,14.6,6,20.2c4.8,5.5,11.8,8.7,19.2,8.7h60.2   c12,0,22.4-9,24.2-20.8l5.6-30.8c4.7-2.9,23.9-11.7,82.2-11.7c58.7,0,77.6,8.8,82.2,11.7l5.6,30.9c1.8,11.9,12.2,20.8,24.2,20.8   h60.2c7.3,0,14.3-3.2,19.2-8.7C393.7,119.3,395.9,111.9,394.9,104.6z"></path>
+                                        <path fill="#CA1319" d="M369.4,201.8c-3.8-21.4-21.6-38-43.3-40.3l-40.5-4.3c-10.3-1.1-18.6-9-20.1-19.3l-4-26.9   c-1.8-12.4-12.7-21.7-25.2-21.7h-77.3c-12.5,0-23.4,9.3-25.2,21.7l-4,26.9c-1.5,10.3-9.8,18.2-20.1,19.3l-40.5,4.3   c-21.7,2.3-39.5,18.8-43.3,40.3l-15.6,87.5c-2.6,14.4,1.3,29,10.7,40.2c9.4,11.2,23.1,17.6,37.7,17.6h277.9   c14.6,0,28.3-6.4,37.7-17.6c9.4-11.2,13.3-25.8,10.7-40.2L369.4,201.8z M197.6,172.7c30.6,0,55.5,24.8,55.5,55.5   c0,30.6-24.8,55.5-55.5,55.5s-55.5-24.8-55.5-55.5C142.1,197.6,166.9,172.7,197.6,172.7z"></path>
+                                    </g>
+                                </svg>
                                 <span class="hidden-sm hidden-xs">
                                 0123.456.789
                                 </span>
@@ -346,7 +263,7 @@
                     </div>
                 </div>
             </div>
-            <div id="header" class="header-menu hidden-md hidden-sm hidden-xs">
+            <div class="header-menu hidden-md hidden-sm hidden-xs">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-hg-12">

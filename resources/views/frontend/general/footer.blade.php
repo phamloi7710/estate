@@ -83,33 +83,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
                                 <div class="row">
-                                    <div class="fw"><!-- 
-                                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 foo-col">
-                                            <div class="footer-widget">
-                                                <h4 class="footer-title">
-                                                    <span>Hỗ trợ</span>
-                                                </h4>
-                                                <ul class="list-menu">
-                                                    <li><a href="#" title="Dịch vụ">Dịch vụ</a></li>
-                                                    <li><a href="#" title="Tìm kiếm">Tìm kiếm</a></li>
-                                                    <li><a href="#" title="Đăng nhập">Đăng nhập</a></li>
-                                                    <li><a href="#" title="Đăng ký">Đăng ký</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 foo-col">
-                                            <div class="footer-widget">
-                                                <h4 class="footer-title">
-                                                    <span>Chính sách</span>
-                                                </h4>
-                                                <ul class="list-menu">
-                                                    <li><a href="#" title="Chính sách bảo mật">Chính sách bảo mật</a></li>
-                                                    <li><a href="#" title="Chính sách vận chuyển">Chính sách vận chuyển</a></li>
-                                                    <li><a href="#" title="Chính sách đổi trả">Chính sách đổi trả</a></li>
-                                                    <li><a href="#" title="Quy định sử dụng">Quy định sử dụng</a></li>
-                                                </ul>
-                                            </div>
-                                        </div> -->
+                                    <div class="fw">
                                         <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 foo-col pull-right">
                                             <div class="footer-widget">
                                                 <h4 class="footer-title">
@@ -145,8 +119,6 @@
                     </div>
                 </div>
             </footer>
-            <!-- Bizweb javascript customer -->
-            <!-- Bizweb javascript -->
             <script src="{{url('')}}/assets/frontend/assets/themes_support/api.jquery.js" type="text/javascript"></script> 
             <!-- Plugin JS -->
             <script src="{{url('')}}/assets/frontend/100/326/299/themes/691188/assets/plugin.js" type="text/javascript"></script>
@@ -180,41 +152,38 @@
                         <a href="/">Trang chủ</a>
                     </li>
                     <li >
-                        <a href="">Giới Thiệu</a>
-                        <ul>
-                            <li >
-                                <a href="#">Lịch Sử Hình Thành Và Phát Triển</a>
-                            </li>
-                            <li >
-                                <a href="#">Cơ Cấu Bộ Máy Quản Lý</a>
-                            </li>
-                            <li >
-                                <a href="#">Kinh Doanh Chủ Yếu</a>
-                            </li>
-                        </ul>
+                        <a href="{{route('getGioiThieu')}}">Giới Thiệu</a>
                     </li>
                     <li >
                         <a href="">Dự Án</a>
                         <ul>
                             <li >
-                                <a href="#">Dự Án Đã Thực Hiện</a>
+                                <a href="{{route('getDuAn')}}">Dự Án Đã Thực Hiện</a>
                             </li>
                             <li >
-                                <a href="#">Dự Án Đang Thực Hiện</a>
+                                <a href="{{route('getDuAn')}}">Dự Án Đang Thực Hiện</a>
                             </li>
                             <li >
-                                <a href="#">Dự Án Đã Hoàn Thành</a>
+                                <a href="{{route('getDuAn')}}">Dự Án Đã Hoàn Thành</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li >
+                        <a href="#">Tin Tức</a>
+                        <ul>
+                            <li >
+                                <a href="{{route('getDanhMucTinTuc')}}">Danh Mục Tin Tức 1</a>
+                            </li>
+                            <li >
+                                <a href="{{route('getDanhMucTinTuc')}}">Danh Mục Tin Tức 2</a>
+                            </li>
+                            <li >
+                                <a href="{{route('getDanhMucTinTuc')}}">Danh Mục Tin Tức 3</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Quan Hệ Cổ Đông</a>
-                    </li>
-                    <li>
-                        <a href="#">Tuyển Dụng</a>
-                    </li>
-                    <li>
-                        <a href="#">Liên Hệ</a>
+                        <a href="{{route('getLienHeFrontend')}}">Liên Hệ</a>
                     </li>
                     <li class="nav-item ">
                         <a href="#">Demo Menu Level 1</a>
@@ -232,18 +201,42 @@
                 </ul>
             </div>
             <div id="panel-account">
-                <ul>
-                    <li class="cp-item">
-                        <a href="" title="Đăng nhập" class="btn-transition">
-                        <i class="fa fa-sign-in" aria-hidden="true"></i><span>Đăng nhập</span>
-                        </a>
-                    </li>
-                    <li class="cp-item">
-                        <a href="" title="Đăng ký" class="btn-transition">
-                        <i class="fa fa-edit" aria-hidden="true"></i><span>Đăng ký</span>
-                        </a>
-                    </li>
-                </ul>
+                <form accept-charset="UTF-8" action="/contact" id="contact" method="post">
+<input name="FormType" type="hidden" value="contact">
+<input name="utf8" type="hidden" value="true">
+                                
+                                
+                                
+                                <div id="emtry_contact" class="form-signup form_contact clearfix">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <fieldset class="form-group">   
+                                                
+                                                <input type="text" placeholder="Nhập Từ Khoá Tìm Kiếm" name="txtSearch" class="form-control form-control-lg" required="">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <label>Tìm Kiếm Theo: </label>
+                                            <div class="search_choice___input_index">
+                                                <div class="search-form col-xs-6">
+                                                    <input checked type="radio" class="search_product" name="typeSearch" value="true">
+                                                    <span>Tên Dự Án</span>
+                                                </div>
+                                                <div class="search-form col-xs-6">
+                                                    <input type="radio" class="search_product" name="typeSearch" value="true">
+                                                    <span>Tin Tức</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-top: 20px;">
+                                            <button tyle="submit" class="btn libra-health___button pull-right">
+                                                <span>Tìm Kiếm</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </form>
             </div>
         </nav>
         <script type="text/javascript" src="{{url('')}}/assets/frontend/custom/custom.footer.js"></script>
@@ -322,27 +315,6 @@
             .dv-mobile-phone:hover .dv-mobile-ph-img-circle, .dv-mobile-phone:hover .dv-mobile-ph-circle-fill{background-color: #2a7f49;}
             .dv-mobile-phone:hover{border-color: #2a7f49}
             .dv-mobile-phone{left:-30px}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             /*Call hotline*/
             .dv-messages {
                 position: fixed;
@@ -353,11 +325,11 @@
                 z-index: 200000 !important;
                 
                 bottom: 60px;
-    font-size: 30px;
-    color: #2a7f49;
-    line-height: 1;
-    z-index: 10;
-    cursor: pointer;
+                font-size: 30px;
+                color: #2a7f49;
+                line-height: 1;
+                z-index: 10;
+                cursor: pointer;
 
             }
             .dv-messages-ph-img-circle {
