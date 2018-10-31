@@ -1,0 +1,167 @@
+
+/*jssor slider loading skin spin css*/
+.jssorl-009-spin img {
+    animation-name: jssorl-009-spin;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes jssorl-009-spin {
+from { transform: rotate(0deg); }
+to { transform: rotate(360deg); }
+}
+/*jssor slider bullet skin 032 css*/
+.jssorb032 {position:absolute;}
+.jssorb032 .i {position:absolute;cursor:pointer;}
+.jssorb032 .i .b {fill:#fff;fill-opacity:0.7;stroke:#000;stroke-width:1200;stroke-miterlimit:10;stroke-opacity:0.25;}
+.jssorb032 .i:hover .b {fill:#000;fill-opacity:.6;stroke:#fff;stroke-opacity:.35;}
+.jssorb032 .iav .b {fill:#000;fill-opacity:1;stroke:#fff;stroke-opacity:.35;}
+.jssorb032 .i.idn {opacity:.3;}
+/*jssor slider arrow skin 051 css*/
+.jssora051 {display:block;position:absolute;cursor:pointer;}
+.jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+.jssora051:hover {opacity:.8;}
+.jssora051.jssora051dn {opacity:.5;}
+.jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+/*jssor slider loading skin spin css*/
+.jssorl-009-spin img {
+animation-name: jssorl-009-spin;
+animation-duration: 1.6s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+@keyframes jssorl-009-spin {
+from { transform: rotate(0deg); }
+to { transform: rotate(360deg); }
+}
+/*jssor slider bullet skin 052 css*/
+.jssorb052 .i {position:absolute;cursor:pointer;}
+.jssorb052 .i .b {fill:#000;fill-opacity:0.3;}
+.jssorb052 .i:hover .b {fill-opacity:.7;}
+.jssorb052 .iav .b {fill-opacity: 1;}
+.jssorb052 .i.idn {opacity:.3;}
+/*jssor slider arrow skin 053 css*/
+.jssora053 {display:block;position:absolute;cursor:pointer;}
+.jssora053 .a {fill:none;stroke:#fff;stroke-width:640;stroke-miterlimit:10;}
+.jssora053:hover {opacity:.8;}
+.jssora053.jssora053dn {opacity:.5;}
+.jssora053.jssora053ds {opacity:.3;pointer-events:none;}
+#tab{
+                left: 0;
+            }
+            #tab nav {
+                background: #32A22D;
+                text-transform: uppercase;
+                font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", sans-serif;
+            }
+
+            #tab nav .nav {
+                position: relative
+            }
+            #tab nav .nav li{
+                border-right: #fff solid 1px;
+            }
+            #tab nav .nav-item-parent {
+                float: left;
+                position: relative;
+                @indluce transition(border-bottom ease 200ms)
+            }
+
+            #tab nav .nav-item-parent:before {
+                position: relative;
+                content: "";
+                left: 50%;
+                right: 50%;
+                bottom: 0;
+                border-bottom: #fff 3px solid;
+                -webkit-transition: all ease 500ms;
+                -moz-transition: all ease 500ms;
+                -ms-transition: all ease 500ms;
+                -o-transition: all ease 500ms;
+                transition: all ease 500ms
+            }
+
+            #tab nav .nav-item-parent:hover:before {
+                left: 0;
+                right: 0
+            }
+
+            #tab nav .nav-item-parent:hover>a {
+                background: transparent;
+            }
+
+            #tab nav .nav-item-parent:focus {
+                background-color: transparent
+            }
+
+            #tab nav .nav-item-parent>a {
+                line-height: 1.30;
+                color: #fff;
+                font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", sans-serif;
+                padding: 10px 20px;
+                position: relative;
+                text-transform: uppercase;
+                height: 40px;
+            }
+
+            #tab nav .nav-item-parent>a>.fa {
+                position: relative;
+                right: 0;
+                width: 20px;
+                top: 50%;
+                text-align: center;
+                -moz-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                -webkit-transition: all ease 300ms;
+                -moz-transition: all ease 300ms;
+                -ms-transition: all ease 300ms;
+                -o-transition: all ease 300ms;
+                transition: all ease 300ms
+            }
+            #tab nav .nav-item-parent:hover>.mega-content {
+                display: block
+            }
+
+            #tab nav .nav-item-parent li {
+                position: relative;
+                border-left: transparent 3px solid;
+                font-size: 1em
+            }
+
+            #tab nav .nav-item-parent li:not(:last-child) {
+                border-bottom: #dedede 1px dotted
+            }
+
+            #tab nav .nav-item-parent li:hover {
+                border-left: red 3px solid
+            }
+            #tab nav .nav-item-parent a:hover {
+                position: relative;
+                content: "";
+                bottom: 0;
+                background-color: #32A22D;
+
+            }
+            #tab nav .nav-item-parent.active>a{
+                background-color: #2A7F49;
+                color: #F26A29;
+            }
+            @media (min-width: 320px) and (max-width: 991px) {
+                #tab nav li{
+                    width: 25%;
+                    text-align: center;
+                    font-size: 11px;
+                }
+            }
+            @media (min-width: 992px) {
+                #tab nav li{
+                    width: 25%;
+                    text-align: center;
+                    font-size: 13px;
+                }
+            }
+
+

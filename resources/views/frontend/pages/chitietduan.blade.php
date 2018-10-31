@@ -83,129 +83,6 @@
                 </div>
             </div>
         </div>
-        <style type="text/css">
-            #tab{
-                left: 0;
-            }
-            #tab nav {
-                background: #32A22D;
-                text-transform: uppercase;
-                font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", sans-serif;
-            }
-
-            #tab nav .nav {
-                position: relative
-            }
-            #tab nav .nav li{
-                border-right: #fff solid 1px;
-            }
-            #tab nav .nav-item-parent {
-                float: left;
-                position: relative;
-                @indluce transition(border-bottom ease 200ms)
-            }
-
-            #tab nav .nav-item-parent:before {
-                position: relative;
-                content: "";
-                left: 50%;
-                right: 50%;
-                bottom: 0;
-                border-bottom: #fff 3px solid;
-                -webkit-transition: all ease 500ms;
-                -moz-transition: all ease 500ms;
-                -ms-transition: all ease 500ms;
-                -o-transition: all ease 500ms;
-                transition: all ease 500ms
-            }
-
-            #tab nav .nav-item-parent:hover:before {
-                left: 0;
-                right: 0
-            }
-
-            #tab nav .nav-item-parent:hover>a {
-                background: transparent;
-            }
-
-            #tab nav .nav-item-parent:focus {
-                background-color: transparent
-            }
-
-            #tab nav .nav-item-parent>a {
-                line-height: 1.30;
-                color: #fff;
-                font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", sans-serif;
-                padding: 10px 20px;
-                position: relative;
-                text-transform: uppercase;
-                height: 40px;
-            }
-
-            #tab nav .nav-item-parent>a>.fa {
-                position: relative;
-                right: 0;
-                width: 20px;
-                top: 50%;
-                text-align: center;
-                -moz-transform: translateY(-50%);
-                -o-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
-                -webkit-transition: all ease 300ms;
-                -moz-transition: all ease 300ms;
-                -ms-transition: all ease 300ms;
-                -o-transition: all ease 300ms;
-                transition: all ease 300ms
-            }
-            #tab nav .nav-item-parent:hover>.mega-content {
-                display: block
-            }
-
-            #tab nav .nav-item-parent li {
-                position: relative;
-                border-left: transparent 3px solid;
-                font-size: 1em
-            }
-
-            #tab nav .nav-item-parent li:not(:last-child) {
-                border-bottom: #dedede 1px dotted
-            }
-
-            #tab nav .nav-item-parent li:hover {
-                border-left: red 3px solid
-            }
-            #tab nav .nav-item-parent a:hover {
-                position: relative;
-                content: "";
-                bottom: 0;
-                background-color: #32A22D;
-
-            }
-            #tab nav .nav-item-parent.active>a{
-                background-color: #2A7F49;
-                color: #F26A29;
-            }
-            @media (min-width: 320px) and (max-width: 991px) {
-                #tab nav li{
-                    width: 25%;
-                    text-align: center;
-                    font-size: 11px;
-                }
-            }
-            @media (min-width: 992px) {
-                #tab nav li{
-                    width: 25%;
-                    text-align: center;
-                    font-size: 13px;
-                }
-            }
-            .scrollq1{ z-index: 10; float: left; position: fixed; top: 122px; width: 100%;}
-            .scrollq3{ z-index: 10; position: fixed; top: 80px; width: 100%;}
-            
-        </style>
-        
         <div  class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="product-overview-tab">
@@ -214,9 +91,6 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <style>
-                                            
-                                        </style>
                                         <div class="module-content">
                                             <div class="section_product_type_1 e-tabs not-coltabs">
                                                 <header id="tab" class="header">
