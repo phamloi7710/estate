@@ -2,38 +2,39 @@
 @stop
 @extends('frontend.general.master')
 @section('content')
+@include('frontend.includes.slider')
 <section id="banner" class="lib-section-1">
     <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
         <!-- Loading Screen -->
         <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="{{url('')}}/assets/frontend/img/spin.svg" />
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="http://osimi.vn/assets/frontend/img/spin.svg" />
         </div>
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
-            <a href="{{route('getChiTietDuAn')}}">
+            <a href="http://osimi.vn/chi-tiet-du-an.html">
                 <div data-b="0">
-                    <img data-u="image" src="http://hodeco.vn/files/259605bbecc58d9a08.jpg" />
+                    <img data-u="image" src="https://wonderfulengineering.com/wp-content/uploads/2014/05/twitter-header-photo-610x203.jpg" />
                     <div data-u="caption" data-t="7" style="position:absolute;top:-50px;left:30px;width:500px;height:40px;font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;background-color:rgb(174, 177, 177, 0.2); color: #fff;"><b>Khu nhà ở phía tây đường 3/2</b></div>
                 </div>
             </a>
-            <a href="{{route('getChiTietDuAn')}}">
+            <a href="http://osimi.vn/chi-tiet-du-an.html">
                 <div data-b="0">
                     <img data-u="image" src="http://hodeco.vn/files/106405bc8402f00898.jpg" />
                     <div data-u="caption" data-t="7" style="position:absolute;top:-50px;left:30px;width:500px;height:40px;font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;background-color:rgb(174, 177, 177, 0.2); color: #fff;"><b>Ecotown Phú Mỹ</b></div>
                 </div>
             </a>  
-            <a href="{{route('getChiTietDuAn')}}">
+            <a href="http://osimi.vn/chi-tiet-du-an.html">
                 <div data-b="0">
                     <img data-u="image" src="http://hodeco.vn/files/84535927d01c08453.jpg" />
                     <div data-u="caption" data-t="7" style="position:absolute;top:-50px;left:30px;width:500px;height:40px;font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;background-color:rgb(174, 177, 177, 0.2); color: #fff;"><b>FUSION SUITES VŨNG TÀU</b></div>
                 </div>
             </a> 
-            <a href="{{route('getChiTietDuAn')}}">
+            <a href="http://osimi.vn/chi-tiet-du-an.html">
                 <div data-b="0">
                     <img data-u="image" src="http://hodeco.vn/files/829456c3f0d5dc670.jpg" />
                     <div data-u="caption" data-t="7" style="position:absolute;top:-50px;left:30px;width:500px;height:40px;font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;background-color:rgb(174, 177, 177, 0.2); color: #fff;"><b>Chung Cư Bình Giã</b></div>
                 </div>
             </a>
-            <a href="{{route('getChiTietDuAn')}}">
+            <a href="http://osimi.vn/chi-tiet-du-an.html">
                 <div data-b="0">
                     <img data-u="image" src="http://hodeco.vn/files/30405591a4562ace9a.jpg" />
                     <div data-u="caption" data-t="7" style="position:absolute;top:-50px;left:30px;width:500px;height:40px;font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;background-color:rgb(174, 177, 177, 0.2); color: #fff;"><b>HODECO SEA VILLAGE</b></div>
@@ -163,14 +164,14 @@
         </div>
     </div>
 </section>
-<section class="lib-section-7">
-    <div class="section_feedback">
+<section class="lib-section-9">
+    <div class="section_product">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="module-header">
                         <h2 class="module-title libra-health___title-index">
-                            <a href="javascript:;">
+                            <a href="#">
                             <span>
                             Đối Tác Chiến Lược
                             </span>
@@ -178,7 +179,83 @@
                         </h2>
                     </div>
                     <div class="module-content">
-                        <!-- Slider đối tác -->
+                        <div class="section_product_type_3 owl-theme owl-carousel nav-enable nav-left-right" data-lg-items="5" data-md-items="4" data-sm-items="3" data-xs-items="2" data-xxs-items="1" data-margin="30" data-nav="true" data-loop="true" data-autoplay="true">
+                            <div class="item">
+                                <div class="product-box">
+                                    <div class="product-thumbnail">
+                                        <img class="img-responsive" src="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" data-lazyload="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="product-box">
+                                    <div class="product-thumbnail">
+                                        <img class="img-responsive" src="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" data-lazyload="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="product-box">
+                                    <div class="product-thumbnail">
+                                        <img class="img-responsive" src="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" data-lazyload="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="product-box">
+                                    <div class="product-thumbnail">
+                                        <img class="img-responsive" src="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" data-lazyload="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="product-box">
+                                    <div class="product-thumbnail">
+                                        <img class="img-responsive" src="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" data-lazyload="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="product-box">
+                                    <div class="product-thumbnail">
+                                        <img class="img-responsive" src="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" data-lazyload="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="product-box">
+                                    <div class="product-thumbnail">
+                                        <img class="img-responsive" src="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" data-lazyload="https://www.ccjabersauto.com/templates/1006/images/400x250.gif" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="sidebar-item">
+                            <div class="module-header">
+                                <h2 class="module-title libra-health___title">
+                                    <span>
+                                    <i class="fa fa-comments" aria-hidden="true"></i> Lời cảm ơn
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="module-content">
+                                <div class="module-feedback owl-carousel owl-theme nav-enable nav-bottom-right" data-lg-items="1" data-md-items="1" data-sm-items="3" data-xs-items="2" data-xxs-items="1" data-margin="30" data-nav="true" data-loop="true" data-autoplay="true">
+                                    <div class="item">
+                                        <div class="feedback_image">
+                                            <img src="//bizweb.dktcdn.net/100/326/299/themes/691188/assets/swing.svg?1540961616376" data-lazyload="//bizweb.dktcdn.net/100/326/299/themes/691188/assets/feedback_1_image.png?1540961616376" class="img-responsive" alt="i-class-fa-fa-comments-aria-hidden-true-i-loi-cam-on">
+                                        </div>
+                                        <div class="feedback_info">
+                                            <div class="feedback_title">
+                                                --- <strong>Allison Argent</strong> ---
+                                            </div>
+                                            <div class="feedback_desc">
+                                                "Libra Health có nhiều chính sách khám chữa bệnh rất hay nên tôi rất thích. Nhà tôi mới đăng ký Thẻ khám bệnh gia đình xong, thế là cả nhà tôi sẽ đi khám miễn phí cả năm."
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

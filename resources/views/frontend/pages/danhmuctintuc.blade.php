@@ -30,20 +30,44 @@
                     </h1>
                     <div class="fw">
                         <article class="article-item blog-article-item">
-                            <div class="article-thumbnail image-hover-1">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4 image-hover-1">
                                 <a href="{{route('getChiTietDuAn')}}" title="NGÀY 03/06/2018 ĐOÀN TN KẾT HỢP VỚI CÔNG ĐOÀN CÔNG TY TỔ CHỨC 'NGÀY HỘI THIẾU NHI HODECO' CHO CON EM CB-CNV CÔNG TY">
-                                <img src="https://lh3.googleusercontent.com/nnRmCRKlSGvjPuUhHDwHOpRcCGGXsS8KH7reU_kYEaGFoPydUq1A7Do7lSIIBu9LxloHdA7_4e4F8hoL8YUnjJkGCXc_drhueGZZ_k9napfJNLASgMJXuQa1J7T3VQMbvXQFL0tvTC2sGB_YKTmt9JKd4CrCh5qq8l8sq_jSL6M5om-5Lcap9mWULfv0eQ6BFkZ0GIyBEn3gogvj1hSss0VVTHtfhB9ZIq8zjZ5OiR1ik46r3l2T006ZLcWbtzEmwfaHkGA9hMBKdJRHtB_XUkduUzWP3vn7HXKyTX0MqllSNuc7CvKbdWo3Weae3yk9wxkQd65agxFrdXtn_7iA71XVpqbx_s3csll5WWibb2cEbaqCoMXMFAgSRlUKCitkHbMSw5T3zu0d1oSKRLVrGgny1xCuayyJVgBScu-P-t7w5S6zqDxsH2pgAcVlLdBrMT3Ird_cbmVcRDDPRywoZF74iEPhNH8As1iUbEa16jDDS5nOW7uH-OhZIrzT61yDpaR5bmVD_8fj-CDGwgQ6LPLzedtcBDBAyxT17ZobayfQFOCtKf_Kdmxw9ytrTo4l7JO8lztR6wRNfbqp17---t3EGeSYwFCP4j_BFc8UfaZqrf5NLubwkr9g0k87RBAW28TEIBD2dEZmwO-fuemeQvgW--uqqPPj=w960-h638-no" data-lazyload="https://lh3.googleusercontent.com/nnRmCRKlSGvjPuUhHDwHOpRcCGGXsS8KH7reU_kYEaGFoPydUq1A7Do7lSIIBu9LxloHdA7_4e4F8hoL8YUnjJkGCXc_drhueGZZ_k9napfJNLASgMJXuQa1J7T3VQMbvXQFL0tvTC2sGB_YKTmt9JKd4CrCh5qq8l8sq_jSL6M5om-5Lcap9mWULfv0eQ6BFkZ0GIyBEn3gogvj1hSss0VVTHtfhB9ZIq8zjZ5OiR1ik46r3l2T006ZLcWbtzEmwfaHkGA9hMBKdJRHtB_XUkduUzWP3vn7HXKyTX0MqllSNuc7CvKbdWo3Weae3yk9wxkQd65agxFrdXtn_7iA71XVpqbx_s3csll5WWibb2cEbaqCoMXMFAgSRlUKCitkHbMSw5T3zu0d1oSKRLVrGgny1xCuayyJVgBScu-P-t7w5S6zqDxsH2pgAcVlLdBrMT3Ird_cbmVcRDDPRywoZF74iEPhNH8As1iUbEa16jDDS5nOW7uH-OhZIrzT61yDpaR5bmVD_8fj-CDGwgQ6LPLzedtcBDBAyxT17ZobayfQFOCtKf_Kdmxw9ytrTo4l7JO8lztR6wRNfbqp17---t3EGeSYwFCP4j_BFc8UfaZqrf5NLubwkr9g0k87RBAW28TEIBD2dEZmwO-fuemeQvgW--uqqPPj=w960-h638-no" class="img-responsive" alt="Du Lịch Đại Dương">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAM1BMVEXMzMyVlZWTk5PLy8uXl5fPz8+5ubnHx8ednZ2ampq1tbXDw8O8vLzAwMCtra2ioqKnp6dvyVRkAAAEbUlEQVR4nO3Y7ZajNgyAYfyBAWMM93+1lWQgJLPbSff0dMjp+/zYDIF1sLBlma4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwv9OLl+PX8P2jqX2rpZw2p1rw8jpdccwnnYdDT81sthVJrTcN5POenw1Ck5SX86n/eTFkn5+KY93sNeY1yWI+uDJueXtMbXRm20Tk3bnt8Q5GW3LQd8RzyGC8/dGOzdNl56XZqx2lqh7WN8rC10+P3I+W4NK7t2kUjJNa9pRrt9JTvPn/6Ue8yrdIVGxmzdGwt8s/YnnaSR1uTXFSHv21HWsoxujVliWnVoRCqNJIlEL5FW0O0LvJD63sT8ecs3k1yz2V0Xp9fn1yMS9dL9zZ9nBoyec4pRv9dT2a9VOeeb4Nq8DHmvpfwRmupSsuhG6Tluw+UIVvnddzbpzzcbdAOuFUHhsysmPpulsf7XR6QuTHJJX2R/6IxSV6GhQRZDnXIDfIL9fyBe+t77as+Tp33R+dl+IxFh020DlpPzpiEQewfl0D1s003HVP6x975QWKiA0Omji+6ilmoPsEgsdCsukg2KPqFDXwZL9FNOqWy5Ibj6fab937suyXK55cZJeGLk4ZxbC3K7Is6AtMUvY08yV/lv+zaHwpBMmPUO11iG+kh2srTb9GNFpO45+DOYhJjnCVxSP788siTpqKhtWAZarUReLYwx3OJu7M559Emu+RaeYoWk8me8jGldA65Mya5TjFWHVrrl9Sgq4tFN7jYYiJhtZhIy3uGch8QkyJVw5745E9bhPeRrw/Z1p9j5JvQyZQaNXzlNe9KJo1t2Q4+TkdMxv4x+2R58unmC0+ngfBuT3xvxaQlznWvQ55oSFr98eExGUqSKtzu+M2YaLFxlnWXr7OLtl51Hx+T7lGznTl2+n2OVUGybKyvrSySX6d8XPElx04flGOVJNOpf2/dUbrCftm4aCDPQH30umMd082Kb/WJt1XjUZ/E1/pEFR/j68albXiOFPPb+kTm1N3rk7mm/hETrcC1jp33vKKV+dDq2GtC7XVEyJVPLUnibQt5s5e+w2i7g052f1bMaB17802g3mLXnQXr635naPsd7dDlDYqWK2N62eFKE60i2ZW23znmzLHf2X61XN3Loq8Kgu1G8lGcFUuh9gJFs8EYuty2PQeZF61mu+4LZUDopXbejqP2PmgD1lJrY9nTzJ1pp6eq79ZsVbDHOebH+5MifdiszH10f9EsI7W9XvkYPZIw3JaysaJNK9dajw2UbS/X9AnvT2RaeHsbNu2LQWlvx+I+BEJtpy97Wd3vaNVi79HOqsWmjhx75/dd0Nxa9seGWgbK9YfubKkyb+J63GmQ+k0Oz1kxVH0Tt11eLdu+eNEz8umfdsuHFsBFX+U+3uzqm17/3pvdHxeWlMplPM8lpeXl9NNWT76wjs1p/+P89rBfPmhLlxBIy+X2EwcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/thfd/YmrD763FMAAAAASUVORK5CYII=" class="img-responsive" alt="Du Lịch Đại Dương">
                                 </a>
                             </div>
-                            <div class="article-info">
-                                <h3 class="fw article-title">
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                <h4 class="fw article-title">
                                     <a href="{{route('getChiTietTinTuc')}}" title="NGÀY 03/06/2018 ĐOÀN TN KẾT HỢP VỚI CÔNG ĐOÀN CÔNG TY TỔ CHỨC 'NGÀY HỘI THIẾU NHI HODECO' CHO CON EM CB-CNV CÔNG TY">
                                     <span>NGÀY 03/06/2018 ĐOÀN TN KẾT HỢP VỚI CÔNG ĐOÀN CÔNG TY TỔ CHỨC 'NGÀY HỘI THIẾU NHI HODECO' CHO CON EM CB-CNV CÔNG TY</span>
                                     </a>
-                                </h3>
-                                <div class="article-summary">
-                                    <i class="fa fa-edit" aria-hidden="true"></i> Nhân ngày quốc tế thiếu nhi 01/06, hưởng ứng Tháng hành động Vì trẻ em, ngày 03/06/2018,  Đoàn thanh niên phối hợp với Công đoàn công ty đã tổ chức chương trình “Ngày hội thiếu nhi HODECO” cho các cháu thiếu nhi là con em CB-CNV công ty. Đây thực sự là hoạt động ý nghĩa cho các cháu được vui chơi, giao lưu trong không khí vui tươi, đầm ấm.
+                                </h4>
+                                <div class="hidden-xs article-summary" style="height: px;overflow: hidden;">
+                                    <i class="fa fa-edit" aria-hidden="true"></i> Nhân ngày quốc tế thiếu nhi 01/06, hưởng ứng Tháng hành động Vì trẻ em, ngày 03/06/2018,  Đoàn thanh niên phối hợp với Công đoàn công ty đã tổ chức chương trình “Ngày hội thiếu nhi HODECO” cho các cháu ....
                                 </div>
+                                <div class="clearfix"></div>
+                                <div class="libra-health___viewmore">
+                                    <a href="{{route('getChiTietTinTuc')}}" title="Xem chi tiết">
+                                    <span>Xem chi tiết</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="article-item blog-article-item">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4 image-hover-1">
+                                <a href="{{route('getChiTietDuAn')}}" title="NGÀY 03/06/2018 ĐOÀN TN KẾT HỢP VỚI CÔNG ĐOÀN CÔNG TY TỔ CHỨC 'NGÀY HỘI THIẾU NHI HODECO' CHO CON EM CB-CNV CÔNG TY">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAM1BMVEXMzMyVlZWTk5PLy8uXl5fPz8+5ubnHx8ednZ2ampq1tbXDw8O8vLzAwMCtra2ioqKnp6dvyVRkAAAEbUlEQVR4nO3Y7ZajNgyAYfyBAWMM93+1lWQgJLPbSff0dMjp+/zYDIF1sLBlma4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwv9OLl+PX8P2jqX2rpZw2p1rw8jpdccwnnYdDT81sthVJrTcN5POenw1Ck5SX86n/eTFkn5+KY93sNeY1yWI+uDJueXtMbXRm20Tk3bnt8Q5GW3LQd8RzyGC8/dGOzdNl56XZqx2lqh7WN8rC10+P3I+W4NK7t2kUjJNa9pRrt9JTvPn/6Ue8yrdIVGxmzdGwt8s/YnnaSR1uTXFSHv21HWsoxujVliWnVoRCqNJIlEL5FW0O0LvJD63sT8ecs3k1yz2V0Xp9fn1yMS9dL9zZ9nBoyec4pRv9dT2a9VOeeb4Nq8DHmvpfwRmupSsuhG6Tluw+UIVvnddzbpzzcbdAOuFUHhsysmPpulsf7XR6QuTHJJX2R/6IxSV6GhQRZDnXIDfIL9fyBe+t77as+Tp33R+dl+IxFh020DlpPzpiEQewfl0D1s003HVP6x975QWKiA0Omji+6ilmoPsEgsdCsukg2KPqFDXwZL9FNOqWy5Ibj6fab937suyXK55cZJeGLk4ZxbC3K7Is6AtMUvY08yV/lv+zaHwpBMmPUO11iG+kh2srTb9GNFpO45+DOYhJjnCVxSP788siTpqKhtWAZarUReLYwx3OJu7M559Emu+RaeYoWk8me8jGldA65Mya5TjFWHVrrl9Sgq4tFN7jYYiJhtZhIy3uGch8QkyJVw5745E9bhPeRrw/Z1p9j5JvQyZQaNXzlNe9KJo1t2Q4+TkdMxv4x+2R58unmC0+ngfBuT3xvxaQlznWvQ55oSFr98eExGUqSKtzu+M2YaLFxlnWXr7OLtl51Hx+T7lGznTl2+n2OVUGybKyvrSySX6d8XPElx04flGOVJNOpf2/dUbrCftm4aCDPQH30umMd082Kb/WJt1XjUZ/E1/pEFR/j68albXiOFPPb+kTm1N3rk7mm/hETrcC1jp33vKKV+dDq2GtC7XVEyJVPLUnibQt5s5e+w2i7g052f1bMaB17802g3mLXnQXr635naPsd7dDlDYqWK2N62eFKE60i2ZW23znmzLHf2X61XN3Loq8Kgu1G8lGcFUuh9gJFs8EYuty2PQeZF61mu+4LZUDopXbejqP2PmgD1lJrY9nTzJ1pp6eq79ZsVbDHOebH+5MifdiszH10f9EsI7W9XvkYPZIw3JaysaJNK9dajw2UbS/X9AnvT2RaeHsbNu2LQWlvx+I+BEJtpy97Wd3vaNVi79HOqsWmjhx75/dd0Nxa9seGWgbK9YfubKkyb+J63GmQ+k0Oz1kxVH0Tt11eLdu+eNEz8umfdsuHFsBFX+U+3uzqm17/3pvdHxeWlMplPM8lpeXl9NNWT76wjs1p/+P89rBfPmhLlxBIy+X2EwcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/thfd/YmrD763FMAAAAASUVORK5CYII=" class="img-responsive" alt="Du Lịch Đại Dương">
+                                </a>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                <h4 class="fw article-title">
+                                    <a href="{{route('getChiTietTinTuc')}}" title="NGÀY 03/06/2018 ĐOÀN TN KẾT HỢP VỚI CÔNG ĐOÀN CÔNG TY TỔ CHỨC 'NGÀY HỘI THIẾU NHI HODECO' CHO CON EM CB-CNV CÔNG TY">
+                                    <span>NGÀY 03/06/2018 ĐOÀN TN KẾT HỢP VỚI CÔNG ĐOÀN CÔNG TY TỔ CHỨC 'NGÀY HỘI THIẾU NHI HODECO' CHO CON EM CB-CNV CÔNG TY</span>
+                                    </a>
+                                </h4>
+                                <div class="hidden-xs article-summary" style="height: px;overflow: hidden;">
+                                    <i class="fa fa-edit" aria-hidden="true"></i> Nhân ngày quốc tế thiếu nhi 01/06, hưởng ứng Tháng hành động Vì trẻ em, ngày 03/06/2018,  Đoàn thanh niên phối hợp với Công đoàn công ty đã tổ chức chương trình “Ngày hội thiếu nhi HODECO” cho các cháu....
+                                </div>
+                                <div class="clearfix"></div>
                                 <div class="libra-health___viewmore">
                                     <a href="{{route('getChiTietTinTuc')}}" title="Xem chi tiết">
                                     <span>Xem chi tiết</span>
@@ -70,22 +94,7 @@
                     </nav>
                 </div>
             </div>
-            <aside class="dqdt-sidebar sidebar left left-content col-lg-3 col-md-3 col-sm-12 col-xs-12 col-lg-pull-9 col-md-pull-9 col-sm-12 col-xs-12">
-                <!-- DANH MỤC SẢN PHẨM -->
-                <!-- <div class="sidebar-item sidebar-menu sidebar-collection-menu hidden-lg hidden-md">
-                    <div class="module-header">
-                        <h2 class="module-title libra-health___title">
-                            <span>Danh mục Tin Tức</span>
-                        </h2>
-                    </div>
-                    <div class="sidebar-menu-content module-content">
-                        <div class="sidebar-linklists">
-                            <ul>
-                            </ul>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- FILTERS -->
+            <aside class="col-xs-12 col-md-4 col-sm-4 col-lg-3 col-md-pull-8 col-lg-pull-9 dqdt-sidebar sidebar left left-content">
                 <div class="aside-filter sidebar-item">
                     <div class="sidebar-item sidebar-menu sidebar-blog-menu item-border">
                         <div class="module-header">

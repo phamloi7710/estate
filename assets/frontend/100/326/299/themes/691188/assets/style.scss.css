@@ -2949,10 +2949,15 @@ footer .back-to-top.show {
 	.article-item.blog-article-item .article-info {
 		width: 100%
 	}
+	.article-item.blog-article-item .article-title {
+		font-size: 10px;
+		top
+	}
 }
 
 .article-item.blog-article-item .article-title {
-	font-size: 1.28571em
+	font-size: 1em;
+	margin-bottom: 15px;
 }
 
 @media (min-width: 1200px) {

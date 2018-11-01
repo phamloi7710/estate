@@ -384,7 +384,7 @@ function lib_owl() {
 			});
 			// }).on('changed.owl.carousel', check_first_active); // check last active owl item
 		})
-	},300);
+	},30);
 } window.lib_owl=lib_owl;
 
 /* check last active owl-item */

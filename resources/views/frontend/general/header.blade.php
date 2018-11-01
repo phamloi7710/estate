@@ -25,54 +25,10 @@
         <meta property="og:url" content="#">
         <meta property="og:site_name" content="Site Title">
         <link rel="icon" href="{{url('')}}/assets/logo-2.png" type="image/x-icon" />
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="{{url('')}}/assets/frontend/custom/custom.header.js"></script>
         <link href="{{url('')}}/assets/frontend/custom/custom.css" rel="stylesheet" type="text/css">
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123748707-1"></script>
         <script async src="{{url('')}}/assets/frontend/slider/jssor.slider-27.5.0.min.js"></script>
-        <script async src="{{url('')}}/assets/frontend/custom/custom.header.js"></script>
-        
-        <style>
-        .dv-messages {
-                position: fixed;
-                visibility: visible;
-                background-color: transparent;
-                width:110px;
-                height:110px;
-                z-index: 200000 !important;
-                
-                bottom: 20px;
-                font-size: 30px;
-                color: #2a7f49;
-                line-height: 1;
-                z-index: 10;
-                cursor: pointer;
-
-            }
-            .dv-messages-ph-img-circle {
-                width: 50px;
-                height: 50px;
-                top: 75px;
-                left: 40px;
-                position: absolute;
-                background: url("{{url('')}}/assets/frontend/img/fb-chat.png") no-repeat center center;
-                background-size: 100%;
-                opacity: 1;
-                -webkit-animation: dv-mobile-circle-img-anim 1s infinite ease-in-out;
-                -moz-animation: dv-mobile-circle-img-anim 1s infinite ease-in-out;
-                -ms-animation: dv-mobile-circle-img-anim 1s infinite ease-in-out;
-                -o-animation: dv-mobile-circle-img-anim 1s infinite ease-in-out;
-                animation: dv-mobile-circle-img-anim 1s infinite ease-in-out;
-                -webkit-transform-origin: 50% 50%;
-                -moz-transform-origin: 50% 50%;
-                -ms-transform-origin: 50% 50%;
-                -o-transform-origin: 50% 50%;
-                transform-origin: 50% 50%
-            }
-            .dv-messages{left:-30px}
-            .scrollq1{ z-index: 10; float: left; position: fixed; top: 122px; width: 100%;}
-            .scrollq3{ z-index: 10; position: fixed; top: 80px; width: 100%;}
-            
-        </style>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Plugin CSS -->
         <link href="{{url('')}}/assets/frontend/100/326/299/themes/691188/assets/plugin.scss.css" rel="stylesheet" type="text/css">
@@ -88,9 +44,17 @@
         <!-- ================= Fonts ================== -->
         <link href="//fonts.googleapis.com/css?family=Roboto:400,700' rel="stylesheet" type="text/css">
         <script>var ProductReviewsAppUtil=ProductReviewsAppUtil || {};</script>
+        <style>
+        .scrollq-desktop{ z-index: 10; float: left; position: fixed; top: 122px; width: 100%;}
+        .scrollq-ipad{ z-index: 10; float: left; position: fixed; top: 80px; width: 100%;}
+        .scrollq-tablet{ z-index: 10; position: fixed; top: 80px; width: 100%;}
+        .scrollq-mobile{ z-index: 10; position: fixed; top: 80px; width: 100%;}
+        .scrollq{ z-index: 9999; position: fixed; left: 0; top: 0; width: 100%;}
+            
+        </style>
 
 <style>
-    .scrollq{ z-index: 9999; position: fixed; left: 0; top: 0; width: 100%;}
+    
     
 </style>
     </head>
@@ -130,7 +94,7 @@
                         <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3 hotline-mobile">
                             <a class="hotline" href="tel:0939080603">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="tiny" id="Icons" x="0px" y="0px" viewBox="0 0 395.5 347.5" xml:space="preserve">
-                                    <i style="font-size: 42px; padding-right: 4px; color: #2a7f49" class="fa fa-mobile"></i>
+                                    <i style="font-size: 42px; padding-right: 4px; color: #2a7f49;" class="fa fa-mobile icon-mobile-top"></i>
                                 </svg>
                                 <span class="hidden-sm hidden-xs">
                                 0939.080.603

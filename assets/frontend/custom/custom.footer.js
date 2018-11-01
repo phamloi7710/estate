@@ -9,15 +9,38 @@ $(document).ready(function(){
  	});
 	var tab = $('#tab');
         $(window).scroll(function () {
-        if ($(window).width() > 992 && $(this).scrollTop() > 480) {
-            tab.addClass("scrollq1");
-            tab.removeClass("scrollq3");
-        }else if ($(window).width() < 992 && $(this).scrollTop() > 300) {
-          tab.removeClass("scrollq1");
-          tab.addClass("scrollq3");
-        } else {
-            tab.removeClass("scrollq1");
-            tab.removeClass("scrollq3");
+        /*desktop*/
+        if ($(window).width() > 1336 && $(this).scrollTop() > 480) {
+          tab.addClass("scrollq-desktop");
+          tab.removeClass("scrollq-ipad");
+          tab.removeClass("scrollq-tablet");
+          tab.removeClass("scrollq-mobile");
+        }else /*Ipad*/
+        if ($(window).width() >= 1024 && $(window).width() < 1336 && $(this).scrollTop() > 480) {
+          tab.addClass("scrollq-ipad");
+          tab.removeClass("scrollq-desktop");
+          tab.removeClass("scrollq-tablet");
+          tab.removeClass("scrollq-mobile");
+        }
+        /*Tablet*/
+        else if ($(window).width() >= 992 && $(window).width() < 1024 && $(this).scrollTop() > 465) {
+          tab.removeClass("scrollq-desktop");
+          tab.removeClass("scrollq-mobile");
+          tab.removeClass("scrollq-ipad");
+          tab.addClass("scrollq-tablet");
+        }
+        /*Mobile*/
+        else if ($(window).width() > 752 && $(window).width() < 992 && $(this).scrollTop() > 870) {
+          tab.removeClass("scrollq-desktop");
+          tab.removeClass("scrollq-tablet");
+          tab.addClass("scrollq-mobile");
+          tab.removeClass("scrollq-ipad");
+        }
+        else{
+          tab.removeClass("scrollq-desktop");
+          tab.removeClass("scrollq-tablet");
+          tab.removeClass("scrollq-mobile");
+          tab.removeClass("scrollq-ipad");
         }
     });
 });

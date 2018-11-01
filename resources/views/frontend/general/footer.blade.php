@@ -49,7 +49,7 @@
                                             Website: 
                                             </label>
                                             <div class="contact-info">
-                                                <a href="www.osimi.vn">www.osimi.vn</a>
+                                                <a href="{{url('')}}">{{url('')}}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -119,7 +119,7 @@
                                 <a href="tel:0939080603">0939.080.603</a><span class="hidden-sm hidden-xs">(Miễn phí cuộc gọi)</span>
                             </div>
                             <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 copyright">
-                                <span>Bản quyền thuộc về <a href="#" title="Title Here" rel="nofollow" target="_blank"><strong>OSIMI.VN</strong></a></span><span class="hidden-xs"> | </span><span>Cung cấp bởi <a href="https://www.facebook.com/DichVuThietKeWebsiteGiaRe" title="Thiết Kế Website Giá Rẻ" rel="nofollow" target="_blank"><strong>Thiết Kế Website Giá Rẻ</strong></a></span>
+                                <span>Bản quyền thuộc về <a href="#" title="Title Here" rel="nofollow" target="_blank"><strong>OSIMI.VN</strong></a></span><span class="hidden-xs">
                             </div>
                         </div>
                         <div class="back-to-top"><i class="fa fa-arrow-circle-up"></i></div>
@@ -234,9 +234,6 @@
             </div>
         </nav>
         <script type="text/javascript" src="{{url('')}}/assets/frontend/custom/custom.footer.js"></script>
-        <a href="#" class="dv-messages" title="#">
-            <div class="dv-messages-ph-img-circle"></div>
-        </a>
         <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
         (function(){

@@ -96,17 +96,23 @@
                                                 <header id="tab" class="header">
                                                     <nav>
                                                         <ul class="nav" >
-                                                            <li class="nav-item-parent active">
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 nav-item-parent active">
                                                                 <a class="nav-link" data-toggle="tab" href="#tab1"><b>Giới Thiệu</b></a>
                                                             </li>
-                                                            <li class="nav-item-parent">
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 nav-item-parent">
                                                                 <a class="nav-link" data-toggle="tab" href="#tab2"><b>Quy Mô</b></a>
                                                             </li>
-                                                            <li class="nav-item-parent">
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 nav-item-parent">
                                                                 <a class="nav-link" data-toggle="tab" href="#tab3"><b>Hình Ảnh</b></a>
                                                             </li>
-                                                            <li class="nav-item-parent">
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 nav-item-parent">
                                                                 <a class="nav-link" data-toggle="tab" href="#tab4"><b>Tiến Độ</b></a>
+                                                            </li>
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 nav-item-parent">
+                                                                <a class="nav-link" data-toggle="tab" href="#tab5"><b>Video</b></a>
+                                                            </li>
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 nav-item-parent">
+                                                                <a class="nav-link" data-toggle="tab" href="#tab6"><b>TAB 6</b></a>
                                                             </li>
                                                         </ul>
                                                     </nav>
@@ -168,6 +174,12 @@
                                                         <p style="text-align:center"><img alt="" src="https://lh3.googleusercontent.com/5IxqkrzR90wh24lqjkeUZbCQvqH4TQQllO1JsjiaB4wl_mXd40PVQkroe6yD39pHK8qajob4U9Gcd-tkCLuwWcyw2H0EdLP4CHg9F_cx5VbWwxvra3GqHxQTiGiaoe3pIb3BrhEXNUk2Y0CW5ybHt-Jkr41v74MV_CsM2fjfWr5tssaTUPBBvMIje98QeIp_T5rfrNfkLBqb8z5t5PJfi4sgPquvIzsEdTDj9eMbWvO2HZZLGQosix_iUWL_TVjvQq32uEjSOVIK-yNaKkt_NWHvlBDN4S5QI07_Cnm1X1t8xLdScgxOCyv5FMPWf1OFAlSTJdZLPmgy7z8Fp0ziwHqPHnHqE_VqBXV0cn5LZWV7MabJwUNEHlho3wz_Nm1WE63BgAU2wQ2BMYG_VwD_h0bAUUMFTtx2mP_ROyAN1bLic6HsYVhWyks9t5UR8TxLYhTMpwP0uxqFwpK5quO83G4Igrslt84FOtBKAaAuEvWShlqjJxLKnPpsYSM5IEr7n8jjEeHvryV_ktBFvmvKKo-dVUHr-Y8qwdScRT6hiT57uJ2j0OC5dst4i_E_TbAsERk9BiQ7WvnDnRo-o2FZgGVcZdUD6BZR_x60CBLcpg4JcoJqX4O-3aOjJmTK6hmxrv1NJMspH6DAEhEMI7vLbA_Q4PLLUaeB=w1000-h667-no" style="border:0px; box-sizing:border-box; font-family:times new roman,times,serif; font-size:16px; height:500px; max-width:100%; text-align:center; vertical-align:middle; width:750px"></p>
                                                         <p></p>
                                                         <p></p>
+                                                    </div>
+                                                    <div id="tab5" class="tab-pane fade">
+                                                        Tab 5
+                                                    </div>
+                                                    <div id="tab6" class="tab-pane fade">
+                                                        Tab 6
                                                     </div>
                                                 </div>
                                             </div>
