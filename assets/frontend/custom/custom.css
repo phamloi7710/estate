@@ -1,124 +1,75 @@
 
 #tab{
     left: 0;
+    width: 100%;
+    text-transform: uppercase;
+
 }
 #tab nav {
     background: #32A22D;
-    text-transform: uppercase;
-    font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", sans-serif;
-}
 
-#tab nav .nav {
-    position: relative
-}
-#tab nav .nav li{
-    border-right: #fff solid 1px;
-}
-#tab nav .nav-item-parent {
-    float: left;
-    position: relative;
-    @indluce transition(border-bottom ease 200ms)
-}
-
-#tab nav .nav-item-parent:before {
-    position: relative;
-    content: "";
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    border-bottom: #fff 3px solid;
-    -webkit-transition: all ease 500ms;
-    -moz-transition: all ease 500ms;
-    -ms-transition: all ease 500ms;
-    -o-transition: all ease 500ms;
-    transition: all ease 500ms
-}
-
-#tab nav .nav-item-parent:hover:before {
-    left: 0;
-    right: 0
-}
-
-#tab nav .nav-item-parent:hover>a {
-    background: transparent;
-}
-
-#tab nav .nav-item-parent:focus {
-    background-color: transparent
-}
-
-#tab nav .nav-item-parent>a {
-    line-height: 1.30;
+    font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", "sans-serif";
     color: #fff;
-    font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", sans-serif;
-    padding: 10px 20px;
-    position: relative;
-    text-transform: uppercase;
-    height: 40px;
-}
-
-#tab nav .nav-item-parent>a>.fa {
-    position: relative;
-    right: 0;
-    width: 20px;
-    top: 50%;
-    text-align: center;
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-transition: all ease 300ms;
-    -moz-transition: all ease 300ms;
-    -ms-transition: all ease 300ms;
-    -o-transition: all ease 300ms;
-    transition: all ease 300ms
-}
-#tab nav .nav-item-parent:hover>.mega-content {
-    display: block
-}
-
-#tab nav .nav-item-parent li {
-    position: relative;
-    border-left: transparent 3px solid;
-    font-size: 1em
-}
-
-#tab nav .nav-item-parent li:not(:last-child) {
-    border-bottom: #dedede 1px dotted
-}
-
-#tab nav .nav-item-parent li:hover {
-    border-left: red 3px solid
-}
-#tab nav .nav-item-parent a:hover {
-    position: relative;
-    content: "";
-    bottom: 0;
-    background-color: #32A22D;
-
-}
-#tab nav .nav-item-parent.active{
-    background-color: #2A7F49;
-    color: #F26A29;
-}
-#tab nav .nav-item-parent.active>a{
-    background-color: #2A7F49;
-    color: #F26A29;
+    
 }
 #tab nav li{
+    /*border-right: #fff solid 1px;*/
     border-bottom: #fff solid 1px;
+    float: left;
 }
-@media (min-width: 320px) and (max-width: 991px) {
+#tab nav li:hover{
+    
+}
+#tab nav li.nav-item{
+    background-color: #32A22D !important;
+}
+#tab nav li a{
+    text-align: center;
+}
+@media (min-width: 1024px){
+    
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    #tab nav{
+        font-size: 12px;
+    }
     #tab nav li{
-        text-align: center;
-        font-size: 11px;
+        width: auto;
+    }
+    #tab nav li a{
+        line-height: 30px;
     }
 }
-@media (min-width: 992px) {
+@media (min-width: 375px) and (max-width: 767px) {
+    #tab nav{
+        font-size: 10px;
+        
+    }
     #tab nav li{
-        text-align: center;
-        font-size: 13px;
+        width: 25%;
+
+    }
+    #tab nav li a{
+        padding-left: 1px;
+        line-height: 30px;
+        text-transform: unset;
+
+    }
+}
+@media (max-width: 374px) {
+    #tab nav{
+        font-size: 10px;
+        
+    }
+    #tab nav li{
+        width: 25%;
+
+    }
+    #tab nav li a{
+        padding-left: 1px;
+        line-height: 30px;
+        text-transform: unset;
+
     }
 }
 .icon-mobile-top{

@@ -1165,10 +1165,10 @@ header nav .nav-item {
 	float: left;
 	position: relative;
 	/*border-right: #fff solid 1px;*/
-	border-bottom-left-radius: 20px;
+	/*border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
+	border-top-right-radius: 20px;*/
 	background-color: #F26A29;
 	margin-right: 1px;
 	@indluce transition(border-bottom ease 200ms)

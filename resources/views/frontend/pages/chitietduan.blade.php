@@ -42,17 +42,17 @@
                     <div class="social-sharing">
                         <div class="social-media social-icons" data-permalink="">
                             <div class="sharing-item">
-                                <a target="_blank" href="//www.facebook.com/sharer.php?u=https://libra-health.bizwebvietnam.net/chan-doan-hinh-anh-va-tham-do-chuc-nang" class="share-facebook txt-facebook hv-bg-facebook hv-bd-facebook" title="Chia sẻ lên Facebook">
+                                <a target="_blank" href="//www.facebook.com/sharer.php?u=[URL_HERE]" class="share-facebook txt-facebook hv-bg-facebook hv-bd-facebook" title="Chia sẻ lên Facebook">
                                 <span class="icon icon-facebook" aria-hidden="true">
                                 <i class="fa fa-facebook"></i>
                                 </span>
                                 </a>
-                                <a target="_blank" href="//twitter.com/share?text=chan-doan-hinh-anh-va-tham-do-chuc-nang&amp;url=https://libra-health.bizwebvietnam.net/chan-doan-hinh-anh-va-tham-do-chuc-nang" class="share-twitter txt-twitter hv-bg-twitter hv-bd-twitter" title="Chia sẻ lên Twitter">
+                                <a target="_blank" href="//twitter.com/share?text=chan-doan-hinh-anh-va-tham-do-chuc-nang&amp;url=[URL_HERE]" class="share-twitter txt-twitter hv-bg-twitter hv-bd-twitter" title="Chia sẻ lên Twitter">
                                 <span class="icon icon-twitter" aria-hidden="true">
                                 <i class="fa fa-twitter"></i>
                                 </span>
                                 </a>
-                                <a target="_blank" href="//plus.google.com/share?url=https://libra-health.bizwebvietnam.net/chan-doan-hinh-anh-va-tham-do-chuc-nang" class="share-google txt-google-plus hv-bg-google-plus hv-bd-google-plus" title="+1 lên Google Plus">
+                                <a target="_blank" href="//plus.google.com/share?url=[URL_HERE]" class="share-google txt-google-plus hv-bg-google-plus hv-bd-google-plus" title="+1 lên Google Plus">
                                 <span class="icon icon-google-plus" aria-hidden="true">
                                 <i class="fa fa-google-plus"></i>
                                 </span>
@@ -95,26 +95,60 @@
                                             <div class="section_product_type_1 e-tabs not-coltabs">
                                                 <header id="tab" class="header">
                                                     <nav>
-                                                        <ul class="nav" >
-                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 nav-item-parent active">
-                                                                <a class="nav-link" data-toggle="tab" href="#tab1"><b>Giới Thiệu</b></a>
+                                                        <!-- <ul class="nav" >
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-3 active">
+                                                                <a class="nav-link" data-toggle="tab" href="#tab1">Giới Thiệu</a>
                                                             </li>
-                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 nav-item-parent">
-                                                                <a class="nav-link" data-toggle="tab" href="#tab2"><b>Quy Mô</b></a>
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                                                                <a class="nav-link" data-toggle="tab" href="#tab2">Vị Trí</a>
                                                             </li>
-                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 nav-item-parent">
-                                                                <a class="nav-link" data-toggle="tab" href="#tab3"><b>Hình Ảnh</b></a>
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                                                                <a class="nav-link" data-toggle="tab" href="#tab3">Thiết Kế</a>
                                                             </li>
-                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 nav-item-parent">
-                                                                <a class="nav-link" data-toggle="tab" href="#tab4"><b>Tiến Độ</b></a>
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                                                                <a class="nav-link" data-toggle="tab" href="#tab4">Tiện Ích</a>
                                                             </li>
-                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 nav-item-parent">
-                                                                <a class="nav-link" data-toggle="tab" href="#tab5"><b>Video</b></a>
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                                                                <a class="nav-link" data-toggle="tab" href="#tab5">Thanh Toán</a>
                                                             </li>
-                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 nav-item-parent">
-                                                                <a class="nav-link" data-toggle="tab" href="#tab6"><b>TAB 6</b></a>
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                                                                <a class="nav-link" data-toggle="tab" href="#tab6">Hình Ảnh</a>
                                                             </li>
-                                                        </ul>
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                                                                <a class="nav-link" data-toggle="tab" href="#tab7">Video</a>
+                                                            </li>
+                                                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                                                                <a class="nav-link" data-toggle="tab" href="#tab8">Liên Hệ</a>
+                                                            </li>
+                                                        </ul> -->
+                                                        <div class="container">
+                                                            <ul class="nav">
+                                                                <li class="nav-item active">
+                                                                    <a class="nav-link" data-toggle="tab" href="#tab1">Giới Thiệu</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="tab" href="#tab2">Vị Trí</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="tab" href="#tab3">Thiết Kế</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="tab" href="#tab4">Tiện Ích</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="tab" href="#tab5">Thanh Toán</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="tab" href="#tab6">Hình Ảnh</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="tab" href="#tab7">Video</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="tab" href="#tab8">Liên Hệ</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </nav>
                                                 </header>
                                                 <div id="children_tab" class="tab-content">
@@ -180,6 +214,52 @@
                                                     </div>
                                                     <div id="tab6" class="tab-pane fade">
                                                         Tab 6
+                                                    </div>
+                                                    <div id="tab7" class="tab-pane fade">
+                                                        <iframe id="libra-health___player" class="libra-health___player" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="100%" height="auto" src="https://www.youtube.com/embed/xyle6vdA2qs?enablejsapi=1&amp;origin=https%3A%2F%2Flibra-health.bizwebvietnam.net&amp;widgetid=1"></iframe>
+                                                        <script>
+                            var ww = $(window).width();
+                            var videoWidth = 0,
+                            videoHeight = 0;
+                            function videoWidthHeight(){
+                                if (ww >= 1200 ){
+                                    videoWidth = 360;
+                                    videoHeight = 270;
+                                } else if (ww >= 992 && ww <= 1199){
+                                    videoWidth = 292;
+                                    videoHeight = 219;
+                                } else if (ww >= 768 && ww <= 991){
+                                    videoWidth = 750;
+                                    videoHeight = 410;
+                                } else if (ww >= 543 && ww < 767){
+                                    videoWidth = '100%';
+                                    videoHeight = 385;
+                                } else if (ww >= 320 && ww < 542){
+                                    videoWidth = '100%';
+                                    videoHeight = 220;
+                                }
+                            }
+                            videoWidthHeight();
+                            $(window).on('resize', function(){
+                                ww = $(window).width();
+                                videoWidthHeight();
+                            });
+                            var tag = document.createElement('script');
+                            tag.src = "https://www.youtube.com/iframe_api";
+                            var firstScriptTag = document.getElementsByTagName('script')[0];
+                            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                            var player;
+                            function onYouTubeIframeAPIReady() {
+                                player = new YT.Player('libra-health___player', {
+                                    height: videoHeight,
+                                    width: videoWidth,
+                                    videoId: 'xyle6vdA2qs'
+                                });
+                            }
+                        </script>
+                                                    </div>
+                                                    <div id="tab8" class="tab-pane fade">
+                                                        Tab 8
                                                     </div>
                                                 </div>
                                             </div>

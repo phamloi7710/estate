@@ -29,7 +29,7 @@
         <link href="{{url('')}}/assets/frontend/custom/custom.css" rel="stylesheet" type="text/css">
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123748707-1"></script>
         <script async src="{{url('')}}/assets/frontend/slider/jssor.slider-27.5.0.min.js"></script>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Plugin CSS -->
         <link href="{{url('')}}/assets/frontend/100/326/299/themes/691188/assets/plugin.scss.css" rel="stylesheet" type="text/css">
         <!-- Build Main CSS -->                             

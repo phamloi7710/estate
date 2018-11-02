@@ -30,10 +30,10 @@ $(document).ready(function(){
           tab.addClass("scrollq-tablet");
         }
         /*Mobile*/
-        else if ($(window).width() > 752 && $(window).width() < 992 && $(this).scrollTop() > 870) {
+        else if ($(window).width() < 992 && $(this).scrollTop() > 465) {
+          tab.addClass("scrollq-mobile");
           tab.removeClass("scrollq-desktop");
           tab.removeClass("scrollq-tablet");
-          tab.addClass("scrollq-mobile");
           tab.removeClass("scrollq-ipad");
         }
         else{

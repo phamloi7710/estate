@@ -13,12 +13,11 @@
             <div class="left-custom-menu-adp-wrap">
                 <ul class="nav navbar-nav left-sidebar-menu-pro">
                     <li class="nav-item">
-                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn">Home</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
+                        <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fa big-icon fa-home"></i> <span class="mini-dn"> Sliders</span> <span class="indicator-right-menu mini-dn"><i class="fa indicator-mn fa-angle-left"></i></span></a>
                         <div role="menu" class="dropdown-menu left-menu-dropdown animated flipInX">
-                            <a href="dashboard.html" class="dropdown-item">Dashboard v.1</a>
-                            <a href="dashboard-2.html" class="dropdown-item">Dashboard v.2</a>
-                            <a href="analytics.html" class="dropdown-item">Analytics</a>
-                            <a href="widgets.html" class="dropdown-item">Widgets</a>
+                            <a href="#" class="dropdown-item">Thêm Mới</a>
+                            <a href="{{route('getListSliderAdmin')}}" class="dropdown-item">Danh Sách</a>
+                            
                         </div>
                     </li>
                 </ul>
@@ -36,15 +35,11 @@
                     <div class="mobile-menu">
                         <nav id="dropdown">
                             <ul class="mobile-menu-nav">
-                                <li><a data-toggle="collapse" data-target="#Charts" href="#">Home <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
+                                <li><a data-toggle="collapse" data-target="#Charts" href="#">Sliders <span class="admin-project-icon adminpro-icon adminpro-down-arrow"></span></a>
                                     <ul class="collapse dropdown-header-top">
-                                        <li><a href="dashboard.html">Dashboard v.1</a>
+                                        <li><a href="#">Thêm Mới</a>
                                         </li>
-                                        <li><a href="dashboard-2.html">Dashboard v.2</a>
-                                        </li>
-                                        <li><a href="analytics.html">Analytics</a>
-                                        </li>
-                                        <li><a href="widgets.html">Widgets</a>
+                                        <li><a href="{{route('getListSliderAdmin')}}">Danh Sách</a>
                                         </li>
                                     </ul>
                                 </li>
