@@ -361,9 +361,10 @@
 }
 
 .section_service .section_service___item .item {
-	width: 100%;
-	float: left
+	width: 65%;
+	float: left;
 }
+
 
 .section_service .section_service___item .item:hover .section_service___image {
 	border: red 2px solid
@@ -405,6 +406,9 @@
 		height: 165px;
 		margin-bottom: 10px
 	}
+	.section_service .section_service___item .item {
+		margin-left: 50px;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -413,11 +417,14 @@
 		height: 131.66px;
 		margin-bottom: 10px
 	}
+	.section_service .section_service___item .item {
+		margin-left: 50px;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
 	.section_service .section_service___item .section_service___image {
-		width: 100%;
+		width: 155%;
 		height: 157.5px;
 		margin-bottom: 10px
 	}
@@ -425,7 +432,7 @@
 
 @media (min-width: 543px) and (max-width: 767px) {
 	.section_service .section_service___item .section_service___image {
-		width: 100%;
+		width: 115%;
 		height: 241.5px;
 		margin-bottom: 10px
 	}
@@ -445,13 +452,16 @@
 	-moz-transition: all ease 500ms;
 	-ms-transition: all ease 500ms;
 	-o-transition: all ease 500ms;
-	transition: all ease 500ms
+	transition: all ease 500ms;
+
 }
 
 .section_service .section_service___item .section_service___name {
 	text-align: center;
-	margin: 0
+	margin: 0;
+
 }
+
 
 @media (min-width: 1200px) {
 	.section_service .section_service___item .section_service___name {
@@ -484,7 +494,8 @@
 @media (min-width: 320px) and (max-width: 542px) {
 	.section_service .section_service___item .section_service___name {
 		font-size: 1em;
-		font-weight: 700
+		font-weight: 700;
+		margin-left: 12px;
 	}
 }
 

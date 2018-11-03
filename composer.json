@@ -9,6 +9,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
+        "spatie/laravel-permission": "^2.22",
         "unisharp/laravel-filemanager": "^1.9"
     },
     "require-dev": {
@@ -31,7 +32,11 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
-        }
+        },
+        "files": [
+            "app\\Helpers\\ChangeTitle.php",
+            "app\\Helpers\\MultiParent.php"
+        ]
     },
     "extra": {
         "laravel": {
@@ -44,11 +49,11 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate"
+            "@php artisan key:generate --ansi"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover"
+            "@php artisan package:discover --ansi"
         ]
     },
     "config": {

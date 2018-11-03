@@ -223,8 +223,8 @@ $(document).ready(function(){
 			position	: "top",
 			type		: "tabs",
 			content		: [ 
-				"<a href='#panel-menu'><i class='fa fa-bars'></i> <span>Danh Mục</span></a>"
-				,"<a href='#panel-account'><i class='fa fa-search'></i> <span>Tìm Kiếm</span></a>"
+				"<a href='#panel-menu'><i class='fas fa-bars'></i> <span>Danh Mục</span></a>"
+				,"<a href='#panel-account'><i class='fas fa-search'></i> <span>Tìm Kiếm</span></a>"
 			]
 		}, {
 			content		: [ "prev", "close" ]
@@ -357,7 +357,7 @@ function lib_owl() {
 				responsiveClass:true,
 				dots: dot,
 				nav: nav,
-				navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+				navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
 				responsive:{
 					0:{
 						items:Number(xxs_item)				
@@ -677,7 +677,7 @@ function ajaxCarousel(selector,dataLgg){
 			responsiveClass:true,
 			dots:dot,
 			nav:nav,
-			navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+			navText: ['<i class="fas fa-chevron-left"></i>','<i class="fas fa-chevron-right"></i>'],
 			responsive:{
 				0:{
 					items:Number(xss_item)

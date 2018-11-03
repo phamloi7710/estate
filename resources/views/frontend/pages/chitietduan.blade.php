@@ -64,15 +64,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 details-pro">
                     <h1 class="title-head product-title" itemprop="name">ECOTOWN PHÚ MỸ</h1>
-                    <div class="product-review rated_star">
-                        <div class="bizweb-product-reviews-badge" data-id="12360145">
-                            <div class="bizweb-product-reviews-star" data-score="0" data-number="5" title="Not rated yet!" style="color: rgb(255, 190, 0);"><i data-alt="1" class="star-off-png" title="Not rated yet!"></i>&nbsp;<i data-alt="2" class="star-off-png" title="Not rated yet!"></i>&nbsp;<i data-alt="3" class="star-off-png" title="Not rated yet!"></i>&nbsp;<i data-alt="4" class="star-off-png" title="Not rated yet!"></i>&nbsp;<i data-alt="5" class="star-off-png" title="Not rated yet!"></i><input name="score" type="hidden" readonly=""></div>
-                            <div>
-                                <p>0</p>
-                            </div>
-                            <div><img src="https://productreviews.bizwebapps.vn//assets/images/user.png" width="18" height="17"></div>
-                        </div>
-                    </div>
+                    
                     <!-- MÔ TẢ NGẮN -->
                     <div class="product-summary product_description">
                         <div class="rte description bg-warning">
