@@ -11,3 +11,14 @@ $(document).ready(function(){
         $("#image").val('');
     });
 });
+function alertMsg(theURL,msg)
+{
+    if (confirm(msg))
+    {
+        window.location.href=theURL;
+    }
+    else
+    {
+        return false;
+    }
+}

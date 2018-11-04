@@ -2,7 +2,7 @@
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
 
-            <a href="{{route('getIndexAdmin')}}" title="Trang Chu" target="_blank"><img src="{{url('')}}/assets/logo-1.png" alt="Home" style="width: 100%;"></a>
+            <a href="{{route('getIndexFrontend')}}" title="Trang Chu" target="_blank"><img src="{{url('')}}/assets/logo-1.png" alt="Home" style="width: 100%;"></a>
         </div>
         <div class="clearfix"></div>
         <!-- menu profile quick info -->
@@ -31,6 +31,13 @@
                         <ul class="nav child_menu">
                             <li><a href="{{route('getListSliderAdmin')}}"> Danh Sách</a></li>
                             <li><a href="{{route('getAddSliderAdmin')}}"> Thêm Mới</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-calculator"></i> Trang Con<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{route('getListPageAdmin')}}"> Danh Sách</a></li>
+                            <li><a href="{{route('getAddPageAdmin')}}"> Thêm Mới</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>@yield('title')</title>
+        <link rel="icon" href="{{url('')}}/assets/logo-2.png" type="image/x-icon">
         <!-- Bootstrap -->
         <link href="{{url('')}}/assets/admin/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Font Awesome -->

@@ -38,10 +38,32 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
 		Route::get('list.html', 'Admin\SliderController@getList')->name('getListSliderAdmin');
 		Route::get('add-new.html', 'Admin\SliderController@getAdd')->name('getAddSliderAdmin');
 		Route::post('add-new.html', 'Admin\SliderController@postAdd')->name('postAddSliderAdmin');
+		Route::get('edit/{id}.html', 'Admin\SliderController@getEdit')->name('getEditSliderAdmin');
+		Route::post('edit/{id}.html', 'Admin\SliderController@postEdit')->name('postEditSliderAdmin');
+		Route::get('delete/{id}', 'Admin\SliderController@delete')->name('deleteSliderAdmin');
 	});
+	Route::group(['prefix'=>'page'], function(){
+		Route::get('list.html', 'Admin\PagesController@getList')->name('getListPageAdmin');
+		Route::get('add-new.html', 'Admin\PagesController@getAdd')->name('getAddPageAdmin');
+		Route::post('add-new.html', 'Admin\PagesController@postAdd')->name('postAddPageAdmin');
+		Route::get('edit/{id}.html', 'Admin\PagesController@getEdit')->name('getEditPageAdmin');
+		Route::post('edit/{id}.html', 'Admin\PagesController@postEdit')->name('postEditPageAdmin');
+		Route::get('delete/{id}', 'Admin\PagesController@delete')->name('deletePageAdmin');
+	});
+	Route::group(['prefix' => 'email-template'], function () {
+
+        Route::get('index.html', 'Admin\EmailTemplateController@getList')->name('getListEmailTemplate');
+        Route::get('add-new.html', 'Admin\EmailTemplateController@getAdd')->name('getAddEmailTemplate');
+        Route::post('add-new.html', 'Admin\EmailTemplateController@postAdd')->name('postAddEmailTemplate');
+        Route::get('edit-{id}.html', 'Admin\EmailTemplateController@getEdit')->name('getEditEmailTemplate');
+        Route::post('edit-{id}.html', 'Admin\EmailTemplateController@postEdit')->name('postEditEmailTemplate');
+        Route::get('delete-{id}.html', 'Admin\EmailTemplateController@getDelete')->name('getDeleteEmailTenplate');
+
+    });
 });
 Route::get('', 'Frontend\IndexController@getIndex')->name('getIndexFrontend');
 Route::get('lien-he.html', 'Frontend\FrontendController@getLienHe')->name('getLienHeFrontend');
+Route::post('lien-he.html', 'Frontend\ContactController@sendContact')->name('sendContact');
 Route::get('chi-tiet-du-an.html', 'Frontend\FrontendController@getChiTietDuAn')->name('getChiTietDuAn');
 Route::get('du-an.html', 'Frontend\FrontendController@getDuAn')->name('getDuAn');
 Route::get('danh-muc-tin-tuc.html', 'Frontend\FrontendController@getDanhMucTinTuc')->name('getDanhMucTinTuc');
@@ -49,4 +71,6 @@ Route::get('chi-tiet-tin-tuc.html', 'Frontend\FrontendController@getChiTietTinTu
 Route::get('gioi-thieu.html', 'Frontend\FrontendController@getGioiThieu')->name('getGioiThieu');
 Route::get('dang-nhap.html', 'Frontend\FrontendController@dangnhap')->name('dangnhap');
 Route::get('dang-ky.html', 'Frontend\FrontendController@dangky')->name('dangky');
+Route::get('{url}.html', 'Frontend\PagesController@getPage')->name('getPageFrontend');
+
 

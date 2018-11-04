@@ -37,7 +37,7 @@ Thêm Mới Slider
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Đường Dẫn
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Trạng Thái
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <label>

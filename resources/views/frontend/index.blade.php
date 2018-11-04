@@ -4,42 +4,19 @@
 @section('content')
 @include('frontend.includes.slider')
 <section id="banner" class="lib-section-1">
-    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
-        <!-- Loading Screen -->
-        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="https://osimi.vn/assets/frontend/img/spin.svg" />
+    <div id="jssor_1" class="jssor_1">
+        <div data-u="loading" class="jssorl-009-spin loadding-slider">
+            <img class="loadding-spin-slider" src="{{url('')}}/assets/frontend/img/spin.svg" />
         </div>
-        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
-            <a href="{{route('getChiTietDuAn')}}">
+        <div class="jssorl-item" data-u="slides">
+            @foreach($slider as $value)
+            <a href="{{$value->url}}">
                 <div data-b="0">
-                    <img data-u="image" src="https://wonderfulengineering.com/wp-content/uploads/2014/05/twitter-header-photo-610x203.jpg" />
-                    <div data-u="caption" data-t="7" style="position:absolute;top:-50px;left:30px;width:500px;height:40px;font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;background-color:rgb(174, 177, 177, 0.2); color: #fff;"><b>Khu nhà ở phía tây đường 3/2</b></div>
+                    <img data-u="image" src="{{url('')}}{{$value->image}}">
+                    <div class="slider-frontend" data-u="caption" data-t="7" style=""><b>{{$value->title}}</b></div>
                 </div>
             </a>
-            <a href="{{route('getChiTietDuAn')}}">
-                <div data-b="0">
-                    <img data-u="image" src="http://hodeco.vn/files/106405bc8402f00898.jpg" />
-                    <div data-u="caption" data-t="7" style="position:absolute;top:-50px;left:30px;width:500px;height:40px;font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;background-color:rgb(174, 177, 177, 0.2); color: #fff;"><b>Ecotown Phú Mỹ</b></div>
-                </div>
-            </a>  
-            <a href="{{route('getChiTietDuAn')}}">
-                <div data-b="0">
-                    <img data-u="image" src="http://hodeco.vn/files/84535927d01c08453.jpg" />
-                    <div data-u="caption" data-t="7" style="position:absolute;top:-50px;left:30px;width:500px;height:40px;font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;background-color:rgb(174, 177, 177, 0.2); color: #fff;"><b>FUSION SUITES VŨNG TÀU</b></div>
-                </div>
-            </a> 
-            <a href="{{route('getChiTietDuAn')}}">
-                <div data-b="0">
-                    <img data-u="image" src="http://hodeco.vn/files/829456c3f0d5dc670.jpg" />
-                    <div data-u="caption" data-t="7" style="position:absolute;top:-50px;left:30px;width:500px;height:40px;font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;background-color:rgb(174, 177, 177, 0.2); color: #fff;"><b>Chung Cư Bình Giã</b></div>
-                </div>
-            </a>
-            <a href="{{route('getChiTietDuAn')}}">
-                <div data-b="0">
-                    <img data-u="image" src="http://hodeco.vn/files/30405591a4562ace9a.jpg" />
-                    <div data-u="caption" data-t="7" style="position:absolute;top:-50px;left:30px;width:500px;height:40px;font-family:Oswald,sans-serif;font-size:32px;font-weight:200;line-height:1.2;text-align:center;background-color:rgb(174, 177, 177, 0.2); color: #fff;"><b>HODECO SEA VILLAGE</b></div>
-                </div>
-            </a>  
+            @endforeach
         </div>
         <!-- Bullet Navigator -->
         <div data-u="navigator" class="jssorb052" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">

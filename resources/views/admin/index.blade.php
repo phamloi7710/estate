@@ -1,5 +1,5 @@
 @section('title')
-Online Soroban
+OSIMI - WEBSITE CHỦ ĐẦU TƯ
 @stop
 @extends('admin.general.master')
 @section('content')

@@ -19,9 +19,6 @@
     </div>
 </section>
 <div class="contact page-template padding-0">
-    <!-- <div class="mapiframe">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29825.22945343809!2d106.691545!3d20.865855!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x13291dc04c4248f4!2sVincom+Plaza!5e0!3m2!1sen!2sus!4v1532052163883" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
-    </div> -->
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -40,23 +37,28 @@
                                 <div class="contact-page-info">
                                     <div class="fw">
                                         <label class="contact-info-title">Điện thoại :</label>
-                                        <a class="contact-info" href="tel:0123456789">0123456789</a>
+                                        <a class="contact-info" href="tel:0939080603">0939.080.603</a>
                                     </div>
                                     <div class="fw">
                                         <label class="contact-info-title">Hotline :</label>
-                                        <a class="contact-info" href="tel:0123456789">0123.456.789</a>
+                                        <a class="contact-info" href="tel:0915080603">0915.080.603</a>
                                     </div>
                                     <div class="fw">
                                         <label class="contact-info-title">Email :</label>
-                                        <a class="contact-info" href="mailto:demo@demo.com">demo@demo.com</a>
-                                    </div>
-                                    <div class="fw">
-                                        <div class="contact-info">Thứ 2 - Thứ 6: 8h00 - 22h00<br>Thứ 7 - Chủ nhật: 8h00 - 21h00</div>
+                                        <a class="contact-info" href="mailto:osimivietnam@gmail.com">osimivietnam@gmail.com</a>
                                     </div>
                                     <div class="fw">
                                         <label class="contact-info-title">Địa chỉ :</label>
-                                        <span class="contact-info">475B Điện Biên Phủ, P.25, Q.Bình Thạnh, TP.HCM</span>
+                                        <span class="contact-info"><br>
+                                            + Trụ sở 1: 93 Nguyễn Bỉnh Khiêm, Phường Đa Kao, Quận 1, TP.HCM
+                                            <br>
+                                            + Trụ sở 2: LE 03-71 tháp E,Tòa nhà Lexington  Residence, 67 Mai Chí Thọ, P.An Phú, Q.2, TP.HCM
+                                            <br>
+                                            + Trụ sở 3: 113 Nguyễn Thái Học, TP. Vũng Tàu</span>
                                     </div>
+                                    <div class="contact-info">
+                                                
+                                            </div>
                                 </div>
                             </div>
                         </div>
@@ -67,34 +69,37 @@
                                 </h2>
                             </div>
                             <div class="module-content">
-                                <form accept-charset="UTF-8" action="/contact" id="contact" method="post">
-                                    <input name="FormType" type="hidden" value="contact">
-                                    <input name="utf8" type="hidden" value="true">
-                                    <div id="emtry_contact" class="form-signup form_contact clearfix">
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                                <fieldset class="form-group">   
-                                                    <label>Họ tên</label>
-                                                    <input type="text" placeholder="Vui lòng nhập Họ &amp; tên" name="contact[name]" id="name" class="form-control form-control-lg" required="">
-                                                </fieldset>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                                <fieldset class="form-group">
-                                                    <label>Email</label>
-                                                    <input type="email" placeholder="Vui lòng nhập Email" name="contact[email]" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,63}$" data-validation="email" id="email" class="form-control form-control-lg" required="">
-                                                </fieldset>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                <fieldset class="fw form-group contact-content">
-                                                    <label>Nội dung</label>
-                                                    <textarea name="contact[body]" placeholder="Vui lòng nhập nội dung" rows="3" id="comment" class="form-control form-control-lg" required=""></textarea>
-                                                </fieldset>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                <button tyle="submit" class="btn libra-health___button">
-                                                <span>Gửi liên hệ</span>
-                                                </button>
-                                            </div>
+                                <form accept-charset="UTF-8" action="{{route('sendContact')}}" method="POST">
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                            <fieldset class="form-group">   
+                                                <label>Họ tên</label>
+                                                <input type="text" placeholder="Vui Lòng Nhập Họ & Tên" name="txtContactName" class="form-control form-control-lg" required="">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                            <fieldset class="form-group">
+                                                <label>Số Điện Thoại</label>
+                                                <input type="number" placeholder="Vui Lòng Nhập Số Điện Thoại" name="txtContactPhone" class="form-control form-control-lg" required="">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                            <fieldset class="form-group">
+                                                <label>Email</label>
+                                                <input type="email" placeholder="Vui Lòng Nhập Email" name="txtContactEmail" class="form-control form-control-lg" required="">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <fieldset class="fw form-group contact-content">
+                                                <label>Nội dung</label>
+                                                <textarea name="contentContact" placeholder="Vui lòng nhập nội dung" rows="3" class="form-control form-control-lg" required=""></textarea>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <button tyle="submit" class="btn libra-health___button pull-right">
+                                            <span>Gửi Yêu Cầu</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </form>
