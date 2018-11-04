@@ -4,7 +4,7 @@ Danh Mục Tin Tức
 @extends('admin.general.master')
 @section('content')
 <?php 
-    $conn = new mysqli('localhost', 'root', '', 'db_bat_dong_san');
+    $conn = new mysqli('localhost', 'root', '', 'estate');
     $sql = $conn->query("SELECT id, name, sort FROM news_category ORDER BY sort");
     if(isset($_post['update'])){
         foreach($_post['sort'] as $sort){
@@ -58,84 +58,89 @@ Danh Mục Tin Tức
             <div class="modal-header">
                 <h4 class="modal-title" id="largeModalLabel">Thêm Mới Danh Mục Tin Tức</h4>
             </div>
-             <form method="POST" action="{{route('postAddNewsCate')}}" class="form-horizontal form-label-left" id="form_validation">
-                @csrf
-                <div class="modal-body">
-                    <div class="row clearfix">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <h5 class="card-inside-title">Tên Danh Mục</h5>
-                                <div class="form-line">
-                                    <input type="text" class="form-control" name="txtCategoryName" required maxlength="10" minlength="3" placeholder="Nhập Tên Danh Mục">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <h5 class="card-inside-title">Danh Mục Cha</h5>
-                                <div class="form-line">
-                                    <select name="sltparentCategory" class="form-control show-tick" required>
-                                        <option value="0">----Thư Mục Gốc----</option>
-                                        <?php menuMultiInCate($category,0,$str = "&ensp;",old('sltparentCategory')) ?>
-                                    </select>
+            <div class="container-fluid">
+                <div class="row clearfix">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <form method="POST" action="{{route('postAddNewsCate')}}" class="form-horizontal form-label-left" id="form_validation">
+                            @csrf
+                            <div class="modal-body">
+                                <div class="row clearfix">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <h5 class="card-inside-title">Tên Danh Mục</h5>
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" name="txtCategoryName" required maxlength="10" minlength="3" placeholder="Nhập Tên Danh Mục">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <h5 class="card-inside-title">Danh Mục Cha</h5>
+                                            <div class="form-line">
+                                                <select name="sltparentCategory" class="form-control show-tick" required>
+                                                    <option value="0">----Thư Mục Gốc----</option>
+                                                    <?php menuMultiInCate($category,0,$str = "&ensp;",old('sltparentCategory')) ?>
+                                                </select>
 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="row clearfix">
-                                <div class="col-sm-6">
-                                    <h5 class="card-inside-title">Trạng Thái Hoạt Động</h5>
-                                    <div class="row clearfix">
-                                        <div class="col-sm-6">
-                                            <div class="demo-radio-button">
-                                                <input value="active" name="status" type="radio" id="radio_30" class="with-gap radio-col-green" checked>
-                                                <label for="radio_30">Hiển Thị</label>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <div class="demo-radio-button">
-                                                <input value="inActive" name="status" type="radio" id="radio_31" class="with-gap radio-col-red">
-                                                <label for="radio_31">Không Hiển Thị</label>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="row clearfix">
+                                            <div class="col-sm-6">
+                                                <h5 class="card-inside-title">Trạng Thái Hoạt Động</h5>
+                                                <div class="row clearfix">
+                                                    <div class="col-sm-6">
+                                                        <div class="demo-radio-button">
+                                                            <input value="active" name="status" type="radio" id="radio_30" class="with-gap radio-col-green" checked>
+                                                            <label for="radio_30">Hiển Thị</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="demo-radio-button">
+                                                            <input value="inActive" name="status" type="radio" id="radio_31" class="with-gap radio-col-red">
+                                                            <label for="radio_31">Không Hiển Thị</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <h5 class="card-inside-title">Trạng Thái Hiển Thị Ở Trang Chủ</h5>
+                                                <div class="row clearfix">
+                                                    <div class="col-sm-6">
+                                                        <div class="demo-radio-button">
+                                                            <input value="active" name="statusHome" type="radio" id="radio_32" class="with-gap radio-col-green">
+                                                            <label for="radio_32">Hiển Thị</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <div class="demo-radio-button">
+                                                            <input value="inActive" name="statusHome" type="radio" id="radio_33" class="with-gap radio-col-red" checked>
+                                                            <label for="radio_33">Không Hiển Thị</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                        <h5 class="card-inside-title">Ghi Chú</h5>
+                                            <div class="form-line">
+                                                <textarea name="note" rows="2" class="form-control no-resize auto-growth" placeholder="Nhập Ghi Chú Tại Đây"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5 class="card-inside-title">Trạng Thái Hiển Thị Ở Trang Chủ</h5>
-                                    <div class="row clearfix">
-                                        <div class="col-sm-6">
-                                            <div class="demo-radio-button">
-                                                <input value="active" name="statusHome" type="radio" id="radio_32" class="with-gap radio-col-green">
-                                                <label for="radio_32">Hiển Thị</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="demo-radio-button">
-                                                <input value="inActive" name="statusHome" type="radio" id="radio_33" class="with-gap radio-col-red" checked>
-                                                <label for="radio_33">Không Hiển Thị</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> 
-                        </div>
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                            <h5 class="card-inside-title">Ghi Chú</h5>
-                                <div class="form-line">
-                                    <textarea name="note" rows="2" class="form-control no-resize auto-growth" placeholder="Nhập Ghi Chú Tại Đây"></textarea>
-                                </div>
                             </div>
-                        </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-link waves-effect">LƯU LẠI</button>
+                                <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">ĐÓNG</button>
+                            </div>
+                        </form>
                     </div>
-
                 </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-link waves-effect">LƯU LẠI</button>
-                    <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">ĐÓNG</button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>

@@ -30,14 +30,14 @@ class NewsController extends Controller
         );
         return redirect()->back()->with($notification);
     }
-    public function postEditCate(Request $request, $slug)
+    public function postEditCate(Request $reqIDst, $slug)
     {
         $category = NewsCategory::where('slug', $slug)->first();
         $category->name = $request->txtCategoryName;
         $category->slug = changeTitle($request->txtCategoryName);
         $category->parent_id = $request->sltparentCategory;
         if($request->sltparentCategory==$category->id){
-            echo "Lỗi Mẹ Rồi";
+            echo "Lỗi Mẹ Nó Rồi!";
             exit();
         }
         $category->status = $request->status;

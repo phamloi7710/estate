@@ -1,4 +1,4 @@
-<script src="{{url('')}}/assets/admin/plugins/bootstrap-toastr/toastr.min.js"></script>
+
 <script>
   @if(Session::has('message'))
     var type = "{{Session::get('alert-type', 'success')}}";
