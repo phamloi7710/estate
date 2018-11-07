@@ -2,95 +2,117 @@
 @stop
 @extends('admin.general.master')
 @section('content')
-<section class="content">
-    <div class="container-fluid">
-        <div class="block-header">
-            <h2>
-	            <ol class="breadcrumb breadcrumb-bg-cyan">
-	                <li><a href="{{route('getIndexAdmin')}}"><i class="material-icons">home</i> Trang Chủ</a></li>
-	                <li><a href="javascript:void(0);"><i class="material-icons">library_books</i> Tin Tức</a></li>
-	                <li class="active">Thêm Mới Tin Tức</li>
-	            </ol>
-			</h2>
+<div class="right_col" role="main">
+    <form action="{{route('postAddNews')}}" method="POST" class="form-horizontal form-label-left">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Thêm Mới Trang Con</h2>
+            <button type="submit" class="btn btn-success pull-right"> Lưu Lại</button>
+            <div class="clearfix"></div>
         </div>
-        <div class="row clearfix">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <form action="" method="POST">
-                    @csrf
-                    <div class="card">
-                        <div class="header">
-                            <h2>
-                                Thêm Mới Tin Tức
-                            </h2>
-                            <div class="header-dropdown m-r--5">
-                                <button type="submit" class="btn btn-primary">Lưu Dữ Liệu</button>
-                            </div>
-                        </div>
-                        <div class="body">
-                            <div class="row clearfix">
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 form-control-label">
-                                    <label class="pull-left" for="title_News">{{__('general.title')}}</label>
-                                </div>
-                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <div class="form-group">
-                                        <div class="form-line">
-                                            <input name="txtTitle" type="text" id="title_News" class="form-control" placeholder="{{__('placeholder.titleNews')}}">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 form-control-label">
-                                    <label class="pull-left" for="title_News">{{__('general.categoryNews')}}</label>
-                                </div>
-                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <div class="form-group">
-                                        <select name="sltCategory" class="form-control">
-                                            <option value="0">----{{__('general.root')}}----</option>
-                                            <?php menuMultiInCate($category,0,$str = "&ensp;",old('sltparentCategory')) ?>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 form-control-label">
-                                    <label class="pull-left" for="title_News">{{__('general.categoryNews')}}</label>
-                                </div>
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="form-group">
-                                                <a data-input="image" data-preview="previewImage" href="javascript:;" class="btn btn-default selectImage">Chọn Ảnh</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="form-group">
-                                                <a href="javascript:;" class="btn btn-danger deleteImageNews">Xoá Hình Ảnh</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                                    <a id="previewImage" href="{{url('')}}/assets/uploads/images/no-image.jpg" class="form-control preview imagePreview thumbnail"><input name="image" id="image" style="width: 100%; border: none;"></a>
-                                </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 form-control-label">
-                                    <label class="pull-left" for="title_News">{{__('general.content')}}</label>
-                                </div>
-                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-                                    <div class="form-group">
-                                        <textarea id="editor" rows="6" name="content" class="form-control"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="x_content">
+            <br />
+            
+                @csrf
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Tiêu Đề
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input name="txtTitle" value="{{old('txtTitle')}}" type="text" class="add-pages-title form-control required" required="required">
                     </div>
-                </form>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Danh Mục Tin Tức
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <select name="sltCategory" class="form-control">
+                            <option value="">---Chọn Danh Mục---</option>
+                            @foreach($category as $cate)
+                            <option value="{{$cate->id}}">{{$cate->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Ảnh Bìa
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <a id="previewImage" href="{{url('')}}/assets/uploads/images/no-image.jpg" class="form-control preview imagePreview"><input name="image" id="image" style="width: 100%; border: none;" placeholder="Đường Dẫn Hình Ảnh"></a>
+                        <a data-input="image" data-preview="previewImage" href="javascript:;" class="btn btn-default btn-xs selectImage">Chọn Ảnh</a>
+                        <a href="javascript:;" class="btn btn-danger btn-xs deleteImageNews">Xoá</a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Tóm Tắt</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <textarea name="tomtat" rows="6" class="form-control col-md-7 col-xs-12"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Nội Dung</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <textarea name="content" id="ckeditor" class="form-control col-md-7 col-xs-12"></textarea>
+                        <script>CKEDITOR.replace('ckeditor');</script>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Trạng Thái
+                    </label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <label>
+                            <input value="active" type="radio" class="flat" checked name="status"> Hoạt Động
+                        </label><br>
+                        <label>
+                            <input value="inActive" type="radio" class="flat" name="status"> Không Hoạt Động
+                        </label>
+                    </div>
+                </div>
+            
+        </div>
+        <div class="row">
+            <div class="x_title" data-toggle="collapse" data-target=".data-optional">
+                <h2>Không Bắt Buộc <i class="fa fas fa-angle-double-down"
+                    data-toggle="collapse"
+                    data-target=".data-optional"></i></h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content collapse data-optional">
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Thẻ Tiêu Đề
+                    </label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="text" name="txtSeoTitle" class="form-control">
+                        <i>Tiêu đề tùy chỉnh hiển thị trong thẻ tiêu đề cho trang này</i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12"> Thẻ Mô Tả
+                    </label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="text" name="txtSeoDescription" class="form-control">
+                        <i>Mô tả META cho trang này. Thao tác này sẽ ghi đè mọi mô tả được tạo tự động</i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12"> Từ khóa (Phân cách bằng dấu phẩy)
+                    </label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="text" name="txtSeoKeywords" class="form-control">
+                        <i>Danh sách các từ khóa quan trọng nhất được phân tách bằng dấu phẩy cho trang này sẽ được viết dưới dạng từ khóa META</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ln_solid"></div>
+        <div class="form-group">
+            <div class="col-md-2 col-sm-2 col-xs-4 pull-right">
+                
             </div>
         </div>
     </div>
-</section>
+</div>
+</form>
+</div>
 @section('script')
 <script type="text/javascript">
     $(".deleteImageNews").click(function(){

@@ -14,31 +14,38 @@ class EmailTemplateController extends Controller
     }
     public function getAdd()
     {
-        return view('pages.admin.emailtemplate.add');
+        return view('admin.pages.emailtemplate.add');
     }
-    public function postAdd(AddEmailTemplateRequest $request)
+    public function postAdd(Request $request)
     {
         $mail = new EmailTemplate();
         $mail->title = $request->txttitle;
         $mail->key = $request->txtkey;
-        $mail->lang_code = $request->sltlang;
         $mail->content = $request->content;
         $mail->save();
-        return redirect()->route('getListEmailTemplate')->with('thongbao',trans('general.addNewSuccessfully'));
+        $notification = array(
+            'message' => 'Thêm Mới Email Template Thành Công!', 
+            'alert-type' => 'success',
+        );
+        return redirect()->route('getListEmailTemplate')->with($notification);
     }
     public function getEdit($id)
     {
         $mail = EmailTemplate::find($id);
-        return view('pages.admin.emailtemplate.edit',['mail'=>$mail]);
+        return view('admin.pages.emailtemplate.edit',['mail'=>$mail]);
     }
-    public function postEdit(EditEmailTemplateRequest $request,$id)
+    public function postEdit(Request $request,$id)
     {
         $mail = EmailTemplate::find($id);
         $mail->title = $request->txttitle;
-        $mail->lang_code = $request->sltlang;
+        $mail->key = $request->txtkey;
         $mail->content = $request->content;
         $mail->save();
-        return redirect()->route('getListEmailTemplate')->with('thongbao',trans('general.updateSuccessfully'));
+        $notification = array(
+            'message' => 'Cập Nhật Email Template Thành Công!', 
+            'alert-type' => 'success',
+        );
+        return redirect()->route('getListEmailTemplate')->with($notification);
     }
     public function getDelete($id)
     {

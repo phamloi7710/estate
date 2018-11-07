@@ -25,14 +25,14 @@ class AccountController extends Controller
         ];
     	if(Auth::attempt($data)){
             $notifySuccess = array(
-                'message' => __('notify.loginSuccessfully'),  
+                'message' => 'Đăng Nhập Thành Công',  
                 'alert-type' => 'success',
             );
     		return redirect()->route('getIndexAdmin')->with($notifySuccess);
     	}
     	else{
     		$notifyError = array(
-                'message' => __('notify.loginError'), 
+                'message' => 'Đăng Nhập Không Thành Công', 
                 'alert-type' => 'error',
             );
     		return redirect()->back()->with($notifyError);;

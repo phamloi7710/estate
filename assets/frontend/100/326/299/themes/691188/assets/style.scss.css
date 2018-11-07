@@ -907,7 +907,8 @@ header .hotline:hover span {
 
 @media (min-width: 992px) {
 	.header-menu {
-		background: #F26A29
+		background: #F26A29;
+		/*background-color: #676766*/
 	}
 }
 
@@ -1165,12 +1166,16 @@ header nav .nav-item {
 	float: left;
 	position: relative;
 	/*border-right: #fff solid 1px;*/
-	/*border-bottom-left-radius: 20px;
+	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;*/
-	background-color: #F26A29;
-	margin-right: 1px;
+	border-top-right-radius: 20px;
+	background-color: ##676766;
+	/*background-color: #F26A29;*/
+	box-shadow: 5px 5px 5px 5px #666;
+  	-moz-box-shadow: 5px 5px 5px #666;
+  	-webkit-box-shadow: 5px 5px 5px #666;
+  	margin-right: 5px;
 	@indluce transition(border-bottom ease 200ms)
 }
 

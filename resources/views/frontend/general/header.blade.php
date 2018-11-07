@@ -9,31 +9,25 @@
         <title>
             OSIMI.VN - WEBSITE CHỦ ĐẦU TƯ
         </title>
-        <!-- ================= Page description ================== -->
-        <meta name="description" content="Site Title">
-        <!-- ================= Meta ================== -->
-        <meta name="keywords" content="Site Title">
-        <link rel="canonical" href="">
-        <meta name='revisit-after' content='1 days'>
-        <meta name="robots" content="noodp,index,follow">
-        <!-- Facebook Open Graph meta tags -->
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Site Title">
+        <meta name="description" content="@yield('description')"/>
+        <meta name="keywords" content="@yield('keywords')"/>
+        <meta property="fb:app_id" content="@yield('fbAppId')"/>
+        <meta property="og:locale" content="@yield('locale')">
+        <meta property="og:type" content="@yield('type')">
+        <meta property="og:title" content="@yield('title')">
+        <meta property="og:description" content="@yield('description')">
+        <meta property="og:url" content="@yield('url')">
         <meta property="og:image" content="{{url('')}}/assets/logo-1.png">
         <meta property="og:image:secure_url" content="{{url('')}}/assets/logo-1.png">
-        <meta property="og:description" content="">
         <meta property="og:url" content="#">
-        <meta property="og:site_name" content="Site Title">
+        <meta property="og:site_name" content="OSIMI.VN - WEBSITE CHỦ ĐẦU TƯ">
         <link rel="icon" href="{{url('')}}/assets/logo-2.png" type="image/x-icon" />
         <script async src="{{url('')}}/assets/frontend/custom/custom.header.js"></script>
         <link href="{{url('')}}/assets/frontend/custom/custom.css" rel="stylesheet" type="text/css">
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123748707-1"></script>
         <script async src="{{url('')}}/assets/frontend/slider/jssor.slider-27.5.0.min.js"></script>
-        
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <!-- Plugin CSS -->
-        <link href="{{url('')}}/assets/frontend/100/326/299/themes/691188/assets/plugin.scss.css" rel="stylesheet" type="text/css">
-        <!-- Build Main CSS -->                             
+        <link href="{{url('')}}/assets/frontend/100/326/299/themes/691188/assets/plugin.scss.css" rel="stylesheet" type="text/css">                           
         <link href="{{url('')}}/assets/frontend/100/326/299/themes/691188/assets/base.scss.css" rel="stylesheet" type="text/css">
         <link href="{{url('')}}/assets/frontend/100/326/299/themes/691188/assets/style.scss.css" rel="stylesheet" type="text/css">
         <link href="{{url('')}}/assets/frontend/100/326/299/themes/691188/assets/update.scss.css" rel="stylesheet" type="text/css">
@@ -42,7 +36,6 @@
         <link href="{{url('')}}/assets/frontend/100/326/299/themes/691188/assets/stylesheet.scss.css" rel="stylesheet" type="text/css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/7.0.3/jquery.mmenu.all.css" rel="stylesheet" type="text/css">
         <script src="{{url('')}}/assets/frontend/100/326/299/themes/691188/assets/jquery-2.2.3.min.js" type="text/javascript"></script> 
-        <!-- ================= Fonts ================== -->
         <link href="//fonts.googleapis.com/css?family=Roboto:400,700' rel="stylesheet" type="text/css">
         <script>var ProductReviewsAppUtil=ProductReviewsAppUtil || {};</script>
         <style>
@@ -121,51 +114,29 @@
                                         <a href="#" class="nav-link">Dự Án<i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu">
                                             <li class="nav-item-lv2">
-                                                <a class="nav-link" href="{{route('getDuAn')}}">Dự Án Đã Thực Hiện</a>
+                                                <a class="nav-link" href="{{route('getDuAnDangTrienKhai')}}">Dự Án Đang Triển Khai</a>
                                             </li>
                                             <li class="nav-item-lv2">
-                                                <a class="nav-link" href="{{route('getDuAn')}}">Dự Án Đang Thực Hiện</a>
-                                            </li>
-                                            <li class="nav-item-lv2">
-                                                <a class="nav-link" href="{{route('getDuAn')}}">Dự Án Đã Hoàn Thành</a>
+                                                <a class="nav-link" href="{{route('getDuAnDaTrienKhai')}}">Dự Án Đã Triển Khai</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="nav-item ">
                                         <a href="#" class="nav-link">Tin Tức<i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu">
+                                            @foreach($newsCate as $catenews)
                                             <li class="nav-item-lv2">
-                                                <a class="nav-link" href="{{route('getDanhMucTinTuc')}}">Danh Mục Tức 1</a>
+                                                <a class="nav-link" href="{{route('getDanhMucTinTucFrontend', ['id'=>$catenews->id, 'slug'=>$catenews->slug])}}">{{$catenews->name}}</a>
                                             </li>
-                                            <li class="nav-item-lv2">
-                                                <a class="nav-link" href="{{route('getDanhMucTinTuc')}}">Danh Mục Tức 2</a>
-                                            </li>
-                                            <li class="nav-item-lv2">
-                                                <a class="nav-link" href="{{route('getDanhMucTinTuc')}}">Danh Mục Tức 3</a>
-                                            </li>
+                                            @endforeach
                                         </ul>
                                     </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link" href="#">Tuyển Dụng</a>
+                                        <a class="nav-link" href="{{route('tuyendung')}}">Tuyển Dụng</a>
                                     </li>
                                     <li class="nav-item ">
                                         <a class="nav-link" href="{{route('getLienHeFrontend')}}">Liên hệ</a>
                                     </li>
-                                    <!-- Submenu 3 Level -->
-                                    <!-- <li class="nav-item ">
-                                        <a href="#" class="nav-link">Demo Menu Level 1<i class="fa fa-angle-down"></i></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-submenu nav-item-lv2">
-                                                <a class="nav-link" href="#">Demo Menu Level 2<i class="fa fa-caret-right"></i></a>
-                                                <ul class="dropdown-menu">
-                                                    <li class="nav-item-lv3">
-                                                        <a class="nav-link" href="#">Demo Menu Level 3</a>
-                                                    </li>
-                                                </ul>
-                                            </li> 
-                                        </ul>
-                                    </li> -->
-                                    <!-- Submenu 3 Level -->
                                 </ul>
                             </nav>
                         </div>

@@ -32,7 +32,7 @@ Giao
                                     <td>{{$em->key}}</td>
                                     <td style="width:10%;" class="center">
                                         <a href="{{route('getEditEmailTemplate',['mail'=>$em->id])}}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i></a>
-                                        <a onclick="return alertMsg('delete-{{$em->id}}.html','{{trans('general.msgDelete')}}');" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>
+                                        <a onclick="return alertMsg('delete-{{$em->id}}.html','Bạn Có Muốn Xoá Mục Này Không?');" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>
                                     </td>                   
                                 </tr>
                                 @endforeach

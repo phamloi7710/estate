@@ -29,8 +29,8 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
 		Route::get('', 'Admin\NewsController@getList')->name('getListNews');
 		Route::get('add-new.html', 'Admin\NewsController@getAdd')->name('getAddNews');
 		Route::post('add-new.html', 'Admin\NewsController@postAdd')->name('postAddNews');
-		Route::get('edit/{alias}.html', 'Admin\NewsController@getEdit')->name('getEditNews');
-		Route::post('edit/{alias}.html', 'Admin\NewsController@postEdit')->name('postEditNews');
+		Route::get('edit/{id}.html', 'Admin\NewsController@getEdit')->name('getEditNews');
+		Route::post('edit/{id}.html', 'Admin\NewsController@postEdit')->name('postEditNews');
 		Route::get('delete/{id}', 'Admin\NewsController@delete')->name('deleteNews');
 		Route::post('updateSort', 'Admin\NewsController@postUpdateSort')->name('postUpdateSort');
 	});
@@ -60,6 +60,40 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
         Route::get('delete-{id}.html', 'Admin\EmailTemplateController@getDelete')->name('getDeleteEmailTenplate');
 
     });
+    Route::group(['prefix' => 'Du-An'], function () {
+        Route::get('index.html', 'Admin\DuAnController@getList')->name('getListDuAnAdmin');
+        Route::get('add-new.html', 'Admin\DuAnController@getAdd')->name('getAddDuAnAdmin');
+        Route::post('add-new.html', 'Admin\DuAnController@postAdd')->name('postAddDuAnAdmin');
+        Route::get('edit-{id}.html', 'Admin\DuAnController@getEdit')->name('getEditDuAnAdmin');
+        Route::post('edit-{id}.html', 'Admin\DuAnController@postEdit')->name('postEditDuAnAdmin');
+        Route::get('delete-{id}.html', 'Admin\DuAnController@getDelete')->name('getDeleteDuAnAdmin');
+
+    });
+    // Route::group(['prefix' => 'tin-tuc'], function () {
+    //     Route::get('index.html', 'Admin\NewsController@getList')->name('getListDuAnAdmin');
+    //     Route::get('add-new.html', 'Admin\NewsController@getAdd')->name('getAddDuAnAdmin');
+    //     Route::post('add-new.html', 'Admin\NewsController@postAdd')->name('postAddDuAnAdmin');
+    //     Route::get('edit-{id}.html', 'Admin\NewsController@getEdit')->name('getEditDuAnAdmin');
+    //     Route::post('edit-{id}.html', 'Admin\NewsController@postEdit')->name('postEditDuAnAdmin');
+    //     Route::get('delete-{id}.html', 'Admin\NewsController@getDelete')->name('getDeleteDuAnAdmin');
+
+    // });
+    // Setting By Loi Pham
+    Route::group(['prefix' => 'settings'], function () {
+    	Route::get('meta-seo.html', 'Admin\SettingController@getMetaSEO')->name('getMetaSEO');
+        Route::post('meta-seo.html', 'Admin\SettingController@postMetaSEO')->name('postMetaSEO');
+
+
+        Route::get('email-config.html', 'Admin\SettingController@getEmailConfig')->name('getEmailConfig');
+        Route::post('email-config.html', 'Admin\SettingController@postEmailConfig')->name('postEmailConfig');
+
+        Route::get('website-infomation.html', 'Admin\SettingController@getWebInfo')->name('getWebInfo');
+        Route::post('website-infomation.html', 'Admin\SettingController@postWebInfo')->name('postWebInfo');
+        
+        // Route::get('website-status', 'SettingController@getWebsiteStatus')->name('getWebsiteStatus');
+        // Route::post('website-status', 'SettingController@postWebsiteStatus')->name('postWebsiteStatus');
+
+    });
 });
 Route::get('', 'Frontend\IndexController@getIndex')->name('getIndexFrontend');
 Route::get('lien-he.html', 'Frontend\FrontendController@getLienHe')->name('getLienHeFrontend');
@@ -70,7 +104,13 @@ Route::get('danh-muc-tin-tuc.html', 'Frontend\FrontendController@getDanhMucTinTu
 Route::get('chi-tiet-tin-tuc.html', 'Frontend\FrontendController@getChiTietTinTuc')->name('getChiTietTinTuc');
 Route::get('gioi-thieu.html', 'Frontend\FrontendController@getGioiThieu')->name('getGioiThieu');
 Route::get('dang-nhap.html', 'Frontend\FrontendController@dangnhap')->name('dangnhap');
+Route::get('tuyen-dung.html', 'Frontend\FrontendController@tuyendung')->name('tuyendung');
 Route::get('dang-ky.html', 'Frontend\FrontendController@dangky')->name('dangky');
 Route::get('{url}.html', 'Frontend\PagesController@getPage')->name('getPageFrontend');
+Route::get('du-an/{url}.html', 'Frontend\PagesController@getChiTietDuAn')->name('getChiTietDuAnFrontend');
+Route::get('du-an-dang-trien-khai', 'Frontend\PagesController@getDuAnDangTrienKhai')->name('getDuAnDangTrienKhai');
+Route::get('du-an-da-trien-khai', 'Frontend\PagesController@getDuAnDaTrienKhai')->name('getDuAnDaTrienKhai');
+Route::get('danh-muc/{slug}.html', 'Frontend\PagesController@getDanhMucTinTuc')->name('getDanhMucTinTucFrontend');
+Route::get('tin-tuc/{slug}.html', 'Frontend\PagesController@getChiTietTinTuc')->name('getChiTietTinTucFrontend');
 
 

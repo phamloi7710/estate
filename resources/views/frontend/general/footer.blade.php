@@ -165,32 +165,25 @@
                         <a href="">Dự Án</a>
                         <ul>
                             <li >
-                                <a href="{{route('getDuAn')}}">Dự Án Đã Thực Hiện</a>
+                                <a href="{{route('getDuAnDaTrienKhai')}}">Dự Án Đã Triển Khai</a>
                             </li>
                             <li >
-                                <a href="{{route('getDuAn')}}">Dự Án Đang Thực Hiện</a>
-                            </li>
-                            <li >
-                                <a href="{{route('getDuAn')}}">Dự Án Đã Hoàn Thành</a>
+                                <a href="{{route('getDuAnDangTrienKhai')}}">Dự Án Đang Triển Khai</a>
                             </li>
                         </ul>
                     </li>
                     <li >
                         <a href="#">Tin Tức</a>
                         <ul>
+                            @foreach($newsCate as $value)
                             <li >
-                                <a href="{{route('getDanhMucTinTuc')}}">Danh Mục Tin Tức 1</a>
+                                <a href="{{route('getDanhMucTinTucFrontend', ['id'=>$value->id, 'slug'=>$value->slug])}}">{{$value->name}}</a>
                             </li>
-                            <li >
-                                <a href="{{route('getDanhMucTinTuc')}}">Danh Mục Tin Tức 2</a>
-                            </li>
-                            <li >
-                                <a href="{{route('getDanhMucTinTuc')}}">Danh Mục Tin Tức 3</a>
-                            </li>
+                            @endforeach
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Tuyển Dụng</a>
+                        <a href="{{route('tuyendung')}}">Tuyển Dụng</a>
                     </li>
                     <li>
                         <a href="{{route('getLienHeFrontend')}}">Liên Hệ</a>
@@ -233,6 +226,14 @@
                 </form>
             </div>
         </nav>
+        <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=1965284407097212&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
         <script type="text/javascript" src="{{url('')}}/assets/frontend/custom/custom.footer.js"></script>
         <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

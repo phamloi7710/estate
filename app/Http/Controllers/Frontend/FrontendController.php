@@ -39,4 +39,8 @@ class FrontendController extends Controller
     {
         return view('frontend.pages.dangky');
     }
+    public function tuyendung()
+    {
+        return view('frontend.pages.tuyendung');
+    }
 }

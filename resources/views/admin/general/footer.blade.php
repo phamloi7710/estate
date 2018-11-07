@@ -1,7 +1,7 @@
 <footer>
-    <div class="pull-right">
+    <!-- <div class="pull-right">
         Developed by <a style="color: #4DBEE6;" href="https://www.novaweb.vn/" title="Novacom JSC">Novacom JSC</a>
-    </div>
+    </div> -->
     <div class="clearfix"></div>
 </footer>
 </div>
@@ -17,6 +17,7 @@
 <script src="{{url('')}}/assets/admin/vendors/iCheck/icheck.min.js"></script>
 <script src="{{url('')}}/assets/admin/vendors/image-preview/imagepreview.min.js"></script>
 <script src="{{url('')}}/assets/admin/plugins/bootstrap/toastr/toastr.min.js"></script>
+<script src="{{url('')}}/assets/admin/custom/custom.footer.js"></script>
 @yield('script')
 @include('admin.general.notify')
 </body>

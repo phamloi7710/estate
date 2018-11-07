@@ -9,6 +9,6 @@ class News extends Model
     protected $table = "news";
     public function category()
     {
-    	$this->belongsTo('App\Model\News', 'cate_id', 'id');
+    	return  $this->belongsTo('App\Model\NewsCategory', 'cate_id', 'id');
     }
 }

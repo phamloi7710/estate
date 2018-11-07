@@ -19,10 +19,7 @@ class NewsController extends Controller
         $category = new NewsCategory;
         $category->name = $request->txtCategoryName;
         $category->slug = changeTitle($request->txtCategoryName);
-        $category->parent_id = $request->sltparentCategory;
         $category->status = $request->status;
-        $category->status_home = $request->statusHome;
-        $category->note = $request->note;
         $category->save();
         $notification = array(
             'message' => 'Thêm Mới Danh Mục Tin Tức Thành Công!', 
@@ -30,19 +27,12 @@ class NewsController extends Controller
         );
         return redirect()->back()->with($notification);
     }
-    public function postEditCate(Request $reqIDst, $slug)
+    public function postEditCate(Request $request, $id)
     {
-        $category = NewsCategory::where('slug', $slug)->first();
+        $category = NewsCategory::find($id);
         $category->name = $request->txtCategoryName;
         $category->slug = changeTitle($request->txtCategoryName);
-        $category->parent_id = $request->sltparentCategory;
-        if($request->sltparentCategory==$category->id){
-            echo "Lỗi Mẹ Nó Rồi!";
-            exit();
-        }
         $category->status = $request->status;
-        $category->status_home = $request->statusHome;
-        $category->note = $request->note;
         $category->save();
         $notification = array(
             'message' => 'Cập Nhật Danh Mục Tin Tức Thành Công!', 
@@ -50,22 +40,95 @@ class NewsController extends Controller
         );
         return redirect()->back()->with($notification);
     }
-    public function postUpdateSort(Request $request)
+    public function deleteCate($id)
     {
-        $category = NewsCategory::orderBy('order','ASC')->get();
-        $itemID = $request->itemID;
-        $itemIndex = $request->itemIndex;
-        foreach ($category as $value) {
-            return DB::table('news_category')->where('id', $itemID)->update(array('order'=>$itemIndex));
+        $news = News::where('cate_id', $id)->count();
+        if ($news==0) {
+            $category = NewsCategory::find($id);
+            $category->delete();
+            $notification = array(
+                'message' => 'Xoá Danh Mục Tin Tức Thành Công!', 
+                'alert-type' => 'success',
+            );
+            return redirect()->back()->with($notification);
+        }
+        else{
+            $notification = array(
+                'message' => 'Danh Mục Này Đang Chứa Tin Tức!', 
+                'alert-type' => 'error',
+            );
+            return redirect()->back()->with($notification);
         }
     }
     public function getList()
     {
-        return view('admin.pages.news.list');
+        $news = News::all();
+        $category = array();
+        foreach($news as $key=>$value)
+        {
+            $category[$value->cate_id] = $value;
+        }
+        return view('admin.pages.news.list', ['news'=>$news, 'category'=>$category]);
     }
     public function getAdd()
     {
-        $category = NewsCategory::all();
+        $category = NewsCategory::where('status', 'active')->get();
         return view('admin.pages.news.add', ['category'=>$category]);
+    }
+    public function postAdd(Request $request)
+    {
+        $news = new News();
+        $news->title = $request->txtTitle;
+        $news->slug = changeTitle($request->txtTitle);
+        $news->image = $request->image;
+        $news->cate_id = $request->sltCategory;
+        $news->tomtat = $request->tomtat;
+        $news->content = $request->content;
+        $news->status = $request->status;
+        $news->seoTitle = $request->txtSeoTitle;
+        $news->seoDescription = $request->txtSeoDescription;
+        $news->seoKeyWorks = $request->txtSeoKeywords;
+        $news->save();
+        $notification = array(
+            'message' => 'Thêm Mới Tin Tức Thành Công!', 
+            'alert-type' => 'success',
+        );
+        return redirect()->route('getListNews')->with($notification);
+    }
+    public function getEdit($id)
+    {
+        $news = News::find($id);
+        $category = NewsCategory::where('status', 'active')->get();
+        return view('admin.pages.news.edit', ['news'=>$news, 'category'=>$category]);
+    }
+    public function postEdit(Request $request,$id)
+    {
+        $news = News::find($id);
+        $news->title = $request->txtTitle;
+        $news->slug = changeTitle($request->txtTitle);
+        $news->image = $request->image;
+        $news->cate_id = $request->sltCategory;
+        $news->tomtat = $request->tomtat;
+        $news->content = $request->content;
+        $news->status = $request->status;
+        $news->seoTitle = $request->txtSeoTitle;
+        $news->seoDescription = $request->txtSeoDescription;
+        $news->seoKeyWorks = $request->txtSeoKeywords;
+        $news->save();
+        $notification = array(
+            'message' => 'Cập Nhật Tin Tức Thành Công!', 
+            'alert-type' => 'success',
+        );
+        return redirect()->route('getListNews')->with($notification);
+    }
+    public function delete($id)
+    {
+        $news = News::find($id);
+        $news->delete();
+        $notification = array(
+            'message' => 'Xoá Tin Tức Thành Công!', 
+            'alert-type' => 'success',
+        );
+        return redirect()->route('getListNews')->with($notification);
     }
 }

@@ -1,94 +1,58 @@
-
+<!--  -->
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Sign In | Bootstrap Based Admin Template - Material Design</title>
-    <!-- Favicon-->
-    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-
-    <!-- Bootstrap Core Css -->
-    <link href="{{url('')}}/assets/admin/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Waves Effect Css -->
-    <link href="{{url('')}}/assets/admin/plugins/node-waves/waves.css" rel="stylesheet" />
-
-    <!-- Animation Css -->
-    <link href="{{url('')}}/assets/admin/plugins/animate-css/animate.css" rel="stylesheet" />
-
-    <!-- Custom Css -->
-    <link href="{{url('')}}/assets/admin/css/style.css" rel="stylesheet">
-</head>
-
-<body class="login-page">
-    <div class="login-box">
-        <div class="logo">
-            <a href="javascript:void(0);"><b>HỆ THỐNG QUẢN LÝ NHÂN SỰ</b></a>
-        </div>
-        <div class="card">
-            <div class="body">
-                <form method="POST" action="{{route('postLoginAdmin')}}">
-                    @csrf
-                    <div class="msg">Đăng Nhập Vào Hệ Thống</div>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="material-icons">person</i>
-                        </span>
-                        <div class="form-line">
-                            <input type="text" class="form-control" name="txtUsername" placeholder="Nhập Tên Đăng Nhập" required autofocus>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="material-icons">lock</i>
-                        </span>
-                        <div class="form-line">
-                            <input type="password" class="form-control" name="txtPassword" placeholder="Nhập Mật Khẩu" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-8 p-t-5">
-                            <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-pink">
-                            <label for="rememberme">Ghi Nhớ Đăng Nhập</label>
-                        </div>
-                        <div class="col-xs-4">
-                            <button class="btn btn-block bg-pink waves-effect" type="submit">Đăng Nhập</button>
-                        </div>
-                    </div>
-                    <div class="row m-t-15 m-b--20">
-                        <!-- <div class="col-xs-6">
-                            <a href="sign-up.html">Register Now!</a>
-                        </div> -->
-                        <div class="col-xs-6 pull-right">
-                            <a href="forgot-password.html">Lấy Lại Mật Khẩu</a>
-                        </div>
-                    </div>
-                </form>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Gentelella Alela! | </title>
+        <!-- Bootstrap -->
+        <link href="{{url('')}}/assets/admin/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="{{url('')}}/assets/admin/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <!-- NProgress -->
+        <link href="{{url('')}}/assets/admin/vendors/nprogress/nprogress.css" rel="stylesheet">
+        <!-- Animate.css -->
+        <link href="{{url('')}}/assets/admin/vendors/animate.css/animate.min.css" rel="stylesheet">
+        <!-- Custom Theme Style -->
+        <link href="{{url('')}}/assets/admin/build/css/custom.min.css" rel="stylesheet">
+    </head>
+    <body class="login">
+        <div>
+            <div class="login_wrapper">
+                <div class="animate form login_form">
+                    <section class="login_content">
+                        <form method="POST" action="{{route('postLoginAdmin')}}">
+                        @csrf
+                            <h1>Đăng Nhập Hệ Thống</h1>
+                            <div>
+                                <input type="text" class="form-control" name="txtUsername" placeholder="Nhập Tên Đăng Nhập" required="" />
+                            </div>
+                            <div>
+                                <input type="password" class="form-control" name="txtPassword" placeholder="Nhập Mật Khẩu" class="form-control" required="" />
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-default submit">Đăng Nhập</button>
+                                <!-- <a class="reset_pass" href="#">Lost your password?</a> -->
+                            </div>
+                            <div class="clearfix"></div><!-- 
+                            <div class="separator">
+                                <p class="change_link">New to site?
+                                    <a href="#signup" class="to_register"> Create Account </a>
+                                </p>
+                                <div class="clearfix"></div>
+                                <br />
+                                <div>
+                                    <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                                    <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                                </div>
+                            </div> -->
+                        </form>
+                    </section>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- Jquery Core Js -->
-    <script src="{{url('')}}/assets/admin/plugins/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core Js -->
-    <script src="{{url('')}}/assets/admin/plugins/bootstrap/js/bootstrap.js"></script>
-
-    <!-- Waves Effect Plugin Js -->
-    <script src="{{url('')}}/assets/admin/plugins/node-waves/waves.js"></script>
-
-    <!-- Validation Plugin Js -->
-    <script src="{{url('')}}/assets/admin/plugins/jquery-validation/jquery.validate.js"></script>
-
-    <!-- Custom Js -->
-    <script src="{{url('')}}/assets/admin/js/admin.js"></script>
-    <script src="{{url('')}}/assets/admin/js/pages/examples/sign-in.js"></script>
-</body>
-
+    </body>
 </html>

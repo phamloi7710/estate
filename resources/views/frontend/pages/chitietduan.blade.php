@@ -208,47 +208,14 @@
                                                         Tab 6
                                                     </div>
                                                     <div id="tab7" class="tab-pane fade">
-                                                        <iframe id="libra-health___player" class="libra-health___player" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="100%" height="auto" src="https://www.youtube.com/embed/xyle6vdA2qs?enablejsapi=1&amp;origin=https%3A%2F%2Flibra-health.bizwebvietnam.net&amp;widgetid=1"></iframe>
-                                                        <script>
-                            var ww = $(window).width();
-                            var videoWidth = 0,
-                            videoHeight = 0;
-                            function videoWidthHeight(){
-                                if (ww >= 1200 ){
-                                    videoWidth = 360;
-                                    videoHeight = 270;
-                                } else if (ww >= 992 && ww <= 1199){
-                                    videoWidth = 292;
-                                    videoHeight = 219;
-                                } else if (ww >= 768 && ww <= 991){
-                                    videoWidth = 750;
-                                    videoHeight = 410;
-                                } else if (ww >= 543 && ww < 767){
-                                    videoWidth = '100%';
-                                    videoHeight = 385;
-                                } else if (ww >= 320 && ww < 542){
-                                    videoWidth = '100%';
-                                    videoHeight = 220;
-                                }
-                            }
-                            videoWidthHeight();
-                            $(window).on('resize', function(){
-                                ww = $(window).width();
-                                videoWidthHeight();
-                            });
-                            var tag = document.createElement('script');
-                            tag.src = "https://www.youtube.com/iframe_api";
-                            var firstScriptTag = document.getElementsByTagName('script')[0];
-                            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                            var player;
-                            function onYouTubeIframeAPIReady() {
-                                player = new YT.Player('libra-health___player', {
-                                    height: videoHeight,
-                                    width: videoWidth,
-                                    videoId: 'xyle6vdA2qs'
-                                });
-                            }
-                        </script>
+                                                        <div class="tab-video">
+                                                            <div class="section_news_list_and_video___video">
+                                                                <div class="module-content">
+                                                                    <iframe class="libra-health___player" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="100%" height="350" src="https://www.youtube.com/embed/xyle6vdA2qs?enablejsapi=1&amp;origin=https%3A%2F%2Flibra-health.bizwebvietnam.net&amp;widgetid=1"></iframe>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div id="tab8" class="tab-pane fade">
                                                         Tab 8
@@ -298,4 +265,44 @@
         </div>
     </div>
 </section>
+<script>
+            var ww = $(window).width();
+            var videoWidth = 0,
+            videoHeight = 0;
+            function videoWidthHeight(){
+                if (ww >= 1200 ){
+                    videoWidth = 360;
+                    videoHeight = 270;
+                } else if (ww >= 992 && ww <= 1199){
+                    videoWidth = 292;
+                    videoHeight = 219;
+                } else if (ww >= 768 && ww <= 991){
+                    videoWidth = 750;
+                    videoHeight = 410;
+                } else if (ww >= 543 && ww < 767){
+                    videoWidth = '100%';
+                    videoHeight = 385;
+                } else if (ww >= 320 && ww < 542){
+                    videoWidth = '100%';
+                    videoHeight = 220;
+                }
+            }
+            videoWidthHeight();
+            $(window).on('resize', function(){
+                ww = $(window).width();
+                videoWidthHeight();
+            });
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('libra-health___player', {
+                    height: videoHeight,
+                    width: videoWidth,
+                    videoId: 'xyle6vdA2qs'
+                });
+            }
+        </script>
 @stop
