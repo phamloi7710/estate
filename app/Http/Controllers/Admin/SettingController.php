@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Setting;
+use App\Model\WebInfomation;
 class SettingController extends Controller
 {
     public function getEmailConfig()
@@ -81,41 +82,120 @@ class SettingController extends Controller
             return redirect()->route('getMetaConfig');
         }
     }
-    // public function getWebsiteStatus()
-    // {
-    //     $websitestatus = Setting::where('key', 'websitestatus')->value('value');
-    //     $websitestatus = unserialize($websitestatus);
-    //     return view('pages.admin.settings.websitestatus',['websitestatus'=>$websitestatus]);   
-    // }
-    // public function postWebsiteStatus(Request $request)
-    // {
-    //     $websitestatus = [
-    //         'status' => $request->ckeckstatus,
-    //         'content' => $request->txtcontent
-    //     ];
-    //     $websitestatus = serialize($websitestatus);
-    //     try {
-    //         $pSets = Setting::where('key','websitestatus')->count();
-
-    //         if($pSets > 0) {
-    //             Setting::where('key','websitestatus')->update(['value'=>$websitestatus]);
-    //         } else {
-    //             $statusConfig = new Setting;
-    //             $statusConfig->key = 'websitestatus';
-    //             $statusConfig->value = $websitestatus;
-    //             $statusConfig->save();
-
-    //         }
-    //         return redirect()->route('getWebsiteStatus')->with('success', trans('general.updateSuccessfully'));
-
-    //     } catch (\Exception $e) {
-    //         //throw $e;
-    //         $request->session()->flash('error', trans('validation.updateError'));
-    //         return redirect()->route('getWebsiteStatus');
-    //     }
-    // }
     public function getWebInfo()
     {
-    	return view('admin.pages.settings.info');
+    	$info = WebInfomation::where('key', 'web-info')->first();
+    	
+    	return view('admin.pages.settings.info',['info'=>$info]);
+    }
+    public function postWebInfo(Request $request)
+    {
+    	$websiteConfig = WebInfomation::where('key', 'web-info')->first();
+    	if(!$websiteConfig){
+    		$info = new WebInfomation();
+    		$info->site_name = $request->txtSiteName;
+    		$info->key = 'web-info';
+    		$phoneData = array();
+	        $titlePhone = $request->txtTitlePhone;
+	        $phone = $request->txtPhone;
+	        if(is_array($phone)) {
+	            for($i=0; $i < count($phone); $i++) {
+	                $phoneData[$i] = [
+	                    'title' => $titlePhone[$i],
+	                    'phone' => $phone[$i],
+	                ];
+	            }
+	        }
+	        $info->phone = serialize($phoneData);
+
+	        $emailData = array();
+	        $titleEmail = $request->txtTitleMail;
+	        $email = $request->txtMail;
+	        if(is_array($email)) {
+	            for($i=0; $i < count($email); $i++) {
+	                $emailData[$i] = [
+	                    'title' => $titleEmail[$i],
+	                    'email' => $email[$i],
+	                ];
+	            }
+	        }
+	        $info->email = serialize($emailData);
+
+	        $addressData = array();
+	        $titleAddress = $request->txtTitleAddress;
+	        $address = $request->txtAddress;
+	        if(is_array($address)) {
+	            for($i=0; $i < count($address); $i++) {
+	                $addressData[$i] = [
+	                    'title' => $titleAddress[$i],
+	                    'address' => $address[$i],
+	                ];
+	            }
+	        }
+	        $info->address = serialize($addressData);
+	        $info->fanpage = $request->txtFanPage;
+	        $info->twitter = $request->txtTwitter;
+	        $info->google_plus = $request->txtGooglePlus;
+	        $info->youtube_channel = $request->txtYoutubeChannel;
+	        $info->instagram = $request->txtInstagram;
+	        $info->save();
+	        $notification = array(
+	            'message' => 'Cập Nhật Thông Tin Website Thành Công!', 
+	            'alert-type' => 'success',
+	        );
+	        return redirect()->route('getWebInfo')->with($notification);
+    	}else{
+    		$info = WebInfomation::where('key', 'web-info')->first();
+    		$info->site_name = $request->txtSiteName;
+    		$phoneData = array();
+	        $titlePhone = $request->txtTitlePhone;
+	        $phone = $request->txtPhone;
+	        if(is_array($phone)) {
+	            for($i=0; $i < count($phone); $i++) {
+	                $phoneData[$i] = [
+	                    'title' => $titlePhone[$i],
+	                    'phone' => $phone[$i],
+	                ];
+	            }
+	        }
+	        $info->phone = serialize($phoneData);
+
+	        $emailData = array();
+	        $titleEmail = $request->txtTitleMail;
+	        $email = $request->txtMail;
+	        if(is_array($email)) {
+	            for($i=0; $i < count($email); $i++) {
+	                $emailData[$i] = [
+	                    'title' => $titleEmail[$i],
+	                    'email' => $email[$i],
+	                ];
+	            }
+	        }
+	        $info->email = serialize($emailData);
+
+	        $addressData = array();
+	        $titleAddress = $request->txtTitleAddress;
+	        $address = $request->txtAddress;
+	        if(is_array($address)) {
+	            for($i=0; $i < count($address); $i++) {
+	                $addressData[$i] = [
+	                    'title' => $titleAddress[$i],
+	                    'address' => $address[$i],
+	                ];
+	            }
+	        }
+	        $info->address = serialize($addressData);
+	        $info->fanpage = $request->txtFanPage;
+	        $info->twitter = $request->txtTwitter;
+	        $info->google_plus = $request->txtGooglePlus;
+	        $info->youtube_channel = $request->txtYoutubeChannel;
+	        $info->instagram = $request->txtInstagram;
+	        $info->save();
+	        $notification = array(
+	            'message' => 'Cập Nhật Thông Tin Website Thành Công!', 
+	            'alert-type' => 'success',
+	        );
+	        return redirect()->route('getWebInfo')->with($notification);
+    	}
     }
 }

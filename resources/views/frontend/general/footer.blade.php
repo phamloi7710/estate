@@ -6,7 +6,7 @@
                             <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
                                 <div class="footer-widget">
                                     <h4 class="footer-title">
-                                        <span><i class="fa fa-home" aria-hidden="true"></i> Chuỗi Dự Án Osimi</span>
+                                        <span><i class="fa fa-home" aria-hidden="true"></i> @if($info){{$info->site_name}}@endif</span>
                                     </h4>
                                     <div class="footer-details">
                                         <!-- <div class="footer-detail rte">
@@ -20,12 +20,13 @@
                                             Địa chỉ:
                                             </label>
                                             <div class="contact-info">
-                                                + Trụ sở 1: 93 Nguyễn Bỉnh Khiêm, Phường Đa Kao, Quận 1, TP.HCM
+                                                @if($info)
+                                                @foreach (unserialize($info->address) as $value)
                                                 <br>
-                                                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;+ Trụ sở 2: LE 03-71 tháp E,Tòa nhà Lexington  Residence, 67 Mai Chí Thọ, P.An Phú, Q.2, TP.HCM
-
-                                                <br>
-                                                &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;+ Trụ sở 3: 113 Nguyễn Thái Học, TP. Vũng Tàu
+                                                &#160;&#160;&#160;&#160;
+                                                + {{$value['title']}}: {{$value['address']}}
+                                                @endforeach
+                                                @endif
                                             </div>
                                         </div>
                                         <div class="footer-detail">
@@ -33,7 +34,14 @@
                                             Điện thoại:
                                             </label>
                                             <div class="contact-info">
-                                                <a href="tel:0939080603">0939.080.603</a> - <a href="tel:0915080603">0915.080.603</a>
+                                                @if($info)
+                                                @foreach (unserialize($info->phone) as $value)
+                                                <br>
+                                                &#160;&#160;&#160;&#160;
+                                                <a href="javascript:;">+ {{$value['title']}}: </a>
+                                                <a href="tel:{{$value['phone']}}">0{{number_format($value['phone'], 0, ".",".")}}</a>
+                                                @endforeach
+                                                @endif
                                             </div>
                                         </div>
                                         <div class="footer-detail">
@@ -41,7 +49,14 @@
                                             Email:
                                             </label>
                                             <div class="contact-info">
-                                                <a href="mailto:osimivietnam@gmail.com">osimivietnam@gmail.com</a>
+                                                @if($info)
+                                                @foreach (unserialize($info->email) as $value)
+                                                <br>
+                                                &#160;&#160;&#160;&#160;
+                                                <a href="javascript:;">+ {{$value['title']}}: </a>
+                                                <a href="mailto:{{$value['email']}}">{{$value['email']}}</a>
+                                                @endforeach
+                                                @endif
                                             </div>
                                         </div>
                                         <div class="footer-detail">
@@ -56,35 +71,35 @@
                                     <div class="footer-social">
                                         <ul class="inline-list social-icons">
                                             <li>
-                                                <a target="_blank" class="icon-fallback-text txt-facebook hv-bg-facebook hv-bd-facebook" href="https://www.facebook.com/osimi.vn/" rel="nofollow" title="OSIMI.VN - WEBSITE CHỦ ĐẦU TƯ">
+                                                <a target="_blank" class="icon-fallback-text txt-facebook hv-bg-facebook hv-bd-facebook" href="@if($info){{$info->fanpage}}@endif" rel="nofollow" title="@if($info){{$info->site_name}}@endif">
                                                 <span class="icon icon-facebook" aria-hidden="true">
                                                 <i class="fa fa-facebook"></i>
                                                 </span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a target="_blank" class="icon-fallback-text txt-twitter hv-bg-twitter hv-bd-twitter" href="https://twitter.com/osimivietnam" rel="nofollow" title="OSIMI.VN - WEBSITE CHỦ ĐẦU TƯ">
+                                                <a target="_blank" class="icon-fallback-text txt-twitter hv-bg-twitter hv-bd-twitter" href="@if($info){{$info->twitter}}@endif" rel="nofollow" title="@if($info){{$info->site_name}}@endif">
                                                 <span class="icon icon-twitter" aria-hidden="true">
                                                 <i class="fa fa-twitter"></i>
                                                 </span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a target="_blank" class="icon-fallback-text txt-google-plus hv-bg-google-plus hv-bd-google-plus" href="https://plus.google.com/u/0/113380583663545932119" rel="nofollow" title="OSIMI.VN - WEBSITE CHỦ ĐẦU TƯ">
+                                                <a target="_blank" class="icon-fallback-text txt-google-plus hv-bg-google-plus hv-bd-google-plus" href="@if($info){{$info->google_plus}}@endif" rel="nofollow" title="@if($info){{$info->site_name}}@endif">
                                                 <span class="icon icon-google-plus" aria-hidden="true">
                                                 <i class="fa fa-google-plus"></i>
                                                 </span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a target="_blank" class="icon-fallback-text txt-youtube hv-bg-youtube hv-bd-youtube" href="https://www.youtube.com/channel/UCbJ-OcQrJgFZcjeUT95n3YQ/featured?view_as=subscriber" rel="nofollow" title="OSIMI.VN - WEBSITE CHỦ ĐẦU TƯ">
+                                                <a target="_blank" class="icon-fallback-text txt-youtube hv-bg-youtube hv-bd-youtube" href="@if($info){{$info->youtube_channel}}@endif" rel="nofollow" title="@if($info){{$info->site_name}}@endif">
                                                 <span class="icon icon-youtube" aria-hidden="true">
                                                 <i class="fa fa-youtube"></i>
                                                 </span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a target="_blank" class="icon-fallback-text txt-instagram hv-bg-instagram hv-bd-instagram" href="https://www.instagram.com/osimi.vn/" rel="nofollow" title="OSIMI.VN - WEBSITE CHỦ ĐẦU TƯ">
+                                                <a target="_blank" class="icon-fallback-text txt-instagram hv-bg-instagram hv-bd-instagram" href="@if($info){{$info->instagram}}@endif" rel="nofollow" title="@if($info){{$info->site_name}}@endif">
                                                 <span class="icon icon-instagram" aria-hidden="true">
                                                 <i class="fa fa-instagram"></i>
                                                 </span>
@@ -100,9 +115,9 @@
                                         <span>Fanpage</span>
                                     </h4>
                                     <div class="footer-fanpage">
-                                        <div class="fb-page" data-href="https://www.facebook.com/osimi.vn/"  data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true">
-                                            <blockquote cite="https://www.facebook.com/osimi.vn/" class="fb-xfbml-parse-ignore">
-                                                <a href="https://www.facebook.com/osimi.vn/"></a>
+                                        <div class="fb-page" data-href="@if($info){{$info->fanpage}}@endif"  data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true">
+                                            <blockquote cite="@if($info){{$info->fanpage}}@endif" class="fb-xfbml-parse-ignore">
+                                                <a href="@if($info){{$info->fanpage}}@endif"></a>
                                             </blockquote>
                                         </div>
                                     </div>

@@ -1,3 +1,4 @@
+
 @section('title')
 @stop
 @extends('frontend.general.master')

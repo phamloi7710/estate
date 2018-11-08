@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Frontend;
-
+use Config;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Contact;
@@ -20,7 +20,6 @@ class ContactController extends Controller
         $contact->save();
         $emailAdmin = 'phamloi7710@gmail.com';
         $template = EmailTemplate::where('key','new-contact')->first();
-
         if(isset($template))
         {
             Mail::to($emailAdmin)->send(new MailContact($contact));

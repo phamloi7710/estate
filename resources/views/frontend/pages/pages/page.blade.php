@@ -1,5 +1,8 @@
-@section('title')
-@stop
+@section('title'){{$page->title}} - @stop
+@section('description', $page->seoDescription)
+@section('keyword', $page->seoKeyWorks)
+@section('url', route('getPageFrontend',['slug'=>$page->url]))
+@section('image'){{url('')}}{{$page->image}}@stop
 @extends('frontend.general.master')
 @section('content')
 <section class="bread-crumb">

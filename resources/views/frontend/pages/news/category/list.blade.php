@@ -1,5 +1,7 @@
-@section('title')
-@stop
+@section('title'){{$cateNews->name}} - @stop
+@section('description', $cateNews->name)
+@section('seoKeyWorks', $cateNews->name)
+@section('url', route('getDanhMucTinTucFrontend',['slug'=>$cateNews->slug]))
 @extends('frontend.general.master')
 @section('content')
 <section class="bread-crumb">

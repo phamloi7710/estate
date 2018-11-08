@@ -1,6 +1,5 @@
-@section('title')
-Tuyển Dụng
-@stop
+@section('title')Liên Hệ - @stop
+@section('url', route('tuyendung'))
 @extends('frontend.general.master')
 @section('content')
 <section class="bread-crumb">

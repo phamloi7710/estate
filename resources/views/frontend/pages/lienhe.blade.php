@@ -1,5 +1,5 @@
-@section('title')
-@stop
+@section('title')Liên Hệ - @stop
+@section('url', route('getLienHeFrontend'))
 @extends('frontend.general.master')
 @section('content')
 <section class="bread-crumb">
@@ -18,6 +18,7 @@
         </div>
     </div>
 </section>
+<!--  dd(config('mail')) -->
 <div class="contact page-template padding-0">
     <div class="container">
         <div class="row">

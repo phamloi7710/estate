@@ -1,5 +1,8 @@
-@section('title')
-@stop
+@section('title'){{$news->title}} - @stop
+@section('description', $news->seoDescription)
+@section('keyword', $news->seoKeyWorks)
+@section('url', route('getChiTietTinTucFrontend',['slug'=>$news->slug]))
+@section('image'){{url('')}}{{$news->image}}@stop
 @extends('frontend.general.master')
 @section('content')
 <section class="bread-crumb">

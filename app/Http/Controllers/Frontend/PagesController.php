@@ -24,7 +24,7 @@ class PagesController extends Controller
     }
     public function getDuAnDangTrienKhai()
     {
-    	$duan = DuAn::where('danhmuc', 'Dự Án Đang Triển Khai');
+    	$duan = DuAn::where('danhmuc', 'Dự Án Đang Triển Khai')->orderBy('id', 'DESC');
     	$duan = $duan->paginate(10)->setPath('');
     	return view('frontend.pages.duan.duandangtrienkhai', ['duan'=>$duan]);
     }

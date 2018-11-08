@@ -40,7 +40,7 @@
 					            <input name="txtdriver" value="{{$emailSetting['driver']}}" type="text" class="form-control">
 					        </div>
 					    </div>
-					     <div class="form-group">
+				     	<div class="form-group">
 					        <label class="control-label col-md-3 col-sm-3 col-xs-12"> SMTP Host
 					        </label>
 					        <div class="col-md-6 col-sm-6 col-xs-12">
@@ -84,10 +84,46 @@
 	                            </div>
 					        </div>
 					    </div>
+					    <div class="ln_solid"></div>
+                      	<div class="form-group">
+                        	<div class="col-md-6 col-sm-6 col-xs-12">
+	                          	<button id="compose" class="btn btn-success pull-left" type="button">Test Send Mail</button>
+	                    	</div>
+                      	</div>
 			        </div>
 			    </div>
 			</form>
 		</div>
 	</div>
 </div>
+<!-- compose -->
+<form method="POST" action="#" class="form-horizontal form-label-left">
+ @csrf
+    <div class="compose col-md-6 col-xs-12">
+      <div class="compose-header">
+        Tin Nhắn Mới
+        <button type="button" class="close compose-close">
+          <span>×</span>
+        </button>
+      </div><br>
+      <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12"> Gửi Đến Địa Chỉ
+        </label>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <input name="txtComposerEmailAddress" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-md-3 col-sm-3 col-xs-12"> Nội Dung Email
+        </label>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <textarea name="txtComposerEmailContent" rows="6" class="form-control"></textarea>
+        </div>
+    </div>
+      <div class="compose-footer">
+        <button class="btn btn-sm btn-success pull-right" type="button">Gửi Ngay</button>
+      </div>
+    </div>
+</form>
+    <!-- /compose -->
 @endsection

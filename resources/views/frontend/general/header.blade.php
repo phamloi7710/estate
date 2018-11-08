@@ -6,21 +6,27 @@
         <meta http-equiv="content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="format-detection" content="telephone=no">
-        <title>
-            OSIMI.VN - WEBSITE CHỦ ĐẦU TƯ
-        </title>
+
+
+
+
+        <title>@yield('title')@if($info){{$info->site_name}}@endif</title>
         <meta name="description" content="@yield('description')"/>
-        <meta name="keywords" content="@yield('keywords')"/>
-        <meta property="fb:app_id" content="@yield('fbAppId')"/>
-        <meta property="og:locale" content="@yield('locale')">
-        <meta property="og:type" content="@yield('type')">
+        <meta name="keywords" content="@yield('keyword')"/>
+        <!-- <meta property="fb:app_id" content="@yield('fbAppId')"/> -->
+        <!-- <meta property="og:locale" content="@yield('locale')"> -->
+        <!-- <meta property="og:type" content="@yield('type')"> -->
         <meta property="og:title" content="@yield('title')">
         <meta property="og:description" content="@yield('description')">
         <meta property="og:url" content="@yield('url')">
-        <meta property="og:image" content="{{url('')}}/assets/logo-1.png">
-        <meta property="og:image:secure_url" content="{{url('')}}/assets/logo-1.png">
-        <meta property="og:url" content="#">
-        <meta property="og:site_name" content="OSIMI.VN - WEBSITE CHỦ ĐẦU TƯ">
+        <meta property="og:image" content="@yield('image')">
+        <meta property="og:image:secure_url" content="@yield('image')">
+        <meta property="og:site_name" content="@if($info){{$info->site_name}}@endif">
+
+
+
+
+
         <link rel="icon" href="{{url('')}}/assets/logo-2.png" type="image/x-icon" />
         <script async src="{{url('')}}/assets/frontend/custom/custom.header.js"></script>
         <link href="{{url('')}}/assets/frontend/custom/custom.css" rel="stylesheet" type="text/css">
