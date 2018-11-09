@@ -155,12 +155,24 @@
 	</div>
 </div>
 <?php
-	$phoneData = unserialize($info->phone);
-	$emailData = unserialize($info->email);
-	$addressData = unserialize($info->address);
+	if(isset($phoneData))
+	{
+		$phoneData = unserialize($info->phone);
+	}
+	if(isset($emailData))
+	{
+		$emailData = unserialize($info->email);
+	}
+	
+	if(isset($addressData))
+	{
+		$addressData = unserialize($info->address);
+	}
+	
 ?>
 <script>
-var row = {{count($phoneData)}};
+
+var row = <?php if(isset($phoneData)){echo count($phoneData);}else{echo '0';} ?>;
 function addPhoneNumber(){
     html = '<tr id="rowPhone'+row+'">';
     html += '<td class="center"> <input name="txtTitlePhone[]" value="" type="text" class="form-control" placeholder="Tiêu Đề"></td>';
@@ -172,7 +184,7 @@ function addPhoneNumber(){
 </script>
 <script>
 function addEmail(){
-	var row = {{count($emailData)}};
+	var row = <?php if(isset($emailData)){echo count($phoneData);}else{echo '0';} ?>;
     html = '<tr id="rowMail'+row+'">';
     html += '<td class="center"> <input name="txtTitleMail[]" value="" type="text" class="form-control" placeholder="Tiêu Đề"></td>';
     html += '<td class="center"> <input name="txtMail[]" value="" type="email" class="form-control" placeholder="Email"></td>';
@@ -183,7 +195,7 @@ function addEmail(){
 </script>
 <script>
 function addAddress(){
-	var row = {{count($addressData)}};
+	var row = <?php if(isset($addressData)){echo count($phoneData);}else{echo '0';} ?>;
     html = '<tr id="rowAddress'+row+'">';
     html += '<td class="center"> <input name="txtTitleAddress[]" value="" type="text" class="form-control" placeholder="Tiêu Đề"></td>';
     html += '<td class="center"> <input name="txtAddress[]" value="" type="text" class="form-control" placeholder="Địa Chỉ"></td>';

@@ -20,13 +20,13 @@ class MailConfigServiceProvider extends ServiceProvider
             if ($mail)
             {
                 $config = array(
-                    'driver'     => isset($mail['driver']) ? isset($mail['driver']) : '',
+                    'driver'     => isset($mail['driver']) ? $mail['driver'] : '',
                     'username'   => $mail['email'],
                     'password'   => $mail['password'],
                     'from'       => array('address' => $mail['email'], 'name' => $mail['sender']),
                     'host'       => $mail['host'],
                     'port'       => $mail['port'],
-                    'encryption' => isset($mail['encrypt']) ? isset($mail['encrypt']) : '',
+                    'encryption' => isset($mail['encrypt']) ? $mail['encrypt'] : '',
                     'sendmail'   => '/usr/sbin/sendmail -bs',
                     'pretend'    => false,
                 );

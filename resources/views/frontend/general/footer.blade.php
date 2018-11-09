@@ -6,7 +6,7 @@
                             <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
                                 <div class="footer-widget">
                                     <h4 class="footer-title">
-                                        <span><i class="fa fa-home" aria-hidden="true"></i> @if($info){{$info->site_name}}@endif</span>
+                                        <span><i class="fa fa-home" aria-hidden="true"></i> @if(isset($info)){{$info->site_name}}@endif</span>
                                     </h4>
                                     <div class="footer-details">
                                         <!-- <div class="footer-detail rte">
@@ -20,7 +20,7 @@
                                             Địa chỉ:
                                             </label>
                                             <div class="contact-info">
-                                                @if($info)
+                                                @if(isset($info))
                                                 @foreach (unserialize($info->address) as $value)
                                                 <br>
                                                 &#160;&#160;&#160;&#160;
@@ -34,7 +34,7 @@
                                             Điện thoại:
                                             </label>
                                             <div class="contact-info">
-                                                @if($info)
+                                                @if(isset($info))
                                                 @foreach (unserialize($info->phone) as $value)
                                                 <br>
                                                 &#160;&#160;&#160;&#160;
@@ -49,7 +49,7 @@
                                             Email:
                                             </label>
                                             <div class="contact-info">
-                                                @if($info)
+                                                @if(isset($info))
                                                 @foreach (unserialize($info->email) as $value)
                                                 <br>
                                                 &#160;&#160;&#160;&#160;
@@ -71,35 +71,35 @@
                                     <div class="footer-social">
                                         <ul class="inline-list social-icons">
                                             <li>
-                                                <a target="_blank" class="icon-fallback-text txt-facebook hv-bg-facebook hv-bd-facebook" href="@if($info){{$info->fanpage}}@endif" rel="nofollow" title="@if($info){{$info->site_name}}@endif">
+                                                <a target="_blank" class="icon-fallback-text txt-facebook hv-bg-facebook hv-bd-facebook" href="@if(isset($info)){{$info->fanpage}}@endif" rel="nofollow" title="@if(isset($info)){{$info->site_name}}@endif">
                                                 <span class="icon icon-facebook" aria-hidden="true">
                                                 <i class="fa fa-facebook"></i>
                                                 </span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a target="_blank" class="icon-fallback-text txt-twitter hv-bg-twitter hv-bd-twitter" href="@if($info){{$info->twitter}}@endif" rel="nofollow" title="@if($info){{$info->site_name}}@endif">
+                                                <a target="_blank" class="icon-fallback-text txt-twitter hv-bg-twitter hv-bd-twitter" href="@if(isset($info)){{$info->twitter}}@endif" rel="nofollow" title="@if(isset($info)){{$info->site_name}}@endif">
                                                 <span class="icon icon-twitter" aria-hidden="true">
                                                 <i class="fa fa-twitter"></i>
                                                 </span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a target="_blank" class="icon-fallback-text txt-google-plus hv-bg-google-plus hv-bd-google-plus" href="@if($info){{$info->google_plus}}@endif" rel="nofollow" title="@if($info){{$info->site_name}}@endif">
+                                                <a target="_blank" class="icon-fallback-text txt-google-plus hv-bg-google-plus hv-bd-google-plus" href="@if(isset($info)){{$info->google_plus}}@endif" rel="nofollow" title="@if(isset($info)){{$info->site_name}}@endif">
                                                 <span class="icon icon-google-plus" aria-hidden="true">
                                                 <i class="fa fa-google-plus"></i>
                                                 </span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a target="_blank" class="icon-fallback-text txt-youtube hv-bg-youtube hv-bd-youtube" href="@if($info){{$info->youtube_channel}}@endif" rel="nofollow" title="@if($info){{$info->site_name}}@endif">
+                                                <a target="_blank" class="icon-fallback-text txt-youtube hv-bg-youtube hv-bd-youtube" href="@if(isset($info)){{$info->youtube_channel}}@endif" rel="nofollow" title="@if(isset($info)){{$info->site_name}}@endif">
                                                 <span class="icon icon-youtube" aria-hidden="true">
                                                 <i class="fa fa-youtube"></i>
                                                 </span>
                                                 </a>
                                             </li>
                                             <li>
-                                                <a target="_blank" class="icon-fallback-text txt-instagram hv-bg-instagram hv-bd-instagram" href="@if($info){{$info->instagram}}@endif" rel="nofollow" title="@if($info){{$info->site_name}}@endif">
+                                                <a target="_blank" class="icon-fallback-text txt-instagram hv-bg-instagram hv-bd-instagram" href="@if(isset($info)){{$info->instagram}}@endif" rel="nofollow" title="@if(isset($info)){{$info->site_name}}@endif">
                                                 <span class="icon icon-instagram" aria-hidden="true">
                                                 <i class="fa fa-instagram"></i>
                                                 </span>
@@ -115,9 +115,9 @@
                                         <span>Fanpage</span>
                                     </h4>
                                     <div class="footer-fanpage">
-                                        <div class="fb-page" data-href="@if($info){{$info->fanpage}}@endif"  data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true">
-                                            <blockquote cite="@if($info){{$info->fanpage}}@endif" class="fb-xfbml-parse-ignore">
-                                                <a href="@if($info){{$info->fanpage}}@endif"></a>
+                                        <div class="fb-page" data-href="@if(isset($info)){{$info->fanpage}}@endif"  data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true">
+                                            <blockquote cite="@if(isset($info)){{$info->fanpage}}@endif" class="fb-xfbml-parse-ignore">
+                                                <a href="@if(isset($info)){{$info->fanpage}}@endif"></a>
                                             </blockquote>
                                         </div>
                                     </div>
@@ -189,6 +189,7 @@
                     </li>
                     <li >
                         <a href="#">Tin Tức</a>
+                        @if(isset($newsCate))
                         <ul>
                             @foreach($newsCate as $value)
                             <li >
@@ -196,6 +197,7 @@
                             </li>
                             @endforeach
                         </ul>
+                        @endif
                     </li>
                     <li>
                         <a href="{{route('tuyendung')}}">Tuyển Dụng</a>

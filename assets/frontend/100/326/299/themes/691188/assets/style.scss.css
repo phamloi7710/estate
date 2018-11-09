@@ -1185,25 +1185,32 @@ header nav .nav-item:before {
 	left: 50%;
 	right: 50%;
 	bottom: 0;
-	border-bottom: #fff 3px solid;
+	/*border-bottom: #fff 3px solid;
 	-webkit-transition: all ease 500ms;
 	-moz-transition: all ease 500ms;
 	-ms-transition: all ease 500ms;
 	-o-transition: all ease 500ms;
-	transition: all ease 500ms
+	transition: all ease 500ms*/
+	
 }
 
 header nav .nav-item:hover:before {
 	left: 0;
-	right: 0
+	right: 0;
+	
 }
 
 header nav .nav-item:hover>a {
-	background: transparent
+	/*background: transparent;*/
+	background-color: #2A7F49;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
 }
 
 header nav .nav-item:focus {
-	background-color: transparent
+	background-color: red;
 }
 
 header nav .nav-item>a {

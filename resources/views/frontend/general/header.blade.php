@@ -10,7 +10,7 @@
 
 
 
-        <title>@yield('title')@if($info){{$info->site_name}}@endif</title>
+        <title>@yield('title'){{isset($info->site_name) ? $info->site_name : ''}}</title>
         <meta name="description" content="@yield('description')"/>
         <meta name="keywords" content="@yield('keyword')"/>
         <!-- <meta property="fb:app_id" content="@yield('fbAppId')"/> -->
@@ -21,7 +21,7 @@
         <meta property="og:url" content="@yield('url')">
         <meta property="og:image" content="@yield('image')">
         <meta property="og:image:secure_url" content="@yield('image')">
-        <meta property="og:site_name" content="@if($info){{$info->site_name}}@endif">
+        <meta property="og:site_name" content="{{isset($info->site_name) ? $info->site_name : ''}}">
 
 
 
@@ -117,7 +117,7 @@
                                         <a class="nav-link" href="{{route('getGioiThieu')}}">Giới Thiệu</a>
                                     </li>
                                     <li class="nav-item ">
-                                        <a href="#" class="nav-link">Dự Án<i class="fa fa-angle-down"></i></a>
+                                        <a href="javascript:;" class="nav-link">Dự Án<i class="fa fa-angle-down"></i></a>
                                         <ul class="dropdown-menu">
                                             <li class="nav-item-lv2">
                                                 <a class="nav-link" href="{{route('getDuAnDangTrienKhai')}}">Dự Án Đang Triển Khai</a>
@@ -128,7 +128,8 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item ">
-                                        <a href="#" class="nav-link">Tin Tức<i class="fa fa-angle-down"></i></a>
+                                        <a href="javascript:;" class="nav-link">Tin Tức<i class="fa fa-angle-down"></i></a>
+                                        @if(isset($newsCate))
                                         <ul class="dropdown-menu">
                                             @foreach($newsCate as $catenews)
                                             <li class="nav-item-lv2">
@@ -136,6 +137,7 @@
                                             </li>
                                             @endforeach
                                         </ul>
+                                        @endif
                                     </li>
                                     <li class="nav-item ">
                                         <a class="nav-link" href="{{route('tuyendung')}}">Tuyển Dụng</a>

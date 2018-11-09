@@ -15,7 +15,7 @@ class CheckRoleAdmin
                 return $next($request);
             }else{
                 $notifyError = array(
-                    'message' => __('notify.roleLoginError'), 
+                    'message' => 'Bạn Không Có Quyền Truy Cập Vào Trang Này!', 
                     'alert-type' => 'error',
                 );
                 return redirect()->back()->with($notifyError);

@@ -38,7 +38,9 @@ class PagesController extends Controller
     {
         $category = NewsCategory::where('status', 'active')->get();
         $cateNews = NewsCategory::where('slug', $slug)->first();
-        return view('frontend.pages.news.category.list', ['category'=>$category, 'cateNews'=>$cateNews]);
+        $news = News::where('cate_id', $cateNews->id)->orderBy('id', 'DESC');
+        $news = $news->paginate(10)->setPath('');
+        return view('frontend.pages.news.category.list', ['category'=>$category, 'news'=>$news, 'cateNews'=>$cateNews]);
     }
     public function getChiTietTinTuc($url)
     {

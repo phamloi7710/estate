@@ -1,6 +1,6 @@
 @section('title')Trang Chủ - @stop
-@section('description', $meta['description'])
-@section('keyword', $meta['keyword'])
+@section('description', isset($meta['description']) ? $meta['description'] : '')
+@section('keyword', isset($meta['keyword']) ? $meta['keyword'] : '')
 @section('url', url(''))
 @section('image','s')
 @extends('frontend.general.master')

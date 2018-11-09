@@ -29,7 +29,7 @@
                         <span>Danh Sách Tin Tức</span>
                     </h1>
                     <div class="fw">
-                    	@foreach($cateNews->news as $value)
+                    	@foreach($news as $value)
                         <article class="article-item blog-article-item">
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4 image-hover-1">
                                 <a href="{{route('getChiTietTinTucFrontend', ['url'=>$value->slug])}}" title="{{$value->title}}">
@@ -55,21 +55,8 @@
                         </article>
                         @endforeach
                     </div>
-                    <nav class="fw pagination-parent">
-                        <ul class="pagination clearfix">
-                            <li class="page-item disabled hidden-xs">
-                                <a class="page-link" href="#">«</a>
-                            </li>
-                            <li class="active page-item disabled">
-                                <a class="page-link" href="#">1</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="/tin-tuc?page=2">2</a>
-                            </li>
-                            <li class="page-item hidden-xs">
-                                <a class="page-link" href="/tin-tuc?page=2">»</a>
-                            </li>
-                        </ul>
+                    <nav class="pull-right">
+                        {{$news->render()}}
                     </nav>
                 </div>
             </div>
