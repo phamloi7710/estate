@@ -17,7 +17,7 @@ function addImage(){
 }
 function addVideo(){
     html = '<tr id="rowVideo'+row+'">';
-    html += '<td><input type="text" name="txtUrlVideo[]" class="form-control" placeholder="ID Video Youtube"></td>';
+    html += '<td><input type="text" name="txtUrlVideo[]" class="form-control" placeholder="Đường Dẫn Video Youtube"></td>';
     html += '<td class="center">';
     html += '<a href="javascript:void(0)" onclick="$(\'#rowVideo'+row+'\').remove();" title="Xóa" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>';
     html += '</td></tr>';

@@ -57,6 +57,13 @@ Sửa Tin Tức
                     </div>
                 </div>
                 <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Sắp Xếp
+                        </label>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                            <input value="{{$news->order}}" name="txtOrder" type="number" class="form-control">
+                        </div>
+                    </div>
+                <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Trạng Thái
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">

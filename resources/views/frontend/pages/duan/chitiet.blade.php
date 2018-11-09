@@ -74,6 +74,7 @@
                     <div class="product-summary product_description">
                         <div class="rte description bg-warning">
                             <p>{{$duan->tomtat}}</p>
+
                         </div>
                     </div>
                     <!-- END MÔ TẢ NGẮN -->
@@ -197,6 +198,7 @@
                     </section>
                 </div>
             </div>
+
             <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="module-comment-facebook">
                     <div class="module-header">

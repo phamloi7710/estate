@@ -25,7 +25,7 @@ Thêm Mới Dự Án
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Danh Mục Dự Án
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <select name="sltCategory" class="form-control">
+                            <select name="sltCategory" class="form-control" required="">
                                 <option value="">---Chọn Danh Mục---</option>
                                 <option value="Dự Án Đang Triển Khai">Dự Án Đang Triển Khai</option>
                                 <option value="Dự Án Đã Triển Khai">Dự Án Đã Triển Khai</option>
@@ -46,6 +46,25 @@ Thêm Mới Dự Án
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <textarea name="tomtat" name="" id="" cols="30" rows="5" class="form-control" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Sắp Xếp
+                        </label>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                            <input value="{{old('txtOrder')?old('txtOrder'):0}}" name="txtOrder" type="number" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Trạng Thái
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <label>
+                                <input value="active" type="radio" class="flat" checked name="status"> Hoạt Động
+                            </label><br>
+                            <label>
+                                <input value="inActive" type="radio" class="flat" name="status"> Không Hoạt Động
+                            </label>
                         </div>
                     </div>
                     <br>
@@ -146,14 +165,14 @@ Thêm Mới Dự Án
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <div class="form-group">
                                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                                        <a onclick="addVideo();" class="btn btn-success btn-xs  pull-right">Thêm Mới ID Video</a>
+                                                        <a onclick="addVideo();" class="btn btn-success btn-xs  pull-right">Thêm Mới Video Youtube</a>
                                                     </div>
                                                 </div>
                                                 
                                                 <table class="table table-bordered">
                                                     <thead>
                                                         <tr>
-                                                            <th style="width: 40%">ID Video Youtube</th>
+                                                            <th style="width: 40%">Đường Dẫn Video Youtube</th>
                                                             <th style="width: 5%"></th>
                                                         </tr>
                                                     </thead>

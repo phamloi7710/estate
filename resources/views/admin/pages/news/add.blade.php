@@ -25,7 +25,7 @@
                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Danh Mục Tin Tức
                     </label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="sltCategory" class="form-control">
+                        <select name="sltCategory" class="form-control" required="">
                             <option value="">---Chọn Danh Mục---</option>
                             @foreach($category as $cate)
                             <option value="{{$cate->id}}">{{$cate->name}}</option>
@@ -53,6 +53,13 @@
                     <div class="col-md-9 col-sm-9 col-xs-12">
                         <textarea name="content" id="ckeditor" class="form-control col-md-7 col-xs-12"></textarea>
                         <script>CKEDITOR.replace('ckeditor');</script>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Sắp Xếp
+                    </label>
+                    <div class="col-md-2 col-sm-2 col-xs-12">
+                        <input value="{{old('txtOrder')?old('txtOrder'):0}}" name="txtOrder" type="number" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">

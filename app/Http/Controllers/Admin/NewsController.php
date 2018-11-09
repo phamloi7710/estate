@@ -85,6 +85,7 @@ class NewsController extends Controller
         $news->tomtat = $request->tomtat;
         $news->content = $request->content;
         $news->status = $request->status;
+        $news->order = $request->txtOrder;
         $news->seoTitle = $request->txtSeoTitle;
         $news->seoDescription = $request->txtSeoDescription;
         $news->seoKeyWorks = $request->txtSeoKeywords;
@@ -111,6 +112,7 @@ class NewsController extends Controller
         $news->tomtat = $request->tomtat;
         $news->content = $request->content;
         $news->status = $request->status;
+        $news->order = $request->txtOrder;
         $news->seoTitle = $request->txtSeoTitle;
         $news->seoDescription = $request->txtSeoDescription;
         $news->seoKeyWorks = $request->txtSeoKeywords;

@@ -22,22 +22,26 @@ Quản Lý Tin Tức
                         <table id="tableSortable" class="table table-hover table-bordered">
                             <thead>
                                 <tr>
+                                    <th class="center" style="text-align: center; width: 3%">ID</th>
                                     <th class=""> Tiêu Đề</th>
-                                    <th class=""> Danh Mục</th>
+                                    <th class="center" style="text-align: center; width: 10%"> Danh Mục</th>
                                     <th class=""> Ảnh Bìa</th>
                                     <th class=""> Tóm Tắt</th>
+                                    <th class="center" style="text-align: center; width: 5%"> Sắp Xếp</th>
                                     <th class="" style="text-align: center; width: 10%"> Trạng Thái</th>
-                                    <th class=" no-link last" style="text-align: center; width: 10%"></th>
+                                    <th class="center" style="text-align: center; width: 8%"></th>
                                 </tr>
                             </thead>
 
                             <tbody>
                                 @foreach($news as $value)
                                 <tr>
+                                    <td class="center">{{$value->id}}</td>
                                     <td>{{$value->title}}</td>
-                                    <td>{{$value->category->name}}</td>
+                                    <td class="center">{{$value->category->name}}</td>
                                     <td class="center"><img width="200" src="{{url('')}}{{$value->image}}"></td>
                                     <td>{{$value->tomtat}}</td>
+                                    <td class="center">{{$value->order}}</td>
                                     <td class="center">
                                         @if($value->status=='active')
                                         <p class="label label-success" style="font-size: 10px;">Đang Hoạt Động</p>

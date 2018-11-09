@@ -6,7 +6,7 @@ OSIMI - WEBSITE CHỦ ĐẦU TƯ
 <div class="right_col" role="main">
     <div class="x_panel">
         <div class="x_title">
-            <h2>{{trans('general.addNew')}} {{trans('slider.slider')}}
+            <h2>
         </h2>
             <div class="clearfix"></div>
         </div>

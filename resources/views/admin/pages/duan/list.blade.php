@@ -21,8 +21,10 @@ Quản Lý Dự Án
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
+                                    <th class="center">ID</th>
                                     <th class="center">Tiêu Đề</th>
                                     <th class="center">Hình Ảnh</th>
+                                    <th class="center">Sắp Xếp</th>
                                     <th class="center">Trạng Thái</th>
                                     <th class="center">Chức Năng</th>
                                 </tr>
@@ -30,9 +32,17 @@ Quản Lý Dự Án
                             <tbody>
                                 @foreach($duan as $value)
                                 <tr>
+                                    <td class="center">{{$value->id}}</td>
                                     <td>{{$value->title}}</td>
                                     <td class="center"><img width="200" src="{{url('')}}{{$value->image}}"></td>
-                                    <td></td>
+                                    <td class="center">{{$value->order}}</td>
+                                    <td class="center">
+                                        @if($value->status=='active')
+                                        <p class="label label-success" style="font-size: 10px;">Đang Hoạt Động</p>
+                                        @else
+                                        <p class="label label-danger" style="font-size: 10px;">Đang Ẩn</p>
+                                        @endif
+                                    </td>
                                     <td style="width:10%;">
                                         <a href="{{route('getEditDuAnAdmin', ['id'=>$value->id])}}" class="btn btn-primary btn-xs">Sửa</a>
                                         <a onclick="return alertMsg('{{route('getDeleteDuAnAdmin', ['id'=>$value->id])}}','Bạn Có Muốn Xoá Trang Này Không?');" class="btn btn-danger btn-xs">Xoá</a>

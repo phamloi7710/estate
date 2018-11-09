@@ -29,7 +29,8 @@ class DuAnController extends Controller
     	$duan->thietke = $request->thietke;
     	$duan->tienich = $request->tienich;
     	$duan->thanhtoan = $request->thanhtoan;
-
+        $duan->status = $request->status;
+        $duan->order = $request->txtOrder;
     	$imageData = array();
         $titleImage = $request->txtImageTitle;
         $image = $request->image;
@@ -46,13 +47,19 @@ class DuAnController extends Controller
 
 
 
+
+
         $videoData = array();
-        $urlVideo = $request->txtUrlVideo;
-        if(is_array($urlVideo)) {
-            for($i=0; $i < count($urlVideo); $i++) {
-                $videoData[$i] = [
-                    'url' => $urlVideo[$i],
-                ];
+        $url = $request->txtUrlVideo;
+        if(is_array($url)) {
+            for($i=0; $i < count($url); $i++) {
+                 preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url[$i], $matches[$i]);
+                 if (!empty($matches)) {
+                    $videoData[$i] = [
+                        'url' => isset($matches[$i][1]) ? $matches[$i][1] : ''
+                    ];
+                  }
+                    
             }
         }
         $duan->video = serialize($videoData);
@@ -82,8 +89,9 @@ class DuAnController extends Controller
     	$duan->vitri = $request->vitri;
     	$duan->thietke = $request->thietke;
     	$duan->tienich = $request->tienich;
-    	$duan->thanhtoan = $request->thanhtoan;
-
+        $duan->thanhtoan = $request->thanhtoan;
+    	$duan->status = $request->status;
+        $duan->order = $request->txtOrder;
     	$imageData = array();
         $titleImage = $request->txtImageTitle;
         $image = $request->image;
@@ -100,13 +108,17 @@ class DuAnController extends Controller
 
 
 
-        $videoData = array();
-        $urlVideo = $request->txtUrlVideo;
-        if(is_array($urlVideo)) {
-            for($i=0; $i < count($urlVideo); $i++) {
-                $videoData[$i] = [
-                    'url' => $urlVideo[$i],
-                ];
+         $videoData = array();
+        $url = $request->txtUrlVideo;
+        if(is_array($url)) {
+            for($i=0; $i < count($url); $i++) {
+                 preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url[$i], $matches[$i]);
+                 if (!empty($matches)) {
+                    $videoData[$i] = [
+                        'url' => isset($matches[$i][1]) ? $matches[$i][1] : ''
+                    ];
+                  }
+                    
             }
         }
         $duan->video = serialize($videoData);

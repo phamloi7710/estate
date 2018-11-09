@@ -33,7 +33,7 @@
                         <article class="article-item blog-article-item">
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4 image-hover-1">
                                 <a href="{{route('getChiTietTinTucFrontend', ['url'=>$value->slug])}}" title="{{$value->title}}">
-                                <img src="{{url('')}}{{$value->image}}" class="img-responsive" alt="Du Lịch Đại Dương">
+                                <img src="{{url('')}}{{$value->image}}" class="img-responsive" alt="{{$value->title}}">
                                 </a>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">

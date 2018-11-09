@@ -24,7 +24,7 @@ class PagesController extends Controller
     }
     public function getDuAnDangTrienKhai()
     {
-    	$duan = DuAn::where('danhmuc', 'Dự Án Đang Triển Khai')->orderBy('id', 'DESC');
+    	$duan = DuAn::where('danhmuc', 'Dự Án Đang Triển Khai')->orderBy('order', 'ASC');
     	$duan = $duan->paginate(10)->setPath('');
     	return view('frontend.pages.duan.duandangtrienkhai', ['duan'=>$duan]);
     }
@@ -38,7 +38,7 @@ class PagesController extends Controller
     {
         $category = NewsCategory::where('status', 'active')->get();
         $cateNews = NewsCategory::where('slug', $slug)->first();
-        $news = News::where('cate_id', $cateNews->id)->orderBy('id', 'DESC');
+        $news = News::where('cate_id', $cateNews->id)->orderBy('order', 'ASC');
         $news = $news->paginate(10)->setPath('');
         return view('frontend.pages.news.category.list', ['category'=>$category, 'news'=>$news, 'cateNews'=>$cateNews]);
     }

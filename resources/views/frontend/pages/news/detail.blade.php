@@ -52,38 +52,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="tags_and_social">
-                                <ul class="article_tags tags-list">
-                                    <li class="tag-item">
-                                        <a class="tag_hover_style_1" href="/blogs/all/tagged/apple" title="Các bài viết có tag : apple">apple</a>
-                                        <a class="tag_hover_style_1" href="/blogs/all/tagged/iphone" title="Các bài viết có tag : iphone">iphone</a>
-                                        <a class="tag_hover_style_1" href="/blogs/all/tagged/mobile" title="Các bài viết có tag : mobile">mobile</a>
-                                    </li>
-                                </ul>
-                                <div class="social-sharing article-sharing">
-                                    <div class="social-media social-icons" data-permalink="https://libra-health.bizwebvietnam.net/phan-tich-quy-luat-chon-ngay-dep-cua-apple-de-xac-dinh-ngay-ra-mat-cac-mau-iphone-2018">
-                                        <div class="sharing-item">
-                                            <a target="_blank" href="//www.facebook.com/sharer.php?u=https://libra-health.bizwebvietnam.net/phan-tich-quy-luat-chon-ngay-dep-cua-apple-de-xac-dinh-ngay-ra-mat-cac-mau-iphone-2018" class="share-facebook txt-facebook hv-bg-facebook hv-bd-facebook" title="Chia sẻ lên Facebook">
-                                            <span class="icon icon-facebook" aria-hidden="true">
-                                            <i class="fa fa-facebook"></i>
-                                            </span>
-                                            </a>
-                                            <a target="_blank" href="//twitter.com/share?text=phan-tich-quy-luat-chon-ngay-dep-cua-apple-de-xac-dinh-ngay-ra-mat-cac-mau-iphon&amp;url=https://libra-health.bizwebvietnam.net/phan-tich-quy-luat-chon-ngay-dep-cua-apple-de-xac-dinh-ngay-ra-mat-cac-mau-iphone-2018" class="share-twitter txt-twitter hv-bg-twitter hv-bd-twitter" title="Chia sẻ lên Twitter">
-                                            <span class="icon icon-twitter" aria-hidden="true">
-                                            <i class="fa fa-twitter"></i>
-                                            </span>
-                                            </a>
-                                            <a target="_blank" href="//plus.google.com/share?url=https://libra-health.bizwebvietnam.net/phan-tich-quy-luat-chon-ngay-dep-cua-apple-de-xac-dinh-ngay-ra-mat-cac-mau-iphone-2018" class="share-google txt-google-plus hv-bg-google-plus hv-bd-google-plus" title="+1 lên Google Plus">
-                                            <span class="icon icon-google-plus" aria-hidden="true">
-                                            <i class="fa fa-google-plus"></i>
-                                            </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="related_articles">
                                 <div class="module-header">

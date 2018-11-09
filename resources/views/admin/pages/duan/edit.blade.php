@@ -48,6 +48,25 @@ Thêm Mới Dự Án
                             <textarea name="tomtat" name="" id="" cols="30" rows="5" class="form-control" required>{{$duan->tomtat}}</textarea>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Sắp Xếp
+                        </label>
+                        <div class="col-md-2 col-sm-2 col-xs-12">
+                            <input value="{{$duan->order}}" name="txtOrder" type="number" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Trạng Thái
+                    </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <label>
+                                <input @if($duan->status=='active')checked @endif value="active" type="radio" class="flat" name="status"> Hiển Thị
+                            </label><br>
+                            <label>
+                                <input @if($duan->status=='inActive')checked @endif value="inActive" type="radio" class="flat" name="status"> Không Hiển Thị
+                            </label>
+                        </div>
+                    </div>
                     <br>
                     <br>
                     <div class="" role="tabpanel" data-example-id="togglable-tabs">
@@ -179,14 +198,14 @@ Thêm Mới Dự Án
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <div class="form-group">
                                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                                        <a onclick="addVideoEdit();" class="btn btn-success btn-xs  pull-right">Thêm Mới ID Video</a>
+                                                        <a onclick="addVideoEdit();" class="btn btn-success btn-xs  pull-right">Thêm Mới Video Youtube</a>
                                                     </div>
                                                 </div>
                                                 
                                                 <table class="table table-bordered">
                                                     <thead>
                                                         <tr>
-                                                            <th style="width: 40%">ID Video Youtube</th>
+                                                            <th style="width: 40%">Đường Dẫn Video Youtube</th>
                                                             <th style="width: 5%"></th>
                                                         </tr>
                                                     </thead>
@@ -195,7 +214,7 @@ Thêm Mới Dự Án
                                                         @foreach ($videoData as $value)
                                                         <tr id="rowVideo{{$i}}">
                                                             <td>
-                                                                <input value="{{$value['url']}}" type="text" name="txtUrlVideo[]" class="form-control" placeholder="Đường Dẫn Video">
+                                                                <input value="https://youtube.com/watch?v={{$value['url']}}" type="text" name="txtUrlVideo[]" class="form-control" placeholder="Đường Dẫn Video">
                                                             </td>
                                                             <td class="center">
                                                                 <a href="javascript:void(0)" onclick="$('#rowVideo{{$i}}').remove();" title="Xóa" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i>
