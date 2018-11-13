@@ -12,6 +12,7 @@
 <script src="{{url('')}}/assets/admin/filemanager/js/lfm.js"></script>
 <script src="{{url('')}}/assets/admin/vendors/moment/min/moment.min.js"></script>
 <script src="{{url('')}}/assets/admin/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="{{url('')}}/assets/admin/vendors/switchery/dist/switchery.min.js"></script>
 <script src="{{url('')}}/assets/admin/vendors/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
 <script src="{{url('')}}/assets/admin/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
 <script src="{{url('')}}/assets/admin/vendors/iCheck/icheck.min.js"></script>

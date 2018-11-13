@@ -1,5 +1,5 @@
 @section('title')
-Thêm Mới Dự Án
+Sửa Dự Án
 @stop
 @extends('admin.general.master')
 @section('content')
@@ -244,10 +244,191 @@ Thêm Mới Dự Án
                     </div>
                 </div>
             </div>
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2> Hiển Thị Thông Tin Dự Án Ra Trang Chủ</h2>
+                    <div class="pull-right">
+                        <label>
+                            <input value="active" type="radio" class="flat" name="statusActiveHome" @if($duan->status_home=='active') checked @endif> Hiển Thị
+                        </label><br>
+                        <label>
+                            <input value="inActive" type="radio" class="flat" name="statusActiveHome" @if($duan->status_home=='inActive') checked @endif> Không Hiển Thị
+                        </label>
+                    </div>
+                        
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <div class="form-group">
+                        <div role="tabpanel" data-example-id="togglable-tabs">
+                            <ul class="nav nav-tabs bar_tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#tabTongQuanIndex" role="tab" data-toggle="tab" aria-expanded="true">Tổng Quan</a>
+                                </li>
+                                <li role="presentation" class=""><a href="#tabViTriIndex" role="tab" data-toggle="tab" aria-expanded="false">Vị Trí</a>
+                                </li>
+                                <li role="presentation" class="">
+                                    <a href="#tabTienIchIndex" role="tab" data-toggle="tab" aria-expanded="false">Tiện Ích</a>
+                                </li>
+                                <li role="presentation" class="">
+                                    <a href="#tabThietKeIndex" role="tab" data-toggle="tab" aria-expanded="false">Thiết Kế</a>
+                                </li>
+                                <li role="presentation" class="">
+                                    <a href="#tabHinhAnhIndex" role="tab" data-toggle="tab" aria-expanded="false">Thư Viện Ảnh</a>
+                                </li>   
+                            </ul>
+                            <div id="myTabContent" class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade active in" id="tabTongQuanIndex" aria-labelledby="home-tab">
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-3 col-xs-12 profile_details">
+                                            <div class="well profile_view">
+                                               <a id="previewImageTongquanIndex" href="{{url('')}}/{{$dataTongQuanIndex['image']}}" class="form-control preview previewImageTongquanIndex"><input name="imageTongQuanIndex" value="{{$dataTongQuanIndex['image']}}" id="imageTongQuanIndex" style="width: 100%; border: none;" placeholder="Đường Dẫn Hình Ảnh"></a>
+                                                <div class="col-xs-12 bottom text-center">
+                                                    <div class="col-xs-12 col-sm-12 emphasis pull-right">
+                                                        <a href="javascript:;" data-input="imageTongQuanIndex" data-preview="previewImageTongquanIndex" class="selectImage btn btn-success btn-xs">Chọn Ảnh</a>
+                                                        <a href="javascript:;" class="deleteImageTongQuanIndex btn btn-danger btn-xs">Xóa</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <textarea name="tongQuanIndex" id="tongQuanIndex" class="form-control col-md-7 col-xs-12">{{$dataTongQuanIndex['content']}}</textarea>
+                                            <script>CKEDITOR.replace('tongQuanIndex');</script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="tabViTriIndex" aria-labelledby="profile-tab">
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-3 col-xs-12 profile_details">
+                                            <div class="well profile_view">
+                                               <a id="previewImageViTriIndex" href="{{url('')}}/{{$dataViTriIndex['image']}}" class="form-control preview previewImageViTriIndex"><input value="{{$dataViTriIndex['image']}}" name="imageViTriIndex" id="imageViTriIndex" style="width: 100%; border: none;" placeholder="Đường Dẫn Hình Ảnh"></a>
+                                                <div class="col-xs-12 bottom text-center">
+                                                    <div class="col-xs-12 col-sm-12 emphasis pull-right">
+                                                        <a href="javascript:;" data-input="imageViTriIndex" data-preview="previewImageViTriIndex" class="selectImage btn btn-success btn-xs">Chọn Ảnh</a>
+                                                        <a href="javascript:;" class="deleteImageViTriIndex btn btn-danger btn-xs">Xóa</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <textarea name="vitriIndex" id="vitriIndex" class="form-control col-md-7 col-xs-12">{{$dataViTriIndex['content']}}</textarea>
+                                            <script>CKEDITOR.replace('vitriIndex');</script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="tabTienIchIndex" aria-labelledby="profile-tab">
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-3 col-xs-12 profile_details">
+                                            <div class="well profile_view">
+                                               <a id="previewImageTienIchIndex" href="{{url('')}}/{{$dataTienIchIndex['image']}}" class="form-control preview previewImageTienIchIndex"><input name="imageTienIchIndex" value="{{$dataTienIchIndex['image']}}" id="imageTienIchIndex" style="width: 100%; border: none;" placeholder="Đường Dẫn Hình Ảnh"></a>
+                                                <div class="col-xs-12 bottom text-center">
+                                                    <div class="col-xs-12 col-sm-12 emphasis pull-right">
+                                                        <a href="javascript:;" data-input="imageTienIchIndex" data-preview="previewImageTienIchIndex" class="selectImage btn btn-success btn-xs">Chọn Ảnh</a>
+                                                        <a href="javascript:;" class="deleteImageTienIchIndex btn btn-danger btn-xs">Xóa</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <textarea name="TienIchIndex" id="TienIchIndex" class="form-control col-md-7 col-xs-12">{{$dataTienIchIndex['content']}}</textarea>
+                                            <script>CKEDITOR.replace('TienIchIndex');</script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="tabThietKeIndex" aria-labelledby="profile-tab">
+                                     <div class="row">
+                                        <div class="col-md-3 col-sm-3 col-xs-12 profile_details">
+                                            <div class="well profile_view">
+                                               <a id="previewImageThietKeIndex" href="{{url('')}}/{{$dataThietKeIndex['image']}}" class="form-control preview previewImageThietKeIndex"><input name="imageThietKeIndex" value="{{$dataThietKeIndex['image']}}" id="imageThietKeIndex" style="width: 100%; border: none;" placeholder="Đường Dẫn Hình Ảnh"></a>
+                                                <div class="col-xs-12 bottom text-center">
+                                                    <div class="col-xs-12 col-sm-12 emphasis pull-right">
+                                                        <a href="javascript:;" data-input="imageThietKeIndex" data-preview="previewImageThietKeIndex" class="selectImage btn btn-success btn-xs">Chọn Ảnh</a>
+                                                        <a href="javascript:;" class="deleteImageThietKeIndex btn btn-danger btn-xs">Xóa</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-12">
+                                            <textarea name="ThietKeIndex" id="ThietKeIndex" class="form-control col-md-7 col-xs-12">{{$dataThietKeIndex['content']}}</textarea>
+                                            <script>CKEDITOR.replace('ThietKeIndex');</script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="tabHinhAnhIndex" aria-labelledby="profile-tab">
+                                    <div class="form-group">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                                    <a onclick="addImageIndexEdit();" class="btn btn-success btn-xs  pull-right">Thêm Mới Hình Ảnh</a>
+                                                </div>
+                                            </div>
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 20%">Tiêu Đề</th>
+                                                        <th style="width: 40%">Hình Ảnh</th>
+                                                        <th style="width: 5%"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="contentHinhAnhIndex">
+                                                    @if($imageDataIndex)
+                                                    @php $i=0 @endphp
+                                                    @foreach ($imageDataIndex as $value)
+                                                    <tr id="rowImageIndex{{$i}}">
+                                                        <td>
+                                                            <input value="{{$value['title']}}" type="text" name="txtImageTitleIndex[]" class="form-control" placeholder="Tiêu Đề Hình Ảnh">
+                                                        </td>
+                                                        <td>
+                                                            <div class="row">
+                                                                <div class="col-md-10">
+                                                                    <input value="{{$value['image']}}" id="imageIndex{{$i}}" type="text" name="imageIndex[]" class="form-control" placeholder="Đường Dẫn Hình Ảnh">
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <a data-input="imageIndex{{$i}}" data-preview="previewImage" href="javascript:;" class="btn btn-default btn-xs selectImageIndex{{$i}}">Chọn Ảnh</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="center">
+                                                            <a href="javascript:void(0)" onclick="$('#rowImageIndex{{$i}}').remove();" title="Xóa" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <script type="text/javascript">
+                                                        $(document).ready(function(){
+                                                            $('.selectImageIndex{{$i}}').filemanager('image');
+                                                            var lfm = function(options, cb) {
+                                                                var route_prefix = (options && options.prefix) ? options.prefix : '/uploads';
+                                                                window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=1200,height=800');
+                                                                window.SetUrl = cb;
+                                                            };
+                                                        })
+                                                        
+                                                    </script>
+                                                    @php $i++ @endphp
+                                                    @endforeach
+                                                    @endif
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
 </div>
 @section('script')
+<script language="javascript">
+    document.getElementById('showIndex').onclick = function(e){
+        if (this.checked){
+               document.getElementById('dataIndex').style.display = 'block';
+            }
+            else{
+                document.getElementById('dataIndex').style.display = 'none';
+            }
+    };
+</script>
 <script type="text/javascript">
     CKEDITOR.replace('tab1');
     CKEDITOR.replace('tab2');
@@ -270,6 +451,26 @@ Thêm Mới Dự Án
         $(".imagePreview").attr('src','');
         $(".imagePreview").attr('src','../assets/uploads/images/no-avatar.png');
         $("#image").val('');
+    });
+    $(".deleteImageTongQuanIndex").click(function(){
+        $(".previewImageTongquanIndex").attr('href','');
+        $(".previewImageTongquanIndex").attr('href','{{url('')}}/assets/uploads/images/no-image.jpg');
+        $("#imageTongQuanIndex").val('');
+    });
+    $(".deleteImageViTriIndex").click(function(){
+        $(".previewImageViTriIndex").attr('href','');
+        $(".previewImageViTriIndex").attr('href','{{url('')}}/assets/uploads/images/no-image.jpg');
+        $("#imageViTriIndex").val('');
+    });
+    $(".deleteImageTienIchIndex").click(function(){
+        $(".previewImageTienIchIndex").attr('href','');
+        $(".previewImageTienIchIndex").attr('href','{{url('')}}/assets/uploads/images/no-image.jpg');
+        $("#imageTienIchIndex").val('');
+    });
+    $(".deleteImageThietKeIndex").click(function(){
+        $(".previewImageThietKeIndex").attr('href','');
+        $(".previewImageThietKeIndex").attr('href','{{url('')}}/assets/uploads/images/no-image.jpg');
+        $("#imageThietKeIndex").val('');
     });
 });
 </script>
@@ -309,22 +510,22 @@ $('.preview').anarchytip();
 </script>
 <script type="text/javascript">
     var row = {{count($imageData)}};
-function addImageEdit(){
-    html = '<tr id="rowImage'+row+'">';
-    html += '<td><input type="text" name="txtImageTitle[]" class="form-control" placeholder="Tiêu Đề Hình Ảnh"></td>';
-    html += '<td><div class="row"><div class="col-md-10"><input id="image'+row+'" type="text" name="image[]" class="form-control" placeholder="Đường Dẫn Hình Ảnh"></div><div class="col-md-2"><a data-input="image'+row+'" data-preview="previewImage" href="javascript:;" class="btn btn-default btn-xs selectImage'+row+'">Chọn Ảnh</a></div></td>';
-    html += '<td class="center">';
-    html += '<a href="javascript:void(0)" onclick="$(\'#rowImage'+row+'\').remove();" title="Xóa" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>';
-    html += '</td></tr>';
-    $('#contentAttribute').append(html);
-    $('.selectImage'+row+'').filemanager('image');
-        var lfm = function(options, cb) {
-        var route_prefix = (options && options.prefix) ? options.prefix : '/uploads';
-        window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=1200,height=800');
-        window.SetUrl = cb;
-    };
-    row++;
-}
+    function addImageEdit(){
+        html = '<tr id="rowImage'+row+'">';
+        html += '<td><input type="text" name="txtImageTitle[]" class="form-control" placeholder="Tiêu Đề Hình Ảnh"></td>';
+        html += '<td><div class="row"><div class="col-md-10"><input id="image'+row+'" type="text" name="image[]" class="form-control" placeholder="Đường Dẫn Hình Ảnh"></div><div class="col-md-2"><a data-input="image'+row+'" data-preview="previewImage" href="javascript:;" class="btn btn-default btn-xs selectImage'+row+'">Chọn Ảnh</a></div></td>';
+        html += '<td class="center">';
+        html += '<a href="javascript:void(0)" onclick="$(\'#rowImage'+row+'\').remove();" title="Xóa" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>';
+        html += '</td></tr>';
+        $('#contentAttribute').append(html);
+        $('.selectImage'+row+'').filemanager('image');
+            var lfm = function(options, cb) {
+            var route_prefix = (options && options.prefix) ? options.prefix : '/uploads';
+            window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=1200,height=800');
+            window.SetUrl = cb;
+        };
+        row++;
+    }
 </script>
 <script type="text/javascript">
     var row = {{count($videoData)}};
@@ -335,6 +536,25 @@ function addImageEdit(){
         html += '<a href="javascript:void(0)" onclick="$(\'#rowVideo'+row+'\').remove();" title="Xóa" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>';
         html += '</td></tr>';
         $('#contentVideo').append(html);
+        row++;
+    }
+</script>
+<script type="text/javascript">
+    var row = @if($imageDataIndex) {{count($imageDataIndex)}} @else 0 @endif;
+    function addImageIndexEdit(){
+        html = '<tr id="rowImageIndex'+row+'">';
+        html += '<td><input type="text" name="txtImageTitleIndex[]" class="form-control" placeholder="Tiêu Đề Hình Ảnh"></td>';
+        html += '<td><div class="row"><div class="col-md-10"><input id="image'+row+'" type="text" name="imageIndex[]" class="form-control" placeholder="Đường Dẫn Hình Ảnh"></div><div class="col-md-2"><a data-input="image'+row+'" data-preview="previewImage" href="javascript:;" class="btn btn-default btn-xs selectImage'+row+'">Chọn Ảnh</a></div></td>';
+        html += '<td class="center">';
+        html += '<a href="javascript:void(0)" onclick="$(\'#rowImageIndex'+row+'\').remove();" title="Xóa" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>';
+        html += '</td></tr>';
+        $('#contentHinhAnhIndex').append(html);
+        $('.selectImage'+row+'').filemanager('image');
+            var lfm = function(options, cb) {
+            var route_prefix = (options && options.prefix) ? options.prefix : '/uploads';
+            window.open(route_prefix + '?type=' + options.type || 'file', 'FileManager', 'width=1200,height=800');
+            window.SetUrl = cb;
+        };
         row++;
     }
 </script>

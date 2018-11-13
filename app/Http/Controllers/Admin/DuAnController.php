@@ -43,12 +43,6 @@ class DuAnController extends Controller
             }
         }
         $duan->hinhanh = serialize($imageData);
-
-
-
-
-
-
         $videoData = array();
         $url = $request->txtUrlVideo;
         if(is_array($url)) {
@@ -64,6 +58,40 @@ class DuAnController extends Controller
         }
         $duan->video = serialize($videoData);
         $duan->lienhe = $request->lienhe;
+
+        $dataTongQuanIndex = [
+            'image'=> $request->imageTongQuanIndex,
+            'content'=> $request->tongQuanIndex
+        ];
+        $dataViTriIndex = [
+            'image'=> $request->imageViTriIndex,
+            'content'=> $request->vitriIndex
+        ];
+        $dataTienIchIndex = [
+            'image'=> $request->imageTienIchIndex,
+            'content'=> $request->TienIchIndex
+        ];
+        $dataThietKeIndex = [
+            'image'=> $request->imageThietKeIndex,
+            'content'=> $request->ThietKeIndex
+        ];
+        $imageDataIndex = array();
+        $titleImageIndex = $request->txtImageTitleIndex;
+        $imageIndex = $request->imageIndex;
+        if(is_array($imageIndex)) {
+            for($i=0; $i < count($imageIndex); $i++) {
+                $imageDataIndex[$i] = [
+                    'title' => $titleImageIndex[$i],
+                    'image' => $imageIndex[$i],
+                ];
+            }
+        }
+        $duan->tong_quan_index = serialize($dataTongQuanIndex);
+        $duan->vi_tri_index = serialize($dataViTriIndex);
+        $duan->tien_ich_index = serialize($dataTienIchIndex);
+        $duan->thiet_ke_index = serialize($dataThietKeIndex);
+        $duan->hinh_anh_index = serialize($imageDataIndex);
+        $duan->status_home = $request->statusActiveHome;
         $duan->save();
         $notification = array(
             'message' => 'Thêm Mới Dự Án Thành Công!', 
@@ -75,8 +103,23 @@ class DuAnController extends Controller
     {
     	$duan = DuAn::find($id);
     	$imageData = unserialize($duan->hinhanh);
-    	$videoData = unserialize($duan->video);
-    	return view('admin.pages.duan.edit', ['duan'=>$duan, 'imageData'=>$imageData, 'videoData'=>$videoData]);
+        $videoData = unserialize($duan->video);
+        $dataTongQuanIndex = unserialize($duan->tong_quan_index);
+        $dataViTriIndex = unserialize($duan->vi_tri_index);
+        $dataTienIchIndex = unserialize($duan->tien_ich_index);
+        $dataThietKeIndex = unserialize($duan->thiet_ke_index);
+    	$imageDataIndex = unserialize($duan->hinh_anh_index);
+    	return view('admin.pages.duan.edit', 
+            [
+                'duan'=>$duan, 
+                'imageData'=>$imageData, 
+                'videoData'=>$videoData, 
+                'dataTongQuanIndex'=>$dataTongQuanIndex, 
+                'dataViTriIndex'=>$dataViTriIndex, 
+                'dataTienIchIndex'=>$dataTienIchIndex, 
+                'dataThietKeIndex'=>$dataThietKeIndex, 
+                'imageDataIndex'=>$imageDataIndex
+            ]);
     }
     public function postEdit(Request $request, $id)
     {
@@ -104,11 +147,7 @@ class DuAnController extends Controller
             }
         }
         $duan->hinhanh = serialize($imageData);
-
-
-
-
-         $videoData = array();
+        $videoData = array();
         $url = $request->txtUrlVideo;
         if(is_array($url)) {
             for($i=0; $i < count($url); $i++) {
@@ -123,6 +162,40 @@ class DuAnController extends Controller
         }
         $duan->video = serialize($videoData);
         $duan->lienhe = $request->lienhe;
+
+        $dataTongQuanIndex = [
+            'image'=> $request->imageTongQuanIndex,
+            'content'=> $request->tongQuanIndex
+        ];
+        $dataViTriIndex = [
+            'image'=> $request->imageViTriIndex,
+            'content'=> $request->vitriIndex
+        ];
+        $dataTienIchIndex = [
+            'image'=> $request->imageTienIchIndex,
+            'content'=> $request->TienIchIndex
+        ];
+        $dataThietKeIndex = [
+            'image'=> $request->imageThietKeIndex,
+            'content'=> $request->ThietKeIndex
+        ];
+        $imageDataIndex = array();
+        $titleImageIndex = $request->txtImageTitleIndex;
+        $imageIndex = $request->imageIndex;
+        if(is_array($imageIndex)) {
+            for($i=0; $i < count($imageIndex); $i++) {
+                $imageDataIndex[$i] = [
+                    'title' => $titleImageIndex[$i],
+                    'image' => $imageIndex[$i],
+                ];
+            }
+        }
+        $duan->tong_quan_index = serialize($dataTongQuanIndex);
+        $duan->vi_tri_index = serialize($dataViTriIndex);
+        $duan->tien_ich_index = serialize($dataTienIchIndex);
+        $duan->thiet_ke_index = serialize($dataThietKeIndex);
+        $duan->hinh_anh_index = serialize($imageDataIndex);
+        $duan->status_home = $request->statusActiveHome;
         $duan->save();
         $notification = array(
             'message' => 'Cập Nhật Dự Án Thành Công!', 

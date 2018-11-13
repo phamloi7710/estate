@@ -20,6 +20,7 @@
         <link href="{{url('')}}/assets/admin/vendors/starrr/dist/starrr.css" rel="stylesheet">
         <!-- Custom Theme Style -->
         <link href="{{url('')}}/assets/admin/build/css/custom.min.css" rel="stylesheet">
+        <link href="{{url('')}}/assets/admin/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/admin/my-assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/admin/my-assets/css/custom.css">
         <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/admin/my-assets/css/check-and-radio.css">

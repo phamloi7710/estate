@@ -68,6 +68,7 @@ Jssor Slider (MIT license)
     </div>
     <script type="text/javascript">jssor_1_slider_init();</script>
 </section>
+@if($dataTongQuanIndex)
 <section class="lib-section-3">
     <div class="section_introduce">
         <div class="container">
@@ -75,7 +76,7 @@ Jssor Slider (MIT license)
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="module-header">
                         <h2 class="module-title libra-health___title-index">
-                            <a href="#">
+                            <a href="@if($duan){{route('getChiTietDuAnFrontend', ['url'=>$duan->url])}}@endif">
                             <span>
                             TỔNG QUAN
                             </span>
@@ -85,52 +86,23 @@ Jssor Slider (MIT license)
                     <div class="module-content">
                         <div class="section_introduce___image">
                             <picture>
-                                <source media="(min-width: 1200px)" srcset="{{url('')}}/assets/uploads/ho-boi-view1-L.jpg">
-                                <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/assets/uploads/ho-boi-view1-L.jpg">
-                                <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/assets/uploads/ho-boi-view1-L.jpg">
-                                <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/assets/uploads/ho-boi-view1-L.jpg">
-                                <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/assets/uploads/ho-boi-view1-L.jpg">
-                                <img src="{{url('')}}/assets/uploads/ho-boi-view1-L.jpg" class="img-responsive" alt="Lỗi Liquid: Value cannot be null.
+                                <source media="(min-width: 1200px)" srcset="{{url('')}}/@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
+                                <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
+                                <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
+                                <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
+                                <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
+                                <img src="{{url('')}}/@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif" class="img-responsive" alt="Lỗi Liquid: Value cannot be null.
                                     Parameter name: key">
                             </picture>
                         </div>
                         <div class="section_introduce___desc">
-                            <b>SAIGON INTELA "MANG ĐẾN PHONG CÁCH SỐNG KHÁC BIỆT"</b><br><br>
-                            Saigon Intela chào đón bạn với những giá trị sống đích thực của một cuộc sống hiện đại. Hãy cùng người thân yêu tận hưởng món quà từ công nghệ cao, từ những tiện ích tối ưu, vượt trội chưa từng có, cùng đón chào ngày mới với nhiều điều diệu kỳ.
-                            <p>
-                                <i class="fa fa-hand-o-right"></i> Tên dự án: Sài Gòn Intela
-                            </p>
-                            <p>
-                                <i class="fa fa-hand-o-right"></i> Chủ đầu tư: LDG Group
-                            </p>
-                            <p>
-                                <i class="fa fa-hand-o-right"></i> Đơn vị phân phối độc quyền: Công ty CP Bất Động Sản 3C</p>
-                            <p>
-                                <i class="fa fa-hand-o-right"></i> Số lượng căn hộ: 1068 căn
-                            </p>
-                            <p>
-                                <i class="fa fa-hand-o-right"></i> Diện tích đất: 9,016 m2
-                            </p>
-                            <p>
-                                <i class="fa fa-hand-o-right"></i> Quy mô dân số: 2,200 người
-                            </p>
-                            <p>
-                                <i class="fa fa-hand-o-right"></i> Mật độ xây dựng: 34,80%
-                            </p>
-                            <p>
-                                <i class="fa fa-hand-o-right"></i> Hệ số sử dụng đất: 8,27
-                            </p>
-                            <p>
-                                <i class="fa fa-hand-o-right"></i> Chiều cao: 24 tầng (2 Block)
-                            </p>
-                            <p>
-                                <i class="fa fa-hand-o-right"></i> Tổng diện tích sàn: 74,599 m2 (không bao gồm 2 tầng hầm và sân thượng)
-                            </p>
-                            <!-- <div class="libra-health___viewmore">
-                                <a href="" title="Giới thiệu">
+                            @if($dataTongQuanIndex){!!$dataTongQuanIndex['content']!!}@endif
+
+                            <div class="libra-health___viewmore">
+                                <a href="@if($duan){{route('getChiTietDuAnFrontend', ['url'=>$duan->url])}}@endif" title="Giới thiệu">
                                 <span>Xem thêm</span>
                                 </a>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -138,6 +110,8 @@ Jssor Slider (MIT license)
         </div>
     </div>
 </section>
+@endif
+@if($dataViTriIndex)
 <section class="lib-section-4">
     <div class="section_service">
         <div class="container">
@@ -145,9 +119,9 @@ Jssor Slider (MIT license)
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="module-header">
                         <h2 class="module-title libra-health___title-index">
-                            <a href="javascript:;">
+                            <a href="@if($duan){{route('getChiTietDuAnFrontend', ['url'=>$duan->url])}}@endif">
                             <span>
-                            VỊ TRÍ SÀI GÒN INTELA
+                            VỊ TRÍ  @if(isset($duan)){{$duan->title}}@endif
                             </span>
                             </a>
                         </h2>
@@ -156,24 +130,17 @@ Jssor Slider (MIT license)
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-8 col-md-push-4 col-lg-8">
                                 <div class="section_service___list">
-                                    <img src="{{url('')}}/assets/uploads/location-img.jpg" alt="Title Here">
+                                    <img src="{{url('')}}/@if($dataViTriIndex){{$dataViTriIndex['image']}}@endif" alt="Title Here">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-4 col-md-pull-8 col-lg-4">
                                 <div class="section_service___desc">
-                                    <p>Sở hữu vị trí đắc địa, nằm ngay mặt tiền đại lộ Nguyễn Văn Linh, cách trung tâm thành phố khoảng 10 phút, kết nối vào khu đô thị Phú Mỹ Hưng và liền kề nhiều khu dịch vụ tiện ích hiện hữu... nên cư dân tại Khu căn hộ thông minh ven sông Saigon Intela sẽ rất thuận lợi trong việc di chuyển cũng như tiếp cận với các tiện nghi hiện đại.</p>
-                                    <p>
-                                        <i class="fa fa-hand-o-right"></i> 5 phút để tới Tuyến Metro Số 5,  ROSA MART 
-                                    </p>
-                                    <p>
-                                        <i class="fa fa-hand-o-right"></i> 10 phút để tới Bệnh viện Chợ Rẫy, Bệnh viện Nhiệt Đới, Đại học Văn Hiến, Siêu thị CO.OP MART.
-                                    </p>
-                                    <p>
-                                        <i class="fa fa-hand-o-right"></i> 15 phút để tới Đại học RMIT, Chợ Bình Điền, Bệnh viện FV, Khu đô thị PHÚ MỸ HƯNG, Đại học Tôn Đức Thắng, Khu dân cư Trung Sơn.
-                                    </p>
-                                    <p>
-                                        <i class="fa fa-hand-o-right"></i> 30 phút để tới Sân bay Tân Sơn Nhất và trung tâm Thành Phố
-                                    </p>
+                                    @if($dataViTriIndex){!!$dataViTriIndex['content']!!}@endif
+                                    <div class="libra-health___viewmore">
+		                                <a href="@if($duan){{route('getChiTietDuAnFrontend', ['url'=>$duan->url])}}@endif" title="Giới thiệu">
+		                                <span>Xem thêm</span>
+		                                </a>
+		                            </div>
                                 </div>
                             </div>
                         </div>
@@ -183,6 +150,8 @@ Jssor Slider (MIT license)
         </div>
     </div>
 </section>
+@endif
+@if($dataTienIchIndex)
 <section class="lib-section-5">
     <div class="section_news_slide">
         <div class="container">
@@ -190,9 +159,9 @@ Jssor Slider (MIT license)
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="module-header">
                         <h2 class="module-title libra-health___title-index">
-                            <a href="javascript:;">
+                            <a href="@if($duan){{route('getChiTietDuAnFrontend', ['url'=>$duan->url])}}@endif">
                             <span>
-                            TIỆN ÍCH NỘI KHU ĐẲNG CẤP
+                            TIỆN ÍCH
                             </span>
                             </a>
                         </h2>
@@ -201,15 +170,17 @@ Jssor Slider (MIT license)
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                                 <div class="section_service___list">
-                                    <img src="{{url('')}}/assets/uploads/ho-boi-view1-L.jpg" alt="Title Here">
+                                    <img src="{{url('')}}/@if($dataTienIchIndex){{$dataTienIchIndex['image']}}@endif" alt="Title Here">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                                 <div class="section_service___desc">
-                                    <h4><b style="color: #32A22D">TẬN HƯỞNG CUỘC SỐNG ĐẲNG CẤP TẠI CĂN HỘ THÔNG MINH</b></h4>
-                                    <p>
-                                        Với mong muốn tạo cho cư dân <b>căn hộ Sài Gòn Intela</b> mọi tiện ích thiết yếu nhất mà không cần phải đi đâu xa bởi, tất cả đều có ngay gần nhà, <b>chủ đầu tư LDG Group</b> đã kiến tạo nên những tiện ích phong phú và đa dạng như: nhà trẻ, siêu thị tiện lợi, hồ bơi, khu vui chơi trẻ em, gym, spa, nhà hàng café… Saigon Intela luôn được trang bị hệ thống an ninh khép kín, PCCC, bảo vệ 24/24h mang lại cuộc sống bình yên nhất cho giấc ngủ của cư dân.
-                                    </p>
+                                    @if($dataTienIchIndex){!!$dataTienIchIndex['content']!!}@endif
+                                    <div class="libra-health___viewmore">
+		                                <a href="@if($duan){{route('getChiTietDuAnFrontend', ['url'=>$duan->url])}}@endif" title="Giới thiệu">
+		                                <span>Xem thêm</span>
+		                                </a>
+		                            </div>
                                 </div>
                             </div>
                             
@@ -220,14 +191,8 @@ Jssor Slider (MIT license)
         </div>
     </div>
 </section>
-<!-- <section class="lib-section-9">
-    <div class="section_product">
-        <div class="container">
-            <img src="http://www.canhosaigonintela.vn/template/tint/images/utility-big-1.jpg" alt="">
-        </div>
-    </div>
-</section> -->
-
+@endif
+@if($imageDataIndex)
 <section class="lib-section-9">
     <div class="section_product">
         <div class="container">
@@ -235,7 +200,7 @@ Jssor Slider (MIT license)
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="module-header">
                         <h2 class="module-title libra-health___title-index">
-                            <a href="javascript:;">
+                            <a href="@if($duan){{route('getChiTietDuAnFrontend', ['url'=>$duan->url])}}@endif">
                             <span>
                             THƯ VIỆN ẢNH
                             </span>
@@ -244,100 +209,22 @@ Jssor Slider (MIT license)
                     </div>
                     <section class="portfolio" id="portfolio">
                         <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-sm-6 col-xs-12">
+                            
+                            	@if($imageDataIndex)
+                            	@foreach($imageDataIndex as $imageIndex)
+                            	<div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12" style="padding-top: 20px;">
                                     <div class="gallery_product filter">
-                                        <a class="fancybox" rel="ligthbox" href="http://www.canhosaigonintela.vn/template/tint/images/ho-boi-view1-L.jpg">
-                                            <img class="img-responsive" alt="" src="http://www.canhosaigonintela.vn/template/tint/images/ho-boi-view1-L.jpg">
+                                        <a class="fancybox" rel="ligthbox" href="{{$imageIndex['image']}}">
+                                            <img class="img-responsive" alt="" src="{{$imageIndex['image']}}">
                                             <div class='img-info'>
-                                                <h3>Hồ Bơi</h3>
+                                                <h3>{{$imageIndex['title']}}</h3>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="gallery_product filter">
-                                                <a class="fancybox" rel="ligthbox" href="http://www.canhosaigonintela.vn/template/tint/images/cong-vien-bo-song.jpg">
-                                                    <img class="img-responsive" alt="" src="http://www.canhosaigonintela.vn/template/tint/images/cong-vien-bo-song.jpg">
-                                                    <div class='img-info'>
-                                                        <h3>Công Viên Nước Bờ Sông</h3>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="gallery_product filter">
-                                                <a class="fancybox" rel="ligthbox" href="http://www.canhosaigonintela.vn/template/tint/images/skybar.jpg">
-                                                    <img class="img-responsive" alt="" src="http://www.canhosaigonintela.vn/template/tint/images/skybar.jpg">
-                                                    <div class='img-info'>
-                                                        <h3>Skybar</h3>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="margin-top: 16px;">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="gallery_product filter">
-                                                <a class="fancybox" rel="ligthbox" href="http://www.canhosaigonintela.vn/template/tint/images/khu-sinh-hoat-cong-dong.jpg">
-                                                    <img class="img-responsive" alt="" src="http://www.canhosaigonintela.vn/template/tint/images/khu-sinh-hoat-cong-dong.jpg">
-                                                    <div class='img-info'>
-                                                        <h3>Khu Sinh Hoạt Cộng Đồng</h3>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="gallery_product filter">
-                                                <a class="fancybox" rel="ligthbox" href="http://www.canhosaigonintela.vn/template/tint/images/trung-tam-thuong-mai.jpg">
-                                                    <img class="img-responsive" alt="" src="http://www.canhosaigonintela.vn/template/tint/images/trung-tam-thuong-mai.jpg">
-                                                    <div class='img-info'>
-                                                        <h3>Khu Trung Tâm Thương Mại</h3>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row" style="margin-top: 16px;">
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class="row">
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="gallery_product filter">
-                                                <a class="fancybox" rel="ligthbox" href="http://www.canhosaigonintela.vn/template/tint/images/cong-vien-co-tich-l.jpg">
-                                                    <img class="img-responsive" alt="" src="http://www.canhosaigonintela.vn/template/tint/images/cong-vien-co-tich-l.jpg">
-                                                    <div class='img-info'>
-                                                        <h3>CÔNG VIÊN SAIGON INTELA</h3>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-xs-12">
-                                            <div class="gallery_product filter">
-                                                <a class="fancybox" rel="ligthbox" href="http://www.canhosaigonintela.vn/template/tint/images/cong-vien-gia-dinh-l.jpg">
-                                                    <img class="img-responsive" alt="" src="http://www.canhosaigonintela.vn/template/tint/images/cong-vien-gia-dinh-l.jpg">
-                                                    <div class='img-info'>
-                                                        <h3>CÔNG VIÊN GIA ĐÌNH FAMILY SITE</h3>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-xs-12">
-                                    <div class="gallery_product filter">
-                                        <a class="fancybox" rel="ligthbox" href="http://www.canhosaigonintela.vn/template/tint/images/cong-vien-co-tich-l.jpg">
-                                            <img class="img-responsive" alt="" src="http://www.canhosaigonintela.vn/template/tint/images/cong-vien-co-tich-l.jpg">
-                                            <div class='img-info'>
-                                                <h3>Công Viên Xì Trum</h3>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-
+                                @endforeach
+                                @endif
                             </div>
                         </div>
                     </section>
@@ -346,7 +233,8 @@ Jssor Slider (MIT license)
         </div>
     </div>
 </section>
-<section class="lib-section-6">
+@endif
+<!-- <section class="lib-section-6">
     <div class="section_service">
         <div class="container">
             <div class="row">
@@ -464,18 +352,13 @@ Jssor Slider (MIT license)
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                <div class="section_service___desc">
-                                    <h2 style="color: #32a22d">CĂN HỘ SMART CITY TÍCH HỢP CÔNG NGHỆ</h2>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 <style>

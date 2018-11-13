@@ -78,9 +78,7 @@
         </div>
         <div class="row">
             <div class="x_title" data-toggle="collapse" data-target=".data-optional">
-                <h2>Không Bắt Buộc <i class="fa fas fa-angle-double-down"
-                    data-toggle="collapse"
-                    data-target=".data-optional"></i></h2>
+                <a class="data-toggle="collapse" data-target=".data-optional">Không Bắt Buộc <i class="fa fas fa-angle-double-down"></i></a>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content collapse data-optional">
@@ -108,12 +106,6 @@
                         <i>Danh sách các từ khóa quan trọng nhất được phân tách bằng dấu phẩy cho trang này sẽ được viết dưới dạng từ khóa META</i>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="ln_solid"></div>
-        <div class="form-group">
-            <div class="col-md-2 col-sm-2 col-xs-4 pull-right">
-                
             </div>
         </div>
     </div>

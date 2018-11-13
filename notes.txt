@@ -1,0 +1,6 @@
+ALTER TABLE `duan` ADD `status_home` ENUM('active','inActive') NOT NULL DEFAULT 'inActive' AFTER `status`;
+ALTER TABLE `duan` ADD `tong_quan_index` LONGTEXT NULL AFTER `note`;
+ALTER TABLE `duan` ADD `vi_tri_index` LONGTEXT NULL AFTER `note`;
+ALTER TABLE `duan` ADD `tien_ich_index` LONGTEXT NULL AFTER `note`;
+ALTER TABLE `duan` ADD `thiet_ke_index` LONGTEXT NULL AFTER `note`;
+ALTER TABLE `duan` ADD `hinh_anh_index` LONGTEXT NULL AFTER `note`;
