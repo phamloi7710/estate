@@ -73,13 +73,40 @@
                         <div class="sidebar-menu-content module-content">
                             <div class="sidebar-linklists">
                                 <ul>
-                                	@foreach($category as $cate)
+                                    @foreach($category as $cate)
                                     <li class="sidebar-menu-list blog-sidebar-menu">
                                         <a class="ajaxLayer" href="{{route('getDanhMucTinTucFrontend', ['slug'=>$cate->slug])}}" title="">
                                             <span>{{$cate->name}}</span>
                                         </a>
                                     </li>
                                     @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside-filter sidebar-item">
+                    <div class="sidebar-item sidebar-menu sidebar-blog-menu item-border">
+                        <div class="module-header">
+                            <h2 class="module-title libra-health___title">
+                                <span>
+                                    <i class="fa fa-newspaper-o" aria-hidden="true"></i> Danh Mục Dự Án
+                                </span>
+                            </h2>
+                        </div>
+                        <div class="sidebar-menu-content module-content">
+                            <div class="sidebar-linklists">
+                                <ul>
+                                    <li class="sidebar-menu-list blog-sidebar-menu">
+                                        <a class="ajaxLayer" href="{{route('getDuAnDangTrienKhai')}}" title="Dự Án Đang Triển Khai">
+                                        <span>Dự Án Đang Triển Khai</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar-menu-list blog-sidebar-menu">
+                                        <a class="ajaxLayer" href="{{route('getDuAnDaTrienKhai')}}" title="Dự Án Đã Triển Khai">
+                                        <span>Dự Án Đã Triển Khai</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

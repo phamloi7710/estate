@@ -51,12 +51,10 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
 		Route::get('delete/{id}', 'Admin\SliderController@delete')->name('deleteSliderAdmin');
 	});
 	Route::group(['prefix'=>'page'], function(){
-		Route::get('list.html', 'Admin\PagesController@getList')->name('getListPageAdmin');
-		Route::get('add-new.html', 'Admin\PagesController@getAdd')->name('getAddPageAdmin');
-		Route::post('add-new.html', 'Admin\PagesController@postAdd')->name('postAddPageAdmin');
-		Route::get('edit/{id}.html', 'Admin\PagesController@getEdit')->name('getEditPageAdmin');
-		Route::post('edit/{id}.html', 'Admin\PagesController@postEdit')->name('postEditPageAdmin');
-		Route::get('delete/{id}', 'Admin\PagesController@delete')->name('deletePageAdmin');
+		Route::get('gioi-thieu.html', 'Admin\PagesController@gioithieu')->name('getgioithieu');
+		Route::post('gioi-thieu.html', 'Admin\PagesController@postgioithieu')->name('postgioithieu');
+		Route::get('tuyen-dung.html', 'Admin\PagesController@tuyendung')->name('gettuyendung');
+		Route::post('tuyen-dung.html', 'Admin\PagesController@posttuyendung')->name('posttuyendung');
 	});
 	Route::group(['prefix' => 'email-template'], function () {
 

@@ -1,5 +1,3 @@
-	
-@section('content')
 @section('title')
 Giới Thiệu Về OSIMI - 
 @stop
@@ -30,36 +28,10 @@ Giới Thiệu Về OSIMI -
                     <div class="row">
                         <div class="article-main-content">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <h1 class="title-head article-title">
-                                    <span>Thông Tin Về OSIMI</span>
-                                </h1>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 
                                 <div class="article-content">
                                     <div class="rte">
-                                        <p><span style="font-size:16px"><strong>OSIMI</strong> - chuy&ecirc;n ph&aacute;t triển v&agrave; ph&acirc;n phối c&aacute;c dự &aacute;n thuộc chuỗi dự &aacute;n Osimi.<br />
-Trung thực, nhiệt t&igrave;nh, chuẩn x&aacute;c - nhằm đ&aacute;p ứng tất cả nhu cầu của kh&aacute;ch h&agrave;ng về nh&agrave; ở/ đầu tư</span></p>
-
-<p><span style="font-size:16px">Lĩnh vực hoạt động: Đầu tư v&agrave; ph&aacute;t triển dự &aacute;n Bất Động Sản tại thị trường Việt Nam</span></p>
-
-<p><span style="font-size:16px">C&aacute;c dự &aacute;n ph&aacute;t triển mới nhất:<br />
-Osimi Tower<br />
-Osimi Seaview Vũng T&agrave;u<br />
-Fusion Suites Vũng T&agrave;u<br />
-Gateway Vũng T&agrave;u<br />
-...<br />
-Đối t&aacute;c, kh&aacute;ch h&agrave;ng: Đất Xanh Group, Ani, Dic Corp, Hodeco, Bidv, Hdbank, Vietinbank...</span></p>
-
-<p><span style="font-size:16px">&nbsp;Địa chỉ: + Trụ sở 1: 93 Nguyễn Bỉnh Khi&ecirc;m, Phường Đa Kao, Quận 1, TP.HCM&nbsp;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; + Trụ sở 2: LE 03-71 th&aacute;p E,T&ograve;a nh&agrave; Lexington Residence, 67 Mai Ch&iacute; Thọ, P.An Ph&uacute;, Q.2, TP.HCM&nbsp;<br />
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; + Trụ sở 3: 113 Nguyễn Th&aacute;i Học, TP. Vũng T&agrave;u<br />
-Hotline: 0939 080603 --- 0915 080603 (24/24)</span></p>
-
-<p><span style="font-size:16px">Website: http://www.osimi.vn/</span></p>
-
-<p><span style="font-size:16px">Email: osimivietnam@gmail.com</span></p>
-
+                                        @if($gioithieu){!!$gioithieu->content!!}@else<p style="text-align: center; font-size: 32px; color: #2A7F49; padding-top: 20px;"><b>Nội Dung Đang Được Cập Nhật</b></p>@endif
                                     </div>
                                 </div>
                             </div>
@@ -72,9 +44,47 @@ Hotline: 0939 080603 --- 0915 080603 (24/24)</span></p>
                     <div class="module-header">
                         <h2 class="module-title libra-health___title">
                             <span>
-                            <i class="fa fa-newspaper-o" aria-hidden="true"></i> Trang Giới Thiệu
+                            <i class="fa fa-newspaper-o" aria-hidden="true"></i> Danh Mục Tin Tức
                             </span>
                         </h2>
+                    </div>
+                    <div class="sidebar-menu-content module-content">
+                        <div class="sidebar-linklists">
+                            <ul>
+                                @foreach($newsCate as $cateNews)
+                                <li class="sidebar-menu-list blog-sidebar-menu">
+                                    <a class="ajaxLayer" href="{{route('getDanhMucTinTucFrontend', ['id'=>$cateNews->id, 'slug'=>$cateNews->slug])}}" title="{{$cateNews->name}}">
+                                    <span>{{$cateNews->name}}</span>
+                                    </a>
+                                </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-item sidebar-menu sidebar-blog-menu item-border">
+                    <div class="module-header">
+                        <h2 class="module-title libra-health___title">
+                            <span>
+                            <i class="fa fa-newspaper-o" aria-hidden="true"></i> Danh Mục Dự Án
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="sidebar-menu-content module-content">
+                        <div class="sidebar-linklists">
+                            <ul>
+                                <li class="sidebar-menu-list blog-sidebar-menu">
+                                    <a class="ajaxLayer" href="{{route('getDuAnDangTrienKhai')}}" title="Dự Án Đang Triển Khai">
+                                    <span>Dự Án Đang Triển Khai</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-list blog-sidebar-menu">
+                                    <a class="ajaxLayer" href="{{route('getDuAnDaTrienKhai')}}" title="Dự Án Đã Triển Khai">
+                                    <span>Dự Án Đã Triển Khai</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

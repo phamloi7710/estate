@@ -26,13 +26,15 @@ class PagesController extends Controller
     {
     	$duan = DuAn::where('danhmuc', 'Dự Án Đang Triển Khai')->orderBy('order', 'ASC');
     	$duan = $duan->paginate(10)->setPath('');
-    	return view('frontend.pages.duan.duandangtrienkhai', ['duan'=>$duan]);
+        $category = NewsCategory::where('status', 'active')->get();
+    	return view('frontend.pages.duan.duandangtrienkhai', ['duan'=>$duan, 'category'=>$category]);
     }
     public function getDuAnDaTrienKhai()
     {
     	$duan = DuAn::where('danhmuc', 'Dự Án Đã Triển Khai');
     	$duan = $duan->paginate(10)->setPath('');
-    	return view('frontend.pages.duan.duandatrienkhai', ['duan'=>$duan]);
+        $category = NewsCategory::where('status', 'active')->get();
+    	return view('frontend.pages.duan.duandatrienkhai', ['duan'=>$duan, 'category'=>$category]);
     }
     public function getDanhMucTinTuc($slug)
     {

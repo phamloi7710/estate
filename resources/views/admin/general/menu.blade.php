@@ -36,8 +36,8 @@
                     <li>
                         <a><i class="fa fa-file-text"></i> Trang Con<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="{{route('getListPageAdmin')}}"> Danh Sách</a></li>
-                            <li><a href="{{route('getAddPageAdmin')}}"> Thêm Mới</a></li>
+                            <li><a href="{{route('getgioithieu')}}"> Trang Giới Thiệu</a></li>
+                            <li><a href="{{route('gettuyendung')}}"> Trang Tuyển Dụng</a></li>
                         </ul>
                     </li>
                     <li>

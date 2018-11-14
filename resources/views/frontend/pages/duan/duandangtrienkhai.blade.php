@@ -59,37 +59,53 @@ Dự Án Đang Triển Khai
                     </nav>
                 </div>
             </div>
-            <aside class="dqdt-sidebar sidebar left left-content col-lg-3 col-md-3 col-sm-12 col-xs-12 col-lg-pull-9 col-md-pull-9 col-sm-12 col-xs-12">
-                <!-- DANH MỤC SẢN PHẨM -->
-                <div class="sidebar-item sidebar-menu sidebar-collection-menu">
-                    <div class="module-header">
-                        <h2 class="module-title libra-health___title">
-                            <span>Danh mục Dự Án</span>
-                        </h2>
-                    </div>
-                    <div class="sidebar-menu-content module-content">
-                        <div class="sidebar-linklists">
-                            <ul>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- FILTERS -->
+            <aside class="col-xs-12 col-md-4 col-sm-4 col-lg-3 col-md-pull-8 col-lg-pull-9 dqdt-sidebar sidebar left left-content">
                 <div class="aside-filter sidebar-item">
                     <div class="sidebar-item sidebar-menu sidebar-blog-menu item-border">
+                        <div class="module-header">
+                            <h2 class="module-title libra-health___title">
+                                <span>
+                                    <i class="fa fa-newspaper-o" aria-hidden="true"></i> Danh Mục Dự Án
+                                </span>
+                            </h2>
+                        </div>
                         <div class="sidebar-menu-content module-content">
                             <div class="sidebar-linklists">
                                 <ul>
                                     <li class="sidebar-menu-list blog-sidebar-menu">
-                                        <a class="ajaxLayer" href="{{route('getDuAnDangTrienKhai')}}" title="Dự Án Đang Thực Hiện">
-                                            <span>Dự Án Đang Triển Khai</span>
+                                        <a class="ajaxLayer" href="{{route('getDuAnDangTrienKhai')}}" title="Dự Án Đang Triển Khai">
+                                        <span>Dự Án Đang Triển Khai</span>
                                         </a>
                                     </li>
                                     <li class="sidebar-menu-list blog-sidebar-menu">
-                                        <a class="ajaxLayer" href="{{route('getDuAnDaTrienKhai')}}" title="Dự Án Đã Thực Hiện">
-                                            <span>Dự Án Đã Triển Khai</span>
+                                        <a class="ajaxLayer" href="{{route('getDuAnDaTrienKhai')}}" title="Dự Án Đã Triển Khai">
+                                        <span>Dự Án Đã Triển Khai</span>
                                         </a>
                                     </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside-filter sidebar-item">
+                    <div class="sidebar-item sidebar-menu sidebar-blog-menu item-border">
+                        <div class="module-header">
+                            <h2 class="module-title libra-health___title">
+                                <span>
+                                    <i class="fa fa-newspaper-o" aria-hidden="true"></i> Danh Mục Tin Tức
+                                </span>
+                            </h2>
+                        </div>
+                        <div class="sidebar-menu-content module-content">
+                            <div class="sidebar-linklists">
+                                <ul>
+                                    @foreach($category as $cate)
+                                    <li class="sidebar-menu-list blog-sidebar-menu">
+                                        <a class="ajaxLayer" href="{{route('getDanhMucTinTucFrontend', ['slug'=>$cate->slug])}}" title="">
+                                            <span>{{$cate->name}}</span>
+                                        </a>
+                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
