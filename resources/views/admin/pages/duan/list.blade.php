@@ -26,6 +26,7 @@ Quản Lý Dự Án
                                     <th class="center">Hình Ảnh</th>
                                     <th class="center">Sắp Xếp</th>
                                     <th class="center">Trạng Thái</th>
+                                    <th class="center">Trang Chủ</th>
                                     <th class="center">Chức Năng</th>
                                 </tr>
                             </thead>
@@ -43,9 +44,16 @@ Quản Lý Dự Án
                                         <p class="label label-danger" style="font-size: 10px;">Đang Ẩn</p>
                                         @endif
                                     </td>
+                                    <td class="center">
+                                        @if($value->status_home=='active')
+                                        <p class="label label-success" style="font-size: 10px;" data-toggle="tooltip" data-placement="left" data-original-title='Nếu nhiều dự án có cùng trạng thái "Đang Hiển Thị" thì tự động sẽ lấy dự án đầu tiên để hiển thị ra trang chủ!'>Đang Hiển Thị</p>
+                                        @else
+                                        <p class="label label-danger" style="font-size: 10px;">Đang Ẩn</p>
+                                        @endif
+                                    </td>
                                     <td style="width:10%;">
-                                        <a href="{{route('getEditDuAnAdmin', ['id'=>$value->id])}}" class="btn btn-primary btn-xs">Sửa</a>
-                                        <a onclick="return alertMsg('{{route('getDeleteDuAnAdmin', ['id'=>$value->id])}}','Bạn Có Muốn Xoá Trang Này Không?');" class="btn btn-danger btn-xs">Xoá</a>
+                                        <a href="{{route('getEditDuAnAdmin', ['id'=>$value->id])}}" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="bottom" data-original-title="Chỉnh Sửa Dự Án">Sửa</a>
+                                        <a onclick="return alertMsg('{{route('getDeleteDuAnAdmin', ['id'=>$value->id])}}','Thao Tác Này Sẽ Không Được Khôi Phục. Bạn Có Muốn Xoá Trang Này Không?');" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="bottom" data-original-title="Xóa Dự Án">Xoá</a>
                                     </td>
                                 </tr>
                                 @endforeach

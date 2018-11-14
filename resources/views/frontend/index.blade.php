@@ -192,6 +192,46 @@ Jssor Slider (MIT license)
     </div>
 </section>
 @endif
+@if($dataThietKeIndex)
+<section class="lib-section-4">
+    <div class="section_service">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="module-header">
+                        <h2 class="module-title libra-health___title-index">
+                            <a href="@if($duan){{route('getChiTietDuAnFrontend', ['url'=>$duan->url])}}@endif">
+                            <span>
+                            THIẾT KẾ CỦA  @if(isset($duan)){{$duan->title}}@endif
+                            </span>
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="module-content">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-8 col-md-push-4 col-lg-8">
+                                <div class="section_service___list">
+                                    <img src="{{url('')}}/@if($dataThietKeIndex){{$dataThietKeIndex['image']}}@endif" alt="Title Here">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-md-pull-8 col-lg-4">
+                                <div class="section_service___desc">
+                                    @if($dataThietKeIndex){!!$dataThietKeIndex['content']!!}@endif
+                                    <div class="libra-health___viewmore">
+		                                <a href="@if($duan){{route('getChiTietDuAnFrontend', ['url'=>$duan->url])}}@endif" title="Giới thiệu">
+		                                <span>Xem thêm</span>
+		                                </a>
+		                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endif
 @if($imageDataIndex)
 <section class="lib-section-9">
     <div class="section_product">
