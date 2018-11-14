@@ -49,4 +49,10 @@ class PagesController extends Controller
         $cungchude = News::where('cate_id', $news->cate_id)->get();
         return view('frontend.pages.news.detail', ['news'=>$news, 'category'=>$category, 'cungchude'=>$cungchude]);
     }
+    public function getPages($url)
+    {
+        $page = Page::where('url',$url)->first();
+        $newsCate = NewsCategory::where('status', 'active')->get();
+        return view('frontend.pages.page',['page'=>$page, 'newsCate'=>$newsCate]);
+    }
 }

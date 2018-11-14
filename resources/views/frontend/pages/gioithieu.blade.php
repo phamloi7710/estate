@@ -1,6 +1,7 @@
 	
 @section('content')
 @section('title')
+Giới Thiệu Về OSIMI - 
 @stop
 @extends('frontend.general.master')
 @section('content')

@@ -21,6 +21,14 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
 		Route::post('edit/{alias}.html', 'Admin\UserController@postEdit')->name('postEditUser');
 		Route::get('delete-user.html', 'Admin\UserController@deleteUser')->name('deleteUser');
 	});
+	Route::group(['prefix'=>'menu'], function(){
+		Route::get('', 'Admin\MenuController@getList')->name('getListMenu');
+		Route::get('add-new.html', 'Admin\MenuController@getAdd')->name('getAddMenu');
+		Route::post('add-new.html', 'Admin\MenuController@postAdd')->name('postAddMenu');
+		Route::get('edit/{alias}.html', 'Admin\MenuController@getEdit')->name('getEditMenu');
+		Route::post('edit/{alias}.html', 'Admin\MenuController@postEdit')->name('postEditMenu');
+		Route::get('delete-user.html', 'Admin\MenuController@deleteUser')->name('deleteMenu');
+	});
 	Route::group(['prefix'=>'news'], function(){
 		Route::get('categories.html', 'Admin\NewsController@getListCate')->name('getListCate');
 		Route::post('add-new-category.html', 'Admin\NewsController@postAddCate')->name('postAddNewsCate');
@@ -112,5 +120,7 @@ Route::get('du-an-dang-trien-khai', 'Frontend\PagesController@getDuAnDangTrienKh
 Route::get('du-an-da-trien-khai', 'Frontend\PagesController@getDuAnDaTrienKhai')->name('getDuAnDaTrienKhai');
 Route::get('danh-muc/{slug}.html', 'Frontend\PagesController@getDanhMucTinTuc')->name('getDanhMucTinTucFrontend');
 Route::get('tin-tuc/{slug}.html', 'Frontend\PagesController@getChiTietTinTuc')->name('getChiTietTinTucFrontend');
+// get Pages
+Route::get('{url}.html','Frontend\PagesController@getPages')->name('getPageFrontend');
 
 
