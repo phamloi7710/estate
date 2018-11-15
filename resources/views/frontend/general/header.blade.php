@@ -80,23 +80,33 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-5 col-lg-6 searchBar hidden-sm">
                             <div class="searchbar">
-                                <div class="search_bar search-auto hidden-xs">
-                                    <form action="#" method="get">
-                                        <input type="text" class="form-control smartsearch_input" autocomplete="off" maxlength="70" name="query" id="search" title="Nhập từ khoá cần tìm" placeholder="Tìm kiếm" required>
+                                <form method="GET" action="{{route('getSearch')}}">
+                                    <div class="search_bar search-auto hidden-xs">
+                                        <input type="text" class="form-control smartsearch_input" autocomplete="off" maxlength="70" name="data" title="Nhập từ khoá cần tìm" placeholder="Tìm kiếm" required>
                                         <button class="btn button-hover-3" type="submit">
                                         <i class="fa fa-search"></i>
                                         </button>
-                                        
-                                    </form>
-                                    
-                                </div>
+                                        <div class="search_choice">
+                                            <label class="search_choice___label hidden-md">Tìm kiếm theo</label>
+                                            <div class="search_choice___input">
+                                                <div class="search_choice___input_index">
+                                                    <input type="radio" class="search_product" name="type" value="project">
+                                                    <span>Tên Dự Án</span>
+                                                </div>
+                                                <div class="search_choice___input_index margin-left-15">
+                                                    <input type="radio" class="search_article" name="type" checked="checked" value="news">
+                                                    <span>Tin Tức</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
+
                         <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3 hotline-mobile">
                             <a class="hotline" href="tel:0939080603">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="tiny" id="Icons" x="0px" y="0px" viewBox="0 0 395.5 347.5" xml:space="preserve">
-                                    <i style="font-size: 42px; padding-right: 4px; color: #2a7f49;" class="fa fa-mobile icon-mobile-top"></i>
-                                </svg>
+                                    <i style="font-size: 42px; padding-right: 10px; color: #2a7f49;" class="fa fa-mobile icon-mobile-top"></i>
                                 <span class="hidden-sm hidden-xs">
                                 0939.080.603
                                 </span>

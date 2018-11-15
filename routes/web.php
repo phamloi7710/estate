@@ -120,5 +120,6 @@ Route::get('danh-muc/{slug}.html', 'Frontend\PagesController@getDanhMucTinTuc')-
 Route::get('tin-tuc/{slug}.html', 'Frontend\PagesController@getChiTietTinTuc')->name('getChiTietTinTucFrontend');
 // get Pages
 Route::get('{url}.html','Frontend\PagesController@getPages')->name('getPageFrontend');
+Route::get('result','Frontend\SearchController@getSearch')->name('getSearch');
 
 

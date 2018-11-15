@@ -703,7 +703,9 @@ header .logo a {
 
 header .searchbar {
 	width: 100%;
-	float: left
+	float: left;
+	margin-top: 26px;
+
 }
 
 @media (min-width: 992px) {
@@ -902,7 +904,8 @@ header .hotline:hover span {
 
 .header-menu {
 	width: 100%;
-	float: left
+	float: left;
+	margin-top: 10px;
 }
 
 @media (min-width: 992px) {

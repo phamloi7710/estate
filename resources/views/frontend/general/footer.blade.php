@@ -208,26 +208,24 @@
                 </ul>
             </div>
             <div id="panel-account">
-                <form accept-charset="UTF-8" action="/contact" id="contact" method="post">
-                <input name="FormType" type="hidden" value="contact">
-                <input name="utf8" type="hidden" value="true">
+                <form method="GET" action="{{route('getSearch')}}">
                 <div id="emtry_contact" class="form-signup form_contact clearfix">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <fieldset class="form-group">   
                                 
-                                <input type="text" placeholder="Nhập Từ Khoá Tìm Kiếm" name="txtSearch" class="form-control form-control-lg" required="">
+                                <input type="text" placeholder="Nhập Từ Khoá Tìm Kiếm" name="data" class="form-control form-control-lg" required="">
                             </fieldset>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <label>Tìm Kiếm Theo: </label>
                             <div class="search_choice___input_index">
                                 <div class="search-form col-xs-6">
-                                    <input checked type="radio" class="search_product" name="typeSearch" value="true">
+                                    <input checked type="radio" class="search_product" name="type" value="project">
                                     <span>Tên Dự Án</span>
                                 </div>
                                 <div class="search-form col-xs-6">
-                                    <input type="radio" class="search_product" name="typeSearch" value="true">
+                                    <input type="radio" class="search_product" name="type" value="news">
                                     <span>Tin Tức</span>
                                 </div>
                             </div>

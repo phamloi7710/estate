@@ -20,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
         $newsCate = NewsCategory::where('status', 'active')->get();
         $info = WebInfomation::where('key', 'web-info')->first();
+        $phoneHeader = $info->phone;
         $meta = Setting::where('key', 'meta-seo')->value('value');
         $meta = unserialize($meta);
         View::composer('frontend.general.header', function($view) use($newsCate) {
@@ -36,6 +37,9 @@ class AppServiceProvider extends ServiceProvider
         });
         View::composer('frontend.general.header', function($view) use($meta) {
             $view->with('meta',$meta);
+        });
+        View::composer('frontend.general.header', function($view) use($phoneHeader) {
+            $view->with('phoneHeader',$phoneHeader);
         });
         View::composer('frontend.index', function($view) use($meta) {
             $view->with('meta',$meta);
