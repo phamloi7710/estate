@@ -41,6 +41,9 @@
                         </ul>
                     </li>
                     <li>
+                        <a href="{{route('getListDoiTacAdmin')}}"><i class="fa fa-file-text"></i> Đối Tác</a>
+                    </li>
+                    <li>
                         <a><i class="fa fa-calculator"></i> Dự Án<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="{{route('getListDuAnAdmin')}}"> Danh Sách</a></li>

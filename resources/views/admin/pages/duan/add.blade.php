@@ -328,7 +328,7 @@ Thêm Mới Dự Án
                                             <table class="table table-bordered">
                                                 <thead>
                                                     <tr>
-                                                        <th style="width: 20%">Tiêu Đề</th>
+                                                        <th style="width: 20%">Tên Đối Tác</th>
                                                         <th style="width: 40%">Hình Ảnh</th>
                                                         <th style="width: 5%"></th>
                                                     </tr>
@@ -409,9 +409,6 @@ Thêm Mới Dự Án
         $("#imageThietKeIndex").val('');
     });
 });
-</script>
-<script type="text/javascript">
-    
 </script>
 <script type="text/javascript">
 $('.preview').anarchytip();

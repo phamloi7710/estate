@@ -507,83 +507,15 @@ $(document).ready(function(){
                     </div>
                     <div class="module-content">
                         <div class="section_product_type_3 owl-theme owl-carousel nav-enable nav-left-right" data-lg-items="5" data-md-items="4" data-sm-items="3" data-xs-items="2" data-xxs-items="1" data-margin="30" data-nav="true" data-loop="true" data-autoplay="true">
+                        	@foreach($doitac as $value)
                             <div class="item">
                                 <div class="product-box">
                                     <div class="product-thumbnail">
-                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}/uploads/images/1/doi-tac/0f03fde2b261523f0b70.jpg" data-lazyload="{{url('')}}/uploads/images/1/doi-tac/0f03fde2b261523f0b70.jpg" alt="">
+                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}/{{$value['image']}}" data-lazyload="{{url('')}}/{{$value['image']}}" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}/uploads/images/1/doi-tac/1d85e564aae74ab913f6.jpg" data-lazyload="{{url('')}}/uploads/images/1/doi-tac/1d85e564aae74ab913f6.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}/uploads/images/1/doi-tac/2746f4a4bb275b790236.jpg" data-lazyload="{{url('')}}/uploads/images/1/doi-tac/2746f4a4bb275b790236.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}/uploads/images/1/doi-tac/2b3676d43957d9098046.jpg" data-lazyload="{{url('')}}/uploads/images/1/doi-tac/2b3676d43957d9098046.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}/uploads/images/1/doi-tac/5ad1f830b7b357ed0ea2.jpg" data-lazyload="{{url('')}}/uploads/images/1/doi-tac/5ad1f830b7b357ed0ea2.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}/uploads/images/1/doi-tac/5f849165dee63eb867f7.jpg" data-lazyload="{{url('')}}/uploads/images/1/doi-tac/5f849165dee63eb867f7.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}/uploads/images/1/doi-tac/6371bb90f413144d4d02.jpg" data-lazyload="{{url('')}}/uploads/images/1/doi-tac/6371bb90f413144d4d02.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}/uploads/images/1/doi-tac/b7e1eaa6a325437b1a34.jpg" data-lazyload="{{url('')}}/uploads/images/1/doi-tac/b7e1eaa6a325437b1a34.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}/uploads/images/1/doi-tac/ca4721a66e258e7bd734.jpg" data-lazyload="{{url('')}}/uploads/images/1/doi-tac/ca4721a66e258e7bd734.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}/uploads/images/1/doi-tac/f43369d22651c60f9f40.jpg" data-lazyload="{{url('')}}/uploads/images/1/doi-tac/f43369d22651c60f9f40.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="product-box">
-                                    <div class="product-thumbnail">
-                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}/uploads/images/1/doi-tac/fa3081d1ce522e0c7743.jpg" data-lazyload="{{url('')}}/uploads/images/1/doi-tac/fa3081d1ce522e0c7743.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

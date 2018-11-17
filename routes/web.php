@@ -66,7 +66,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
         Route::get('delete-{id}.html', 'Admin\EmailTemplateController@getDelete')->name('getDeleteEmailTenplate');
 
     });
-    Route::group(['prefix' => 'Du-An'], function () {
+    Route::group(['prefix' => 'du-an'], function () {
         Route::get('index.html', 'Admin\DuAnController@getList')->name('getListDuAnAdmin');
         Route::get('add-new.html', 'Admin\DuAnController@getAdd')->name('getAddDuAnAdmin');
         Route::post('add-new.html', 'Admin\DuAnController@postAdd')->name('postAddDuAnAdmin');
@@ -75,15 +75,11 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
         Route::get('delete-{id}.html', 'Admin\DuAnController@getDelete')->name('getDeleteDuAnAdmin');
 
     });
-    // Route::group(['prefix' => 'tin-tuc'], function () {
-    //     Route::get('index.html', 'Admin\NewsController@getList')->name('getListDuAnAdmin');
-    //     Route::get('add-new.html', 'Admin\NewsController@getAdd')->name('getAddDuAnAdmin');
-    //     Route::post('add-new.html', 'Admin\NewsController@postAdd')->name('postAddDuAnAdmin');
-    //     Route::get('edit-{id}.html', 'Admin\NewsController@getEdit')->name('getEditDuAnAdmin');
-    //     Route::post('edit-{id}.html', 'Admin\NewsController@postEdit')->name('postEditDuAnAdmin');
-    //     Route::get('delete-{id}.html', 'Admin\NewsController@getDelete')->name('getDeleteDuAnAdmin');
+    Route::group(['prefix' => 'doi-tac'], function () {
+        Route::get('index.html', 'Admin\DoiTacController@getList')->name('getListDoiTacAdmin');
+        Route::post('add-new.html', 'Admin\DoiTacController@postAdd')->name('postAddDoiTacAdmin');
 
-    // });
+    });
     // Setting By Loi Pham
     Route::group(['prefix' => 'settings'], function () {
     	Route::get('meta-seo.html', 'Admin\SettingController@getMetaSEO')->name('getMetaSEO');

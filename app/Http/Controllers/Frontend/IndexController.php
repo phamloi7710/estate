@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Model\Slider;
 use App\Model\News;
 use App\Model\DuAn;
+use App\Model\DoiTac;
 class IndexController extends Controller
 {
     public function getIndex()
@@ -19,6 +20,8 @@ class IndexController extends Controller
     	$dataThietKeIndex = $duan ? unserialize($duan->thiet_ke_index) : '';
     	$dataTienIchIndex = $duan ? unserialize($duan->tien_ich_index) : '';
     	$imageDataIndex = $duan ? unserialize($duan->hinh_anh_index) : '';
+        $dataDoiTac = DoiTac::where('key', 'doitac')->first();
+        $doitac = unserialize($dataDoiTac->data);
     	return view('frontend.index', 
     		[
     			'slider'=>$slider, 
@@ -28,7 +31,8 @@ class IndexController extends Controller
                 'dataViTriIndex'=>$dataViTriIndex,
     			'dataThietKeIndex'=>$dataThietKeIndex,
     			'dataTienIchIndex'=>$dataTienIchIndex,
-    			'imageDataIndex'=>$imageDataIndex,
+                'imageDataIndex'=>$imageDataIndex,
+    			'doitac'=>$doitac,
     		]);
     }
 }
