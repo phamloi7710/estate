@@ -21,6 +21,11 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
 		Route::post('edit/{alias}.html', 'Admin\UserController@postEdit')->name('postEditUser');
 		Route::get('delete-user.html', 'Admin\UserController@deleteUser')->name('deleteUser');
 	});
+	Route::group(['prefix'=>'contact'], function(){
+		Route::get('', 'Admin\ContactController@getList')->name('getListContact');
+		Route::post('edit/{id}', 'Admin\ContactController@postEdit')->name('postEditContact');
+		Route::get('delete-Contact{id}', 'Admin\ContactController@deleteContact')->name('deleteContact');
+	});
 	Route::group(['prefix'=>'menu'], function(){
 		Route::get('', 'Admin\MenuController@getList')->name('getListMenu');
 		Route::get('add-new.html', 'Admin\MenuController@getAdd')->name('getAddMenu');
@@ -91,9 +96,6 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
 
         Route::get('website-infomation.html', 'Admin\SettingController@getWebInfo')->name('getWebInfo');
         Route::post('website-infomation.html', 'Admin\SettingController@postWebInfo')->name('postWebInfo');
-        
-        // Route::get('website-status', 'SettingController@getWebsiteStatus')->name('getWebsiteStatus');
-        // Route::post('website-status', 'SettingController@postWebsiteStatus')->name('postWebsiteStatus');
 
     });
 });
@@ -117,5 +119,3 @@ Route::get('tin-tuc/{slug}.html', 'Frontend\PagesController@getChiTietTinTuc')->
 // get Pages
 Route::get('{url}.html','Frontend\PagesController@getPages')->name('getPageFrontend');
 Route::get('result','Frontend\SearchController@getSearch')->name('getSearch');
-
-

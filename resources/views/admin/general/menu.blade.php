@@ -41,7 +41,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{route('getListDoiTacAdmin')}}"><i class="fa fa-file-text"></i> Đối Tác</a>
+                        <a href="{{route('getListDoiTacAdmin')}}"><i class="fa fa-suitcase"></i> Đối Tác</a>
                     </li>
                     <li>
                         <a><i class="fa fa-calculator"></i> Dự Án<span class="fa fa-chevron-down"></span></a>
@@ -56,6 +56,9 @@
                             <li><a href="{{route('getListCate')}}"> Danh Mục</a></li>
                             <li><a href="{{route('getListNews')}}"> Tin Tức</a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="{{route('getListContact')}}"><i class="fa fa-users"></i> Liên Hệ</a>
                     </li>
                     <li>
                         <a><i class="fa fa-cogs"></i> Cài Đặt Hệ Thống<span class="fa fa-chevron-down"></span></a>

@@ -12,6 +12,7 @@ use App\Model\News;
 use App\Model\NewsCategory;
 use App\Model\Setting;
 use App\Model\WebInfomation;
+use App\Model\Contact;
 use Illuminate\Support\Facades\Validator;
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,8 +24,13 @@ class AppServiceProvider extends ServiceProvider
         $phoneHeader = $info->phone;
         $meta = Setting::where('key', 'meta-seo')->value('value');
         $meta = unserialize($meta);
+        $dataContact = Contact::where('status', 'false')->get();
+        $countContact = count($dataContact);
         View::composer('frontend.general.header', function($view) use($newsCate) {
             $view->with('newsCate',$newsCate);
+        });
+        View::composer('admin.general.header', function($view) use($countContact) {
+            $view->with('countContact',$countContact);
         });
         View::composer('frontend.general.footer', function($view) use($newsCate) {
             $view->with('newsCate',$newsCate);

@@ -158,15 +158,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        
-
-        /*
-         * Package Service Providers...
-         */
-
-        /*
-         * Application Service Providers...
-         */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
@@ -177,20 +168,11 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
         // added By Loi Pham
         App\Providers\MailConfigServiceProvider::class,
+        // char
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
+        
 
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Class Aliases
-    |--------------------------------------------------------------------------
-    |
-    | This array of class aliases will be registered when this application
-    | is started. However, feel free to register as many as you wish as
-    | the aliases are "lazy" loaded so they don't hinder performance.
-    |
-    */
-
     'aliases' => [
 
         'App' => Illuminate\Support\Facades\App::class,

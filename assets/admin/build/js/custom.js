@@ -2979,8 +2979,8 @@ if (typeof NProgress != 'undefined') {
 
 				  echartBar.setOption({
 					title: {
-					  text: 'Graph title',
-					  subtext: 'Graph Sub-text'
+					  text: 'Thống Kê',
+					  subtext: 'Dữ Liệu'
 					},
 					tooltip: {
 					  trigger: 'axis'

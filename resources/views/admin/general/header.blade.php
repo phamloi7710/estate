@@ -50,34 +50,30 @@
                                     <span class=" fa fa-angle-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                        <li><a href="{{url('/admin/user/edit').'/'.Auth::user()->id}}"> {{trans('general.profile')}}</a></li>
-                                        <!-- <li>
-                                            <a href="javascript:;">
-                                            <span class="badge bg-red pull-right">50%</span>
-                                            <span>{{trans('general.settings')}}</span>
-                                            </a>
-                                        </li>
-                                        <li><a href="javascript:;">{{trans('general.help')}}</a></li> -->
                                         <li><a href="{{route('logout')}}"><i class="fa fa-sign-out pull-right"></i> Đăng Xuất</a></li>
                                     </ul>
                                 </li>
-                                <!-- <li role="presentation" class="dropdown">
+                                <li role="presentation" class="dropdown">
                                     <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                                    <i class="fa fa-envelope-o"></i>
-                                    <span class="badge bg-green">6</span>
+                                    <i class="fa fa-bell-o"></i>
+                                    <span class="badge bg-green">{{$countContact}}</span>
                                     </a>
                                     <ul class="dropdown-menu list-unstyled msg_list" role="menu">
                                         <li>
-                                            <a>
+                                            @if($countContact=='0')
+                                            <p>Hiện Tại Không Có Liên Hệ Mới Nào!</p>
+                                            @else
+                                            <a href="{{route('getListContact')}}">
                                             <span class="image"><i class="fa fa-user"></i></span>
                                             <span>
-                                            <span>You have 6 new contact</span>
-                                            <span class="time">3 mins ago</span>
+                                            <span>Bạn Có {{$countContact}} Liên Hệ Mới</span>
+                                            <!-- <span class="time">3 mins ago</span> -->
                                             </span>
                                             </a>
+                                            @endif
                                         </li>
                                     </ul>
-                                </li> -->
+                                </li>
                             </ul>
                         </nav>
                     </div>
