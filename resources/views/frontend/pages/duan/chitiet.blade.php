@@ -1,6 +1,8 @@
-
-@section('title')
-@stop
+@section('title'){{$duan->title}} - @stop
+@section('description', $duan->seoDescription)
+@section('keyword', $duan->seoKeyWorks)
+@section('url', route('getChiTietDuAnFrontend',['url'=>$duan->url]))
+@section('image'){{url('')}}{{$duan->image}}@stop
 @extends('frontend.general.master')
 @section('content')
 <style>

@@ -12,9 +12,9 @@
                                         <!-- <div class="footer-detail rte">
                                             [TÊN_CÔNG_TY]
                                         </div> -->
-                                        <div class="footer-detail rte">
+                                        <!-- <div class="footer-detail rte">
                                             Thứ 2 - Thứ 6: 8h00 - 22h00<br>Thứ 7 - Chủ nhật: 8h00 - 21h00
-                                        </div>
+                                        </div> -->
                                         <div class="footer-detail rte">
                                             <label class="contact-info-title">
                                             Địa chỉ:
@@ -24,7 +24,7 @@
                                                 @foreach (unserialize($info->address) as $value)
                                                 <br>
                                                 &#160;&#160;&#160;&#160;
-                                                + {{$value['title']}}: {{$value['address']}}
+                                                <b>+ {{$value['title']}}:</b> {{$value['address']}}
                                                 @endforeach
                                                 @endif
                                             </div>
@@ -38,7 +38,7 @@
                                                 @foreach (unserialize($info->phone) as $value)
                                                 <br>
                                                 &#160;&#160;&#160;&#160;
-                                                <a href="javascript:;">+ {{$value['title']}}: </a>
+                                                <a href="javascript:;"> <b>+ {{$value['title']}}:</b> </a>
                                                 <a href="tel:{{$value['phone']}}">0{{number_format($value['phone'], 0, ".",".")}}</a>
                                                 @endforeach
                                                 @endif
@@ -53,7 +53,7 @@
                                                 @foreach (unserialize($info->email) as $value)
                                                 <br>
                                                 &#160;&#160;&#160;&#160;
-                                                <a href="javascript:;">+ {{$value['title']}}: </a>
+                                                <a href="javascript:;"><b>+ {{$value['title']}}:</b> </a>
                                                 <a href="mailto:{{$value['email']}}">{{$value['email']}}</a>
                                                 @endforeach
                                                 @endif

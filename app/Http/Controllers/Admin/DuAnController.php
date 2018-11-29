@@ -92,6 +92,9 @@ class DuAnController extends Controller
         $duan->thiet_ke_index = serialize($dataThietKeIndex);
         $duan->hinh_anh_index = serialize($imageDataIndex);
         $duan->status_home = $request->statusActiveHome;
+        $duan->seoTitle = $request->txtSeoTitle;
+        $duan->seoDescription = $request->txtSeoDescription;
+        $duan->seoKeyWorks = $request->txtSeoKeywords;
         $duan->save();
         $notification = array(
             'message' => 'Thêm Mới Dự Án Thành Công!', 
@@ -196,6 +199,9 @@ class DuAnController extends Controller
         $duan->thiet_ke_index = serialize($dataThietKeIndex);
         $duan->hinh_anh_index = serialize($imageDataIndex);
         $duan->status_home = $request->statusActiveHome;
+        $duan->seoTitle = $request->txtSeoTitle;
+        $duan->seoDescription = $request->txtSeoDescription;
+        $duan->seoKeyWorks = $request->txtSeoKeywords;
         $duan->save();
         $notification = array(
             'message' => 'Cập Nhật Dự Án Thành Công!', 

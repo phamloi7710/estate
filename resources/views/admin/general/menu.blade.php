@@ -61,6 +61,9 @@
                         <a href="{{route('getListContact')}}"><i class="fa fa-users"></i> Liên Hệ</a>
                     </li>
                     <li>
+                        <a href="{{route('getFileManagement')}}"><i class="fa fa-file-image-o"></i>Quản Lý Hình Ảnh</a>
+                    </li>
+                    <li>
                         <a><i class="fa fa-cogs"></i> Cài Đặt Hệ Thống<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="{{route('getWebInfo')}}"> Thông Tin Chung</a></li>

@@ -413,6 +413,37 @@ Sửa Dự Án
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="x_title" > SEO <i>(Search Engine Optimization)</i> <i class="fa fas fa-angle-double-down"></i>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Thẻ Tiêu Đề
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <input value="{{$duan->seoTitle}}" type="text" name="txtSeoTitle" class="form-control">
+                                    <i>Tiêu đề tùy chỉnh hiển thị trong thẻ tiêu đề cho trang này</i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12"> Thẻ Mô Tả
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <input value="{{$duan->seoDescription}}" type="text" name="txtSeoDescription" class="form-control">
+                                    <i>Mô tả META cho trang này. Thao tác này sẽ ghi đè mọi mô tả được tạo tự động</i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12"> Từ khóa (Phân cách bằng dấu phẩy)
+                                </label>
+                                <div class="col-md-9 col-sm-9 col-xs-12">
+                                    <input value="{{$duan->seoKeyWorks}}" type="text" name="txtSeoKeywords" class="form-control">
+                                    <i>Danh sách các từ khóa quan trọng nhất được phân tách bằng dấu phẩy cho trang này sẽ được viết dưới dạng từ khóa META</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>

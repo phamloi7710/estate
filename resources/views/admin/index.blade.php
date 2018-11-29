@@ -39,51 +39,7 @@ OSIMI - WEBSITE CHỦ ĐẦU TƯ
 	        </div>
 	    </div>
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-<script>
-    var month = ['1','2','3', '4','5','6','7', '8','9','10','11', '12'];
-    var views = <?php echo $views; ?>;
-    var fwdeqwd = <?php echo $views; ?>;
-
-
-    var barChartData = {
-        labels: month,
-        datasets: [{
-            label: 'View',
-            backgroundColor: "rgba(220,220,220,0.5)",
-            data: views
-        },{
-            label: 'fwdeqwd',
-            backgroundColor: "rgba(220,220,220,0.5)",
-            data: fwdeqwd
-        }]
-    };
-
-
-    window.onload = function() {
-        var ctx = document.getElementById("canvas").getContext("2d");
-        window.myBar = new Chart(ctx, {
-            type: 'bar',
-            data: barChartData,
-            options: {
-                elements: {
-                    rectangle: {
-                        borderWidth: 2,
-                        borderColor: 'rgb(0, 255, 0)',
-                        borderSkipped: 'bottom'
-                    }
-                },
-                responsive: true,
-                title: {
-                    display: true,
-                    text: 'Yearly Website Visitor'
-                }
-            }
-        });
-
-
-    };
-</script>
+	
     <div class="x_panel">
         <div class="x_title">
             <h2>

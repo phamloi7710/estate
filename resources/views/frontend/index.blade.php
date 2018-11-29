@@ -86,12 +86,12 @@ Jssor Slider (MIT license)
                     <div class="module-content">
                         <div class="section_introduce___image">
                             <picture>
-                                <source media="(min-width: 1200px)" srcset="{{url('')}}/@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
-                                <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}/@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
-                                <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}/@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
-                                <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}/@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
-                                <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}/@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
-                                <img src="{{url('')}}/@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif" class="img-responsive" alt="Lỗi Liquid: Value cannot be null.
+                                <source media="(min-width: 1200px)" srcset="{{url('')}}@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
+                                <source media="(min-width: 992px) and (max-width: 1199px)" srcset="{{url('')}}@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
+                                <source media="(min-width: 768px) and (max-width: 991px)" srcset="{{url('')}}@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
+                                <source media="(min-width: 543px) and (max-width: 767px)" srcset="{{url('')}}@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
+                                <source media="(min-width: 320px) and (max-width: 542px)" srcset="{{url('')}}@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif">
+                                <img src="{{url('')}}@if($dataTongQuanIndex){{$dataTongQuanIndex['image']}}@endif" class="img-responsive" alt="Lỗi Liquid: Value cannot be null.
                                     Parameter name: key">
                             </picture>
                         </div>
@@ -130,7 +130,7 @@ Jssor Slider (MIT license)
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-8 col-md-push-4 col-lg-8">
                                 <div class="section_service___list">
-                                    <img src="{{url('')}}/@if($dataViTriIndex){{$dataViTriIndex['image']}}@endif" alt="Title Here">
+                                    <img src="{{url('')}}@if($dataViTriIndex){{$dataViTriIndex['image']}}@endif" alt="Title Here">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-4 col-md-pull-8 col-lg-4">
@@ -170,7 +170,7 @@ Jssor Slider (MIT license)
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                                 <div class="section_service___list">
-                                    <img src="{{url('')}}/@if($dataTienIchIndex){{$dataTienIchIndex['image']}}@endif" alt="Title Here">
+                                    <img src="{{url('')}}@if($dataTienIchIndex){{$dataTienIchIndex['image']}}@endif" alt="Title Here">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -211,7 +211,7 @@ Jssor Slider (MIT license)
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-8 col-md-push-4 col-lg-8">
                                 <div class="section_service___list">
-                                    <img src="{{url('')}}/@if($dataThietKeIndex){{$dataThietKeIndex['image']}}@endif" alt="Title Here">
+                                    <img src="{{url('')}}@if($dataThietKeIndex){{$dataThietKeIndex['image']}}@endif" alt="Title Here">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-4 col-md-pull-8 col-lg-4">
@@ -511,7 +511,7 @@ $(document).ready(function(){
                             <div class="item">
                                 <div class="product-box">
                                     <div class="product-thumbnail">
-                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}/{{$value['image']}}" data-lazyload="{{url('')}}/{{$value['image']}}" alt="">
+                                        <img style="height: 120px" class="img-responsive" src="{{url('')}}{{$value['image']}}" data-lazyload="{{url('')}}{{$value['image']}}" alt="">
                                     </div>
                                 </div>
                             </div>

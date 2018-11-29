@@ -79,10 +79,7 @@ Sửa Tin Tức
             
         </div>
         <div class="row">
-            <div class="x_title" data-toggle="collapse" data-target=".data-optional">
-                <h2>Không Bắt Buộc <i class="fa fas fa-angle-double-down"
-                    data-toggle="collapse"
-                    data-target=".data-optional"></i></h2>
+            <div class="x_title" > SEO <i>(Search Engine Optimization)</i> <i class="fa fas fa-angle-double-down"></i>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content collapse data-optional">

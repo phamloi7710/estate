@@ -36,26 +36,33 @@
                             </div>
                             <div class="module-content">
                                 <div class="contact-page-info">
-                                    <div class="fw">
-                                        <label class="contact-info-title">Điện thoại :</label>
-                                        <a class="contact-info" href="tel:0939080603">0939.080.603</a>
-                                    </div>
-                                    <div class="fw">
-                                        <label class="contact-info-title">Hotline :</label>
-                                        <a class="contact-info" href="tel:0915080603">0915.080.603</a>
-                                    </div>
-                                    <div class="fw">
-                                        <label class="contact-info-title">Email :</label>
-                                        <a class="contact-info" href="mailto:osimivietnam@gmail.com">osimivietnam@gmail.com</a>
-                                    </div>
+                                    @if(isset($info))
+                                        @foreach (unserialize($info->phone) as $value)
+                                            <div class="fw">
+                                                <label class="contact-info-title">{{$value['title']}}:</label>
+                                                <a class="contact-info" href="tel:{{$value['phone']}}">0{{number_format($value['phone'], 0, ".",".")}}</a>
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                    @if(isset($info))
+                                        @foreach (unserialize($info->email) as $value)
+                                            <div class="fw">
+                                                <label class="contact-info-title">{{$value['title']}}:</label>
+                                                <a class="contact-info" href="mailto:{{$value['email']}}">{{$value['email']}}</a>
+                                            </div>
+                                        @endforeach
+                                    @endif
                                     <div class="fw">
                                         <label class="contact-info-title">Địa chỉ :</label>
-                                        <span class="contact-info"><br>
-                                            + Trụ sở 1: 93 Nguyễn Bỉnh Khiêm, Phường Đa Kao, Quận 1, TP.HCM
-                                            <br>
-                                            + Trụ sở 2: LE 03-71 tháp E,Tòa nhà Lexington  Residence, 67 Mai Chí Thọ, P.An Phú, Q.2, TP.HCM
-                                            <br>
-                                            + Trụ sở 3: 113 Nguyễn Thái Học, TP. Vũng Tàu</span>
+                                        <span class="contact-info">
+                                            @if(isset($info))
+                                                @foreach (unserialize($info->address) as $value)
+                                                <br>
+                                                &#160;&#160;&#160;&#160;
+                                                <b>+ {{$value['title']}}:</b> {{$value['address']}}
+                                                @endforeach
+                                                @endif
+                                            </span>
                                     </div>
                                     <div class="contact-info">
                                                 

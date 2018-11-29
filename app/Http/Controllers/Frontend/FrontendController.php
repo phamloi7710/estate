@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Model\Page;
 use App\Model\NewsCategory;
+use App\Model\WebInfomation;
 class FrontendController extends Controller
 {
     public function __construct()
@@ -15,7 +16,8 @@ class FrontendController extends Controller
     }
     public function getLienHe()
     {
-    	return view('frontend.pages.lienhe');
+        $info = WebInfomation::where('key', 'web-info')->first();
+    	return view('frontend.pages.lienhe', ['info'=>$info]);
     }
     public function getChiTietDuAn()
     {

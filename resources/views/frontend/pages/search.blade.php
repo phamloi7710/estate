@@ -37,7 +37,7 @@
                         <div class="article-item">
                             <div class="article-thumbnail image-hover-1">
                                 <a href="@if($type=='news'){{route('getChiTietTinTucFrontend', ['url'=>$value->slug])}}@elseif($type=='project'){{route('getChiTietDuAnFrontend', ['url'=>$value->url])}}@endif" title="{{$value->title}}">
-                                <img src="{{url('')}}/{{$value->image}}" data-lazyload="{{url('')}}/{{$value->image}}" class="img-responsive" alt="{{$value->title}}">
+                                <img src="{{url('')}}{{$value->image}}" data-lazyload="{{url('')}}{{$value->image}}" class="img-responsive" alt="{{$value->title}}">
                                 </a>
                             </div>
                             <div class="article-info">

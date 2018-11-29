@@ -3,8 +3,8 @@ Route::get('admin/login.html','Admin\AccountController@getLogin')->name('getLogi
 Route::post('admin/login.html','Admin\AccountController@postLogin')->name('postLoginAdmin');
 Route::get('admin/logout','Admin\AccountController@getLogout')->name('logout');
 Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
-	Route::get('uploads', '\UniSharp\LaravelFilemanager\controllers\LfmController@show');
-    Route::post('uploads/upload', '\UniSharp\LaravelFilemanager\controllers\UploadController@upload');
+	Route::get('uploads', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
+    Route::post('uploads/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
 	Route::get('', 'Admin\IndexController@getIndex')->name('getIndexAdmin');
 	Route::get('image-management.html', 'Admin\IndexController@getFileManagement')->name('getFileManagement');
 	Route::group(['prefix'=>'permissions'], function(){

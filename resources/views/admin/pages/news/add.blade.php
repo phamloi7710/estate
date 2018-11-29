@@ -77,11 +77,10 @@
             
         </div>
         <div class="row">
-            <div class="x_title" data-toggle="collapse" data-target=".data-optional">
-                <a class="data-toggle="collapse" data-target=".data-optional">Không Bắt Buộc <i class="fa fas fa-angle-double-down"></i></a>
+            <div class="x_title" > SEO <i>(Search Engine Optimization)</i> <i class="fa fas fa-angle-double-down"></i>
                 <div class="clearfix"></div>
             </div>
-            <div class="x_content collapse data-optional">
+            <div class="x_content">
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Thẻ Tiêu Đề
                     </label>
