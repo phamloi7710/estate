@@ -76,7 +76,7 @@ Thêm Mới Tài Khoản
                                     <label class="col-md-12 col-sm-12 col-xs-12">Quyền Truy Cập<span class="required">*</span>
                                     </label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <select name="roles" id="optgroup" class="ms form-control" multiple="multiple">
+                                        <select name="roles[]" id="optgroup" class="ms form-control" multiple="multiple">
                                             @foreach($roles as $value)
                                             <option value="{{$value->id}}">{{$value->name}}</option>
                                             @endforeach

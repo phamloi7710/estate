@@ -20,7 +20,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
 		Route::post('add-new.html', 'Admin\UserController@postAdd')->name('postAddUser');
 		Route::get('edit/{alias}.html', 'Admin\UserController@getEdit')->name('getEditUser');
 		Route::post('edit/{alias}.html', 'Admin\UserController@postEdit')->name('postEditUser');
-		Route::get('delete-user.html', 'Admin\UserController@deleteUser')->name('deleteUser');
+		Route::get('delete/{id}', 'Admin\UserController@deleteUser')->name('deleteUser');
 	});
 	Route::group(['prefix'=>'contact'], function(){
 		Route::get('', 'Admin\ContactController@getList')->name('getListContact');

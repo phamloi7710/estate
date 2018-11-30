@@ -6,16 +6,16 @@
         </div>
         <div class="clearfix"></div>
         <!-- menu profile quick info -->
-        <!--<div class="profile clearfix">-->
-        <!--    <div class="profile_pic">-->
-        <!--        <img src="{{url('uploads/avatars')}}/{{Auth::user()->avatar}}" alt="..."-->
-        <!--             class="img-circle profile_img">-->
-        <!--    </div>-->
-        <!--    <div class="profile_info">-->
-        <!--        <span>Xin Chào</span>-->
-        <!--        <h2>{{Auth::user()->username}}</h2>-->
-        <!--    </div>-->
-        <!--</div>-->
+        <div class="profile clearfix">
+            <div class="profile_pic">
+                <img src="{{url('')}}{{Auth::user()->avatar}}" alt="..."
+                     class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+                <span>Xin Chào</span>
+                <h2>{{Auth::user()->name}}</h2>
+            </div>
+        </div>
         <!-- /menu profile quick info -->
         <br/>
         <!-- sidebar menu -->

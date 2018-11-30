@@ -30,14 +30,14 @@ Danh Sách Tài Khoản
                                 @foreach($users as $value)
                                 <tr>
                                     <td class="center">{{$value->name}}</td>
-                                    <td class="center"><img width="200" src="{{url('')}}{{$value->image}}"></td>
+                                    <td class="center"><img width="200" src="{{url('')}}{{$value->avatar}}"></td>
                                     <td class="center">{{$value->username}}</td>
                                     <td class="center">{{$value->email}}</td>
                                     <td class="center">{{$value->phone}}</td>
                                     <td class="center">{{$value->address}}</td>
                                     <td class="center">
-                                        <a class="btn btn-primary btn-xs pull-right" href="{{route('getEditNews', ['id'=>$value->id])}}">Sửa</a>
-                                        <a onclick="alertMsg('{{route('deleteNews', ['id'=> $value->id])}}', 'Bạn Có Muốn Xoá Mục Này Không?');" class="btn btn-danger btn-xs">Xoá</a>
+                                        <a class="btn btn-primary btn-xs pull-right" href="{{route('getEditUser', ['id'=>$value->id])}}">Sửa</a>
+                                        <a onclick="alertMsg('{{route('deleteUser', ['id'=> $value->id])}}', 'Bạn Có Muốn Xoá Mục Này Không?');" class="btn btn-danger btn-xs">Xoá</a>
                                     </td>
                                 </tr>
                                 @endforeach

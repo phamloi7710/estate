@@ -9,6 +9,7 @@ use Spatie\Permission\Models\Role;
 use App\Mail\MailNewUser;
 use App\Model\EmailTemplate;
 use Illuminate\Support\Facades\Mail;
+use DB;
 class UserController extends Controller
 {
     public function getList()
@@ -47,16 +48,42 @@ class UserController extends Controller
         );
         return redirect()->back()->with($notification);
     }
-    public function getEdit()
+    public function getEdit($id)
     {
-    	
+        $user = User::find($id);
+        $roles = Role::all();
+        $userRole = $user->roles;
+        // dd($userRole);exit();
+        return view('admin.pages.user.edit', ['user'=>$user, 'roles'=>$roles, 'userRole'=>$userRole]);
     }
-    public function postEdit()
+    public function postEdit(Request $request, $id)
     {
-    	
+    	$user = User::find($id);
+        $user->name = $request->txtFullName;
+        $user->avatar = $request->avatar;
+        $user->email = $request->txtEmail;
+        $user->username = $request->txtUserName;
+        $user->phone = $request->txtPhone;
+        $user->address = $request->txtAddress;
+        $user->is_admin = 'true';
+        $user->save();
+        DB::table('model_has_roles')->where('model_id',$id)->delete();
+        $user->assignRole($request->input('roles'));
+        $notification = array(
+            'message' => __("Chỉnh Sửa Thành Viên Thành Công"), 
+            'alert-type' => 'success',
+        );
+        return redirect()->route('getListUsers')->with($notification);
     }
-    public function deleteUser()
+    public function deleteUser($id)
     {
-    	
+        $user = User::find($id);
+    	DB::table('model_has_roles')->where('model_id',$id)->delete();
+        $user->delete();
+        $notification = array(
+            'message' => __("Xóa Thành Viên Thành Công"), 
+            'alert-type' => 'success',
+        );
+        return redirect()->back()->with($notification);
     }
 }
