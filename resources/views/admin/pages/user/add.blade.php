@@ -1,25 +1,100 @@
 @section('title')
+Thêm Mới Tài Khoản
 @stop
 @extends('admin.general.master')
 @section('content')
-<section class="content">
-    <div class="container-fluid">
-    	<div class="row clearfix">
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="card">
-                    <div class="header">
-                        <div class="row clearfix">
-                            <div class="col-xs-12 col-sm-12">
-                                <h2>Ảnh Đại Diện</h2>
+<div class="right_col" role="main">
+    <div class="x_panel">
+        <form method="POST" action="{{route('postAddUser')}}" data-parsley-validate class="form-horizontal form-label-left">
+        @csrf
+            <div class="x_title">
+                <h2>Danh Sách Tài Khoản</h2>
+                <button type="submit" class="btn btn-success pull-right" >Lưu Lại</button>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                        <img style="width: 100%; height: 100%;" id="previewImage" class="imagePreview img-responsive thumbnail" src="{{url('')}}/assets/uploads/images/no-avatar.png">
+                        <input id="avatar" name="avatar" class="form-control" type="hidden">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a data-input="avatar" data-preview="previewImage" class="btn btn-info btn-xs selectImage"> Chọn Ảnh Đại Diện</a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="javascript:;" class="btn btn-danger btn-xs deleteImage">Xoá Hình Ảnh</a>
                             </div>
                         </div>
                     </div>
-                    <div class="body">
-                        
-                    </div>
+                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="col-md-12 col-sm-12 col-xs-12">Họ Tên Đầy Đủ<span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input name="txtFullName" type="text" class="form-control" placeholder="Nhập Họ Đầy Đủ">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label class="col-md-12 col-sm-12 col-xs-12">Địa Chỉ Email<span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input name="txtEmail" type="text" class="form-control" placeholder="Nhập Địa Chỉ Email">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label class="col-md-12 col-sm-12 col-xs-12">Tên Đăng Nhập<span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input name="txtUserName" type="text" class="form-control" placeholder="Nhập Tên Đăng Nhập">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <label class="col-md-12 col-sm-12 col-xs-12">Địa Chỉ<span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input name="txtAddress" type="text" class="form-control" placeholder="Nhập Địa Chỉ">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label class="col-md-12 col-sm-12 col-xs-12">Số Điện Thoại<span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input name="txtPhone" type="text" class="form-control" placeholder="Nhập Số Điện Thoại">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm
+                            <br>-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label class="col-md-12 col-sm-12 col-xs-12">Quyền Truy Cập<span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <select name="roles" id="optgroup" class="ms form-control" multiple="multiple">
+                                            @foreach($roles as $value)
+                                            <option value="{{$value->id}}">{{$value->name}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </div>
-        </div>
+        </form>
     </div>
-</section>
+</div>
+@section('script')
+<script type="text/javascript">
+  // run pre selected options
+  $('#optgroup').multiSelect();
+  </script>
+@stop
 @stop

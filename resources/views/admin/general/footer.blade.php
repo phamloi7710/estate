@@ -19,6 +19,7 @@
 <script src="{{url('')}}/assets/admin/vendors/image-preview/imagepreview.min.js"></script>
 <script src="{{url('')}}/assets/admin/plugins/bootstrap/toastr/toastr.min.js"></script>
 <script src="{{url('')}}/assets/admin/custom/custom.footer.js"></script>
+<script src="{{url('')}}/assets/admin/lou-multi-select-e052211/js/jquery.multi-select.js"></script>
 @yield('script')
 @include('admin.general.notify')
 </body>

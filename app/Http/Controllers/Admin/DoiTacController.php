@@ -7,6 +7,12 @@ use App\Http\Controllers\Controller;
 use App\Model\DoiTac;
 class DoiTacController extends Controller
 {
+	// function __construct()
+ //    {
+ //         $this->middleware('permission:doitac-get-list');
+ //         $this->middleware('permission:doitac-get-add', ['only' => ['create','store']]);
+ //         $this->middleware('permission:doitac-post-add', ['only' => ['edit','update']]);
+ //    }
     public function getList()
     {
     	$data = DoiTac::where('key', 'doitac')->first();

@@ -10,6 +10,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
 	Route::group(['prefix'=>'permissions'], function(){
 		Route::get('', 'Admin\PermisssionController@getList')->name('getListPermisssions');
 		Route::post('add', 'Admin\PermisssionController@postAdd')->name('postAddPermisssion');
+		Route::get('edit/{id}', 'Admin\PermisssionController@getEdit')->name('getEditPermisssion');
 		Route::post('edit/{id}', 'Admin\PermisssionController@postEdit')->name('postEditPermisssion');
 		Route::get('delete/{id}', 'Admin\PermisssionController@delete')->name('deletePermisssion');
 	});
@@ -63,7 +64,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
 	});
 	Route::group(['prefix' => 'email-template'], function () {
 
-        Route::get('index.html', 'Admin\EmailTemplateController@getList')->name('getListEmailTemplate');
+        Route::get('', 'Admin\EmailTemplateController@getList')->name('getListEmailTemplate');
         Route::get('add-new.html', 'Admin\EmailTemplateController@getAdd')->name('getAddEmailTemplate');
         Route::post('add-new.html', 'Admin\EmailTemplateController@postAdd')->name('postAddEmailTemplate');
         Route::get('edit-{id}.html', 'Admin\EmailTemplateController@getEdit')->name('getEditEmailTemplate');

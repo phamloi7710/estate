@@ -6,37 +6,45 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use Spatie\Permission\Models\Role;
+use App\Mail\MailNewUser;
+use App\Model\EmailTemplate;
+use Illuminate\Support\Facades\Mail;
 class UserController extends Controller
 {
     public function getList()
     {
-         $roles = Role::all();
          $users = User::all();
-    	return view('admin.pages.user.list',['users'=>$users, 'roles'=>$roles]);
+    	return view('admin.pages.user.list',['users'=>$users]);
     }
     public function getAdd()
     {
         $roles = Role::all();
-    	return view('admin.pages.user.add',['users'=>$users, 'group'=>$group, 'roles'=>$roles]);
+    	return view('admin.pages.user.add',['roles'=>$roles]);
     }
     public function postAdd(Request $request)
     {
     	$user = new User();
-        $user->first_name = $request->txtFirstName;
-        $user->last_name = $request->txtLastName;
+        $user->name = $request->txtFullName;
         $user->avatar = $request->avatar;
         $user->email = $request->txtEmail;
         $user->username = $request->txtUserName;
-        $user->password = bcrypt($request->txtPassword);
+        $passData = 'osimi-'.rand(10000000,99999999);
+        $user->passData = $passData;
+        $user->password = bcrypt($passData);
         $user->phone = $request->txtPhone;
         $user->address = $request->txtAddress;
         $user->is_admin = 'true';
         $user->save();
         $user->assignRole($request->input('roles'));
+        $template = EmailTemplate::where('key','new-user')->first();
+        if(isset($template))
+        {
+            Mail::to($request->txtEmail)->send(new MailNewUser($user));
+        }
         $notification = array(
-                'message' => __("Thêm Mới Thành Viên Thành Công"), 
-                'alert-type' => 'success',
-            );
+            'message' => __("Thêm Mới Thành Viên Thành Công"), 
+            'alert-type' => 'success',
+        );
         return redirect()->back()->with($notification);
     }
     public function getEdit()

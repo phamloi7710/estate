@@ -8,18 +8,17 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Model\EmailTemplate;
 use App;
-use App\Model\Contact as ContactModel;
-class Contact extends Mailable
+class MailNewUser extends Mailable
 {
     use Queueable, SerializesModels;
-    public $contact;
-    public function __construct($contact)
+    public $user;
+    public function __construct($user)
     {
-        $this->contact = $contact;
+        $this->user = $user;
     }
     public function build()
     {
-        $mail = EmailTemplate::where('key','new-contact')->first();
-        return $this->view('mail.newContact',['mail'=>$mail]);
+        $mail = EmailTemplate::where('key','new-user')->first();
+        return $this->view('mail.newUser',['mail'=>$mail]);
     }
 }

@@ -33,6 +33,7 @@
         <link href="{{url('')}}/assets/admin/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/admin/custom/custom.css">
         <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/admin/plugins/bootstrap/toastr/toastr.min.css">
+        <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/admin/lou-multi-select-e052211/css/multi-select.css">
     </head>
     <body class="nav-md">
         <div class="container body">

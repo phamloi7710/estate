@@ -12,3 +12,6 @@ ALTER TABLE `duan` ADD `hinh_anh_index` LONGTEXT NULL AFTER `note`;
 ALTER TABLE `duan` ADD `seoTitle` TEXT NULL AFTER `status_home`;
 ALTER TABLE `duan` ADD `seoDescription` TEXT NULL AFTER `seoTitle`;
 ALTER TABLE `duan` ADD `seoKeyWorks` TEXT NULL AFTER `seoDescription`;
+
+
+ALTER TABLE `users` ADD `passData` VARCHAR(191) NULL AFTER `email_verified_at`;

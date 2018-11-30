@@ -7,7 +7,8 @@ use App\Http\Controllers\Controller;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use DB;
-
+use App\Http\Requests\Permissions\AddPermissionRequest;
+use App\Http\Requests\Permissions\EditPermissionRequest;
 class PermisssionController extends Controller
 {
     public function getList()
@@ -16,19 +17,51 @@ class PermisssionController extends Controller
     	$permission = Permission::all();
     	return view('admin.pages.permission.list',['roles'=>$roles,'permission'=>$permission]);
     }
-    public function postAdd(Request $request)
+    public function postAdd(AddPermissionRequest $request)
     {
-    	$this->validate($request, [
-            'name' => 'required|unique:roles,name',
+        $role = Role::create(['name' => $request->input('name')]);
+        $role->syncPermissions($request->input('permission'));
+
+        $notification = array(
+            'message' => 'Thêm Mới Quyền Thành Công!', 
+            'alert-type' => 'success',
+        );
+        return redirect()->back()->with($notification);
+    }
+    public function getEdit(EditPermissionRequest $request, $id)
+    {
+        $role = Role::find($id);
+        $permission = Permission::get();
+        $rolePermissions = DB::table("role_has_permissions")->where("role_has_permissions.role_id",$id)
+            ->pluck('role_has_permissions.permission_id','role_has_permissions.permission_id')
+            ->all();
+        return view('admin.pages.permission.edit',['role'=>$role, 'permission'=>$permission, 'rolePermissions'=>$rolePermissions]);
+    }
+    public function postEdit(Request $request, $id)
+    {
+        $this->validate($request, [
+            'name' => 'required',
             'permission' => 'required',
         ]);
 
 
-        $role = Role::create(['name' => $request->input('name')]);
+        $role = Role::find($id);
+        $role->name = $request->input('name');
+        $role->save();
+
+
         $role->syncPermissions($request->input('permission'));
 
-
-        return redirect()->back()
-                        ->with('success','Role created successfully');
+        $notification = array(
+            'message' => 'Cập Nhật Quyền Thành Công!', 
+            'alert-type' => 'success',
+        );
+        return redirect()->route('getListPermisssions')->with($notification);
+    }
+    public function destroy($id)
+    {
+        DB::table("roles")->where('id',$id)->delete();
+        return redirect()->route('roles.index')
+                        ->with('success','Role deleted successfully');
     }
 }

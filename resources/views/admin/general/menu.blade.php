@@ -27,6 +27,14 @@
                         <a href="{{route('getIndexAdmin')}}"><i class="fa fa-home"></i> Trang Chủ</a>
                     </li>
                     <li>
+                        <a><i class="fa fa-user"></i> Tài Khoản<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{route('getListUsers')}}"> Danh Sách</a></li>
+                            <li><a href="{{route('getAddUser')}}"> Thêm Mới</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
                         <a><i class="fa fa-image"></i> Slider<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="{{route('getListSliderAdmin')}}"> Danh Sách</a></li>
