@@ -7,6 +7,12 @@ use App\Http\Controllers\Controller;
 use App\Model\Contact;
 class ContactController extends Controller
 {
+    function __construct()
+    {
+         $this->middleware('permission:contact-list', ['only' => ['getList']]);
+         $this->middleware('permission:contact-edit', ['only' => ['postEdit']]);
+         $this->middleware('permission:contact-delete', ['only' => ['deleteContact']]);
+    }
     public function getList(Request $request)
     {
     	$contact = Contact::where('id','>',0)->orderBy('status','DESC');

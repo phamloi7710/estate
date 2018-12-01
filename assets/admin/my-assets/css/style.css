@@ -52,8 +52,10 @@ td:hover>span{
      border-color: #3b8eb5;
 }
 .error{
+    
      border-color: red;
      color: red;
+     font-weight: normal;
 } 
 .warning{
      background-color: #eaaf51;

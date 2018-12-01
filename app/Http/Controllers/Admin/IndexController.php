@@ -12,12 +12,11 @@ use App\Model\DuAn;
 use DB;
 class IndexController extends Controller
 {
+ 	function __construct()
+    {
+         $this->middleware('permission:image-management', ['only' => ['getFileManagement']]);
+    }
     public function getIndex(){
-    	// $views = News::select(DB::raw("SUM(views) as count"))
-	    //     ->orderBy("created_at")
-	    //     ->groupBy(DB::raw("month(created_at)"))
-	    //     ->get()->toArray();
-	    // $views = array_column($views, 'count');
 	    $dataContact = Contact::all();
 	    $dangtrienkhai = DuAn::where('danhmuc', 'Dự Án Đang Triển Khai')->get();
 	    $datrienkhai = DuAn::where('danhmuc', 'Dự Án Đã Triển Khai')->get();

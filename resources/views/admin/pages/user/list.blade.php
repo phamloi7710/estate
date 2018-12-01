@@ -30,7 +30,7 @@ Danh Sách Tài Khoản
                                 @foreach($users as $value)
                                 <tr>
                                     <td class="center">{{$value->name}}</td>
-                                    <td class="center"><img width="200" src="{{url('')}}{{$value->avatar}}"></td>
+                                    <td class="center"><img width="100" src="{{url('')}}{{$value->avatar}}"></td>
                                     <td class="center">{{$value->username}}</td>
                                     <td class="center">{{$value->email}}</td>
                                     <td class="center">{{$value->phone}}</td>

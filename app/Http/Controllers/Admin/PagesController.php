@@ -71,6 +71,11 @@ class PagesController extends Controller
     //     $pages->delete();
     //     return redirect()->route('getListPages')->with('thongbao',trans('general.deleteSuccessfully'));
     // }
+    function __construct()
+    {
+         $this->middleware('permission:gioithieu', ['only' => ['gioithieu', 'postgioithieu']]);
+         $this->middleware('permission:tuyendung', ['only' => ['tuyendung', 'posttuyendung']]);
+    }
     public function gioithieu()
     {
         $gioithieu = Page::where('url', 'gioi-thieu.html')->first();

@@ -7,6 +7,13 @@ use App\Http\Controllers\Controller;
 use App\Model\DuAn;
 class DuAnController extends Controller
 {
+    function __construct()
+    {
+         $this->middleware('permission:duan-list', ['only' => ['getList']]);
+         $this->middleware('permission:duan-add', ['only' => ['getAdd', 'postAdd']]);
+         $this->middleware('permission:duan-edit', ['only' => ['getEdit', 'postEdit']]);
+         $this->middleware('permission:duan-delete', ['only' => ['getDelete']]);
+    }
     public function getList()
     {
     	$duan = DuAn::all();

@@ -10,8 +10,16 @@ use App\Mail\MailNewUser;
 use App\Model\EmailTemplate;
 use Illuminate\Support\Facades\Mail;
 use DB;
+use Auth;
 class UserController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('permission:user-list', ['only' => ['getList']]);
+        $this->middleware('permission:user-add', ['only' => ['getAdd', 'postAdd']]);
+        $this->middleware('permission:user-edit', ['only' => ['getEdit', 'postEdit']]);
+        $this->middleware('permission:user-delete', ['only' => ['deleteUser']]);
+    }
     public function getList()
     {
          $users = User::all();
@@ -67,8 +75,14 @@ class UserController extends Controller
         $user->address = $request->txtAddress;
         $user->is_admin = 'true';
         $user->save();
-        DB::table('model_has_roles')->where('model_id',$id)->delete();
-        $user->assignRole($request->input('roles'));
+        if(Auth::user()->id==$user->id || $user->id=='1'){
+
+        }else{
+            DB::table('model_has_roles')->where('model_id',$id)->delete();
+            $user->assignRole($request->input('roles'));
+        }
+         // DB::table('model_has_roles')->where('model_id',$id)->delete();
+         //    $user->assignRole($request->input('roles'));
         $notification = array(
             'message' => __("Chỉnh Sửa Thành Viên Thành Công"), 
             'alert-type' => 'success',

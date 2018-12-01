@@ -9,7 +9,10 @@ use Session;
 use App\User;
 class AccountController extends Controller
 {
-
+    function __construct()
+    {
+         $this->middleware('permission:login-admin', ['only' => ['getLogin', 'postLogin', 'getLogout']]);
+    }
     public function getLogin(){
         
     	if (Auth::check()) {

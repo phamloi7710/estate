@@ -9,6 +9,17 @@ use App\Model\NewsCategory;
 use DB;
 class NewsController extends Controller
 {
+    function __construct()
+    {
+         $this->middleware('permission:news-cate-list', ['only' => ['getListCate']]);
+         $this->middleware('permission:news-cate-add', ['only' => ['postAddCate']]);
+         $this->middleware('permission:news-cate-edit', ['only' => ['postEditCate']]);
+         $this->middleware('permission:news-cate-delete', ['only' => ['deleteCate']]);
+         $this->middleware('permission:news-list', ['only' => ['getList']]);
+         $this->middleware('permission:news-add', ['only' => ['getAdd', 'postAdd']]);
+         $this->middleware('permission:news-edit', ['only' => ['getEdit', 'postEdit']]);
+         $this->middleware('permission:news-delete', ['only' => ['delete']]);
+    }
     public function getListCate()
     {
     	$category = NewsCategory::orderBy('order','ASC')->get();

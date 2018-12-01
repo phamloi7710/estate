@@ -8,6 +8,12 @@ use App\Model\Setting;
 use App\Model\WebInfomation;
 class SettingController extends Controller
 {
+	function __construct()
+    {
+         $this->middleware('permission:email-config', ['only' => ['getEmailConfig', 'postEmailConfig']]);
+         $this->middleware('permission:meta-seo', ['only' => ['getMetaSEO', 'postMetaSEO']]);
+         $this->middleware('permission:web-info', ['only' => ['getWebInfo', 'postWebInfo']]);
+    }
     public function getEmailConfig()
     {
         $data = Setting::where('key', 'mail-config')->value('value');

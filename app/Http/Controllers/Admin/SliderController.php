@@ -7,6 +7,13 @@ use App\Http\Controllers\Controller;
 use App\Model\Slider;
 class SliderController extends Controller
 {
+    function __construct()
+    {
+         $this->middleware('permission:slider-list', ['only' => ['getList']]);
+         $this->middleware('permission:slider-add', ['only' => ['getAdd', 'postAdd']]);
+         $this->middleware('permission:slider-edit', ['only' => ['getEdit', 'postEdit']]);
+         $this->middleware('permission:slider-delete', ['only' => ['delete']]);
+    }
     public function getList()
     {
         $slider = Slider::all();

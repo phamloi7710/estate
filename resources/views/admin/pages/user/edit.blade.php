@@ -29,7 +29,7 @@ Chỉnh Sửa Tài Khoản
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <label class="col-md-12 col-sm-12 col-xs-12">Họ Tên Đầy Đủ<span class="required">*</span>
+                                    <label class="col-md-12 col-sm-12 col-xs-12">Họ Tên Đầy Đủ<span class="required" style="color: red;">  (*)</span>
                                     </label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <input value="{{$user->name}}" name="txtFullName" type="text" class="form-control" placeholder="Nhập Họ Đầy Đủ">
@@ -37,7 +37,7 @@ Chỉnh Sửa Tài Khoản
                                 </div>
                                 <br>
                                 <div class="form-group">
-                                    <label class="col-md-12 col-sm-12 col-xs-12">Địa Chỉ Email<span class="required">*</span>
+                                    <label class="col-md-12 col-sm-12 col-xs-12">Địa Chỉ Email<span class="required" style="color: red;">  (*)</span>
                                     </label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <input value="{{$user->email}}" name="txtEmail" type="text" class="form-control" placeholder="Nhập Địa Chỉ Email">
@@ -45,7 +45,7 @@ Chỉnh Sửa Tài Khoản
                                 </div>
                                 <br>
                                 <div class="form-group">
-                                    <label class="col-md-12 col-sm-12 col-xs-12">Tên Đăng Nhập<span class="required">*</span>
+                                    <label class="col-md-12 col-sm-12 col-xs-12">Tên Đăng Nhập<span class="required" style="color: red;">  (*)</span>
                                     </label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <input value="{{$user->username}}" name="txtUserName" type="text" class="form-control" placeholder="Nhập Tên Đăng Nhập">
@@ -54,7 +54,7 @@ Chỉnh Sửa Tài Khoản
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <label class="col-md-12 col-sm-12 col-xs-12">Địa Chỉ<span class="required">*</span>
+                                    <label class="col-md-12 col-sm-12 col-xs-12">Địa Chỉ<span class="required" style="color: red;">  (*)</span>
                                     </label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <input value="{{$user->address}}" name="txtAddress" type="text" class="form-control" placeholder="Nhập Địa Chỉ">
@@ -62,27 +62,35 @@ Chỉnh Sửa Tài Khoản
                                 </div>
                                 <br>
                                 <div class="form-group">
-                                    <label class="col-md-12 col-sm-12 col-xs-12">Số Điện Thoại<span class="required">*</span>
+                                    <label class="col-md-12 col-sm-12 col-xs-12">Số Điện Thoại<span class="required" style="color: red;">  (*)</span>
                                     </label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <input value="{{$user->phone}}" name="txtPhone" type="text" class="form-control" placeholder="Nhập Số Điện Thoại">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm
-                            <br>-12 col-md-12 col-lg-12">
+                            
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
-                                    <label class="col-md-12 col-sm-12 col-xs-12">Quyền Truy Cập<span class="required">*</span>
+                                    <label class="col-md-12 col-sm-12 col-xs-12">Quyền Truy Cập<span class="required" style="color: red;">  (*)</span> (<i>Thiết lập các chức năng trên website mà tài khoản này có thể truy cập</i>)
                                     </label>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <select name="roles[]" id="optgroup" class="ms form-control" multiple="multiple">
+
+                                        <select name="roles[]" id="optgroup" class="ms form-control" multiple="multiple" @if(Auth::user()->id==$user->id || $user->id=='1') disabled @endif>
                                             @foreach($roles as $value)
                                             <option value="{{$value->id}}"@foreach($userRole as $role) @if($role->name==$value->name) selected @endif @endforeach>{{$value->name}}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                 </div>
+                                
+                                @if(Auth::user()->id==$user->id)
+                                <span class="required" style="color: red;">  (**)</span> <b><i>Bạn không thể thay đổi quyền cho tài khoản của mình</i></b>
+                                @elseif($user->id=='1')
+                                <span class="required" style="color: red;">  (**)</span> <b><i>Bạn không thể thay đổi quyền của tài khoản quản trị</i></b>
+                                @endif
                             </div>
+                            
                         </div>
                     </div> 
                 </div>
