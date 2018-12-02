@@ -8,12 +8,12 @@
         <!-- menu profile quick info -->
         <div class="profile clearfix">
             <div class="profile_pic">
-                <img src="{{url('')}}{{Auth::user()->avatar}}" alt="..."
+                <img src="{{url('')}}@if(Auth::user()){{Auth::user()->avatar}}@endif" alt="..."
                      class="img-circle profile_img">
             </div>
             <div class="profile_info">
                 <span>Xin Chào</span>
-                <h2>{{Auth::user()->name}}</h2>
+                <h2>@if(Auth::user()){{Auth::user()->name}}@endif</h2>
             </div>
         </div>
         <!-- /menu profile quick info -->

@@ -70,8 +70,7 @@ Thêm Mới Tài Khoản
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm
-                            <br>-12 col-md-12 col-lg-12">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="form-group">
                                     <label class="col-md-12 col-sm-12 col-xs-12">Quyền Truy Cập<span class="required" style="color: red;">  (*)</span> (<i>Thiết lập các chức năng trên website mà tài khoản này có thể truy cập</i>)
                                     </label>

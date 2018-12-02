@@ -47,10 +47,11 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="">
                                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="{{url('')}}{{Auth::user()->avatar}}" alt="{{Auth::user()->name}}">{{Auth::user()->name}}
+                                    <img src="{{url('')}}@if(Auth::user()){{Auth::user()->avatar}}@endif" alt="@if(Auth::user()){{Auth::user()->name}}@endif">@if(Auth::user()){{Auth::user()->name}}@endif
                                     <span class=" fa fa-angle-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                        <li><a href="{{route('getDetailProfile', ['username'=>Auth::user()->username])}}"> Trang Cá Nhân</a></li>
                                         <li><a href="{{route('logout')}}"><i class="fa fa-sign-out pull-right"></i> Đăng Xuất</a></li>
                                     </ul>
                                 </li>

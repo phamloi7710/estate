@@ -19,6 +19,6 @@ class MailNewUser extends Mailable
     public function build()
     {
         $mail = EmailTemplate::where('key','new-user')->first();
-        return $this->view('mail.newUser',['mail'=>$mail]);
+        return $this->view('mail.newUser',['mail'=>$mail])->subject('Tài Khoản Mới');
     }
 }

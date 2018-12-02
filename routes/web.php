@@ -22,6 +22,11 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
 		Route::post('edit/{alias}.html', 'Admin\UserController@postEdit')->name('postEditUser');
 		Route::get('delete/{id}', 'Admin\UserController@deleteUser')->name('deleteUser');
 	});
+	Route::group(['prefix'=>'profile'], function(){
+		Route::get('{username}.html', 'Admin\ProfileController@getDetail')->name('getDetailProfile');
+		Route::post('{username}.html', 'Admin\ProfileController@postDetail')->name('postDetailProfile');
+		Route::post('change-pass/{username}.html', 'Admin\ProfileController@postChangePassword')->name('postChangePassword');
+	});
 	Route::group(['prefix'=>'contact'], function(){
 		Route::get('', 'Admin\ContactController@getList')->name('getListContact');
 		Route::post('edit/{id}', 'Admin\ContactController@postEdit')->name('postEditContact');

@@ -20,6 +20,6 @@ class Contact extends Mailable
     public function build()
     {
         $mail = EmailTemplate::where('key','new-contact')->first();
-        return $this->view('mail.newContact',['mail'=>$mail]);
+        return $this->view('mail.newContact',['mail'=>$mail])->subject('Liên Hệ Mới');
     }
 }
