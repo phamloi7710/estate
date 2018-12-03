@@ -104,7 +104,11 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
         Route::post('website-infomation.html', 'Admin\SettingController@postWebInfo')->name('postWebInfo');
 
     });
+	
 });
+Route::post('forgot-password.html', 'Admin\AccountController@postFogot')->name('postForgotPass');
+Route::get('reset-password-{token}', 'Admin\AccountController@getResetPass')->name('getResetPass');
+Route::post('reset-password', 'Admin\AccountController@postResetPass')->name('postResetPass');
 Route::get('', 'Frontend\IndexController@getIndex')->name('getIndexFrontend');
 Route::get('lien-he.html', 'Frontend\FrontendController@getLienHe')->name('getLienHeFrontend');
 Route::post('lien-he.html', 'Frontend\ContactController@sendContact')->name('sendContact');
