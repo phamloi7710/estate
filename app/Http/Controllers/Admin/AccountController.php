@@ -61,12 +61,12 @@ class AccountController extends Controller
     }
     public function postFogot(Request $request)
     {
+
         $this->validateEmail($request);
         // exit();
         $response = $this->broker()->sendResetLink(
             $request->only('email')
         );
-
         return $response == Password::RESET_LINK_SENT ? $this->sendResetLinkResponse($response) : $this->sendResetLinkFailedResponse($request, $response);
     }
     protected function validateEmail(Request $request)

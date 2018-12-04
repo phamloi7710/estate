@@ -32,6 +32,17 @@
         <div>
             <div class="login_wrapper">
                 <div class="animate form login_form">
+                  @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                  @endif
+                  @if ($errors->has('email'))
+                    <div class="alert alert-danger">
+                        {{$errors->first('email')}} <br>
+                        <p>Bấm vào <a href="{{url('admin/login.html#signup')}}">đây</a> để thực hiện tại thao tác lấy lại mật khẩu</p>
+                    </div>
+                    @endif
                     <section class="login_content">
                         <form id="formLogin" method="POST" action="{{route('postResetPass')}}">
                         <input type="hidden" name="token" value="{{ $token }}">
@@ -68,11 +79,7 @@
                         </form>
                     </section>
                 </div>
-                @if (session('status'))
-                    <div class="alert alert-success">
-                        {{ session('status') }}
-                    </div>
-                @endif
+                
             </div>
         </div>
         <script src="{{url('')}}/assets/admin/vendors/jquery/dist/jquery.min.js"></script>

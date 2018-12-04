@@ -34,7 +34,13 @@
             <a class="hiddenanchor" id="signin"></a>
             <div class="login_wrapper">
                 <div class="animate form login_form">
+
                     <section class="login_content">
+                        @if (session('status'))
+                            <div class="alert alert-success">
+                                {{ session('status') }}
+                            </div>
+                        @endif
                         <form id="formLogin" method="POST" action="{{route('postLoginAdmin')}}">
                         @csrf
                             <h1>Đăng Nhập Hệ Thống</h1>
@@ -52,11 +58,7 @@
                         </form>
                     </section>
                 </div>
-                @if (session('status'))
-                    <div class="alert alert-success">
-                        {{ session('status') }}
-                    </div>
-                @endif
+                
                 <div id="register" class="animate form registration_form">
                     <section class="login_content">
                         <form id="formFogotPass" method="POST" action="{{route('postForgotPass')}}">
