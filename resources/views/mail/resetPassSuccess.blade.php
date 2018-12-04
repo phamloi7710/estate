@@ -6,6 +6,7 @@
     if(isset($user))
     {
         $data = [
+          'username'=>$user->username,
             'password'=>$user->passData,
         ];
         
@@ -479,7 +480,7 @@
                             <h1 style="text-align: center;">Chào Mừng Bạn Đến Với&nbsp;<a data-saferedirecturl="https://www.google.com/url?q=http://OSIMI.VN&amp;source=gmail&amp;ust=1543983358062000&amp;usg=AFQjCNExY8KBkqQ4UjIvc2RfRL81uXDy4g" href="http://osimi.vn/" target="_blank">OSIMI.VN</a></h1>
 &nbsp;
 
-<h2>Đây là Email thông tin liên hệ tới bạn.</h2>
+<h2>Bạn đã khôi phục thành công mật khẩu của mình</h2>
 
                         </td>
                     </tr>
@@ -552,14 +553,9 @@
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
                         
-                            <h2 class="null" style="text-align: center;">Thông Tin Liên Hệ Mới</h2>
+                            <h2 class="null" style="text-align: center;">Thông Tin Đăng Nhập Mới Nhất Của Bạn</h2>
 
-<!-- <ul>
-    <li><strong>Họ Và Tên</strong>: Phạm V Lơi,</li>
-    <li><strong>Địa Chỉ Email</strong>:&nbsp;<a href="mailto:phamloi7710@gmail.com" target="_blank">phamloi7710@gmail.com</a></li>
-    <li><strong>Số Điện Thoại</strong>: 963227711</li>
-    <li><strong>Nội Dung</strong>: a</li>
-</ul> -->
+
 {!!$message!!}
 
 
@@ -698,7 +694,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://www.facebook.com" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://www.facebook.com/osimi.vn/" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             
@@ -730,7 +726,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://www.twitter.com/" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://twitter.com/osimivietnam" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             
@@ -762,7 +758,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://plus.google.com" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-googleplus-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://plus.google.com/u/0/113380583663545932119" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-googleplus-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             
@@ -794,7 +790,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://www.youtube.com" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-youtube-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://www.youtube.com/channel/UCbJ-OcQrJgFZcjeUT95n3YQ/featured" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-youtube-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             
@@ -826,7 +822,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://instagram.com" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://www.instagram.com/osimi.vn/" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             

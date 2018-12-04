@@ -693,7 +693,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://www.facebook.com" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://www.facebook.com/osimi.vn/" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             
@@ -725,7 +725,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://www.twitter.com/" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://twitter.com/osimivietnam" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             
@@ -757,7 +757,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://plus.google.com" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-googleplus-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://plus.google.com/u/0/113380583663545932119" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-googleplus-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             
@@ -789,7 +789,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://www.youtube.com" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-youtube-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://www.youtube.com/channel/UCbJ-OcQrJgFZcjeUT95n3YQ/featured" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-youtube-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             
@@ -821,7 +821,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://instagram.com" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://www.instagram.com/osimi.vn/" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             

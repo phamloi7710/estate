@@ -17,23 +17,6 @@
        $message = str_replace('{{'.$key.'}}', $value, $message);
     }
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-    
-</head>
-<body>
-{!!$message!!}
-</body>
-</html>
-<!-- @if(isset($token))
-    <div style="text-align: center; color: #fff;">
-        <a href="{{route('getResetPass',['token'=>$token])}}" class="btn btn-primary" style="text-align: center;">Reset Password</a>
-    </div>
-    @endif -->
-
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
     <head>
@@ -718,7 +701,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://www.facebook.com" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://www.facebook.com/osimi.vn/" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             
@@ -750,7 +733,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://www.twitter.com/" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://twitter.com/osimivietnam" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-twitter-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             
@@ -782,7 +765,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://plus.google.com" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-googleplus-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://plus.google.com/u/0/113380583663545932119" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-googleplus-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             
@@ -814,7 +797,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://www.youtube.com" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-youtube-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://www.youtube.com/channel/UCbJ-OcQrJgFZcjeUT95n3YQ/featured" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-youtube-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             
@@ -846,7 +829,7 @@
                                                                         <tbody><tr>
                                                                             
                                                                                 <td align="center" valign="middle" width="24" class="mcnFollowIconContent">
-                                                                                    <a href="http://instagram.com" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-48.png" style="display:block;" height="24" width="24" class=""></a>
+                                                                                    <a href="https://www.instagram.com/osimi.vn/" target="_blank"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-48.png" style="display:block;" height="24" width="24" class=""></a>
                                                                                 </td>
                                                                             
                                                                             

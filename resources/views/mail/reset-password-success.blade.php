@@ -367,9 +367,7 @@
 
 }</style></head>
     <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
-        <!--*|IF:MC_PREVIEW_TEXT|*-->
-        <!--[if !gte mso 9]><!----><span class="mcnPreviewText" style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">*|MC_PREVIEW_TEXT|*</span><!--<![endif]-->
-        <!--*|END:IF|*-->
+        
         <center>
             <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
                 <tr>
@@ -393,7 +391,7 @@
                             <td class="mcnImageContent" valign="top" style="padding-right: 9px; padding-left: 9px; padding-top: 0; padding-bottom: 0; text-align:center;">
                                 
                                     
-                                        <img align="center" alt="" src="http://osimi.vn/assets/logo-1.png" width="232" style="max-width:232px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+                                        <img align="center" alt="" src="http://osimi.vn/assets/logo-1.png" width="620" style="max-width:620px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
                                     
                                 
                             </td>
@@ -414,8 +412,8 @@
                             <tr>
                                 <td align="center" valign="top">
                                     <table border="0" cellpadding="0" cellspacing="0" width="620" class="flexibleContainer">
-                                          <tr>
-                                          <td align="center" valign="bottom" style="padding-top:18px;">
+                                        <tr>
+                                            <td align="center" valign="bottom" style="padding-top:18px;">
                                                 <img src="https://gallery.mailchimp.com/27aac8a65e64c994c4416d6b8/images/champagne.png" width="620" class="mcnImage" style="display:block !important; height:auto; max-width:620px;">
                                             </td>
                                         </tr>
@@ -428,8 +426,8 @@
                                                                 <tr>
                                                                     <td align="center" valign="top">
                                                                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                                                              <tr>
-                                                                              <td align="center" colspan="3" valign="bottom">
+                                                                            <tr>
+                                                                                <td align="center" colspan="3" valign="bottom">
                                                                                     <!-- BEGIN HEADER // -->
                                                                                     <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
                                                                                         <tr>
@@ -455,23 +453,21 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td valign="top" class="mcnTextBlockInner" style="padding-top:9px;">
-                  <!--[if mso]>
-                        <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-                        <tr>
-                        <![endif]-->
-                      
-                        <!--[if mso]>
-                        <td valign="top" width="620" style="width:620px;">
-                        <![endif]-->
+                <!--[if mso]>
+                <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                <tr>
+                <![endif]-->
+                
+                <!--[if mso]>
+                <td valign="top" width="620" style="width:620px;">
+                <![endif]-->
                 <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="mcnTextContentContainer">
                     <tbody><tr>
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
                         
-                            <h1 style="text-align: center;">KHÔI PHỤC MẬT KHẨU</h1>
-
-<h1><span style="font-size:18px">Chào Mừng Bạn Đến Với OSIMI.VN</span></h1>
-
+                            <h1 style="text-align: center;">Chào Mừng Bạn Đến Với&nbsp;<a data-saferedirecturl="https://www.google.com/url?q=http://OSIMI.VN&amp;source=gmail&amp;ust=1543983358062000&amp;usg=AFQjCNExY8KBkqQ4UjIvc2RfRL81uXDy4g" href="http://osimi.vn/" target="_blank">OSIMI.VN</a></h1>
+&nbsp;
 <h2>Đây là Email xác nhận khôi phục mật khẩu của bạn trên hệ thống.</h2>
 
                         </td>
@@ -545,7 +541,7 @@
                         
                         <td valign="top" class="mcnTextContent" style="padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:18px;">
                         
-                            <span style="font-family:comic sans ms,marker felt-thin,arial,sans-serif">Ai đó đã yêu cầu một liên kết để thay đổi mật khẩu của bạn. Bạn có thể thực hiện điều này thông qua nút bấm bên dưới.</span>
+                            <span>Ai đó đã yêu cầu một liên kết để thay đổi mật khẩu của bạn. Bạn có thể thực hiện điều này thông qua nút bấm bên dưới.</span>
                         </td>
                     </tr>
                 </tbody></table>
