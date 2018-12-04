@@ -2,6 +2,12 @@
 @section('url', route('getLienHeFrontend'))
 @extends('frontend.general.master')
 @section('content')
+<style>
+    .error{
+        font-size: 12px;
+        text-transform: none;
+    }
+</style>
 <section class="bread-crumb">
     <div class="container">
         <div class="row">
@@ -77,7 +83,7 @@
                                 </h2>
                             </div>
                             <div class="module-content">
-                                <form accept-charset="UTF-8" action="{{route('sendContact')}}" method="POST">
+                                <form id="formContact" accept-charset="UTF-8" action="{{route('sendContact')}}" method="POST" data-parsley-validate>
                                     @csrf
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -89,7 +95,7 @@
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                             <fieldset class="form-group">
                                                 <label>Số Điện Thoại</label>
-                                                <input type="number" placeholder="Vui Lòng Nhập Số Điện Thoại" name="txtContactPhone" class="form-control form-control-lg" required="">
+                                                <input type="text" placeholder="Vui Lòng Nhập Số Điện Thoại" name="txtContactPhone" class="form-control form-control-lg" required="">
                                             </fieldset>
                                         </div>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -101,7 +107,7 @@
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                             <fieldset class="fw form-group contact-content">
                                                 <label>Nội dung</label>
-                                                <textarea name="contentContact" placeholder="Vui lòng nhập nội dung" rows="3" class="form-control form-control-lg" required=""></textarea>
+                                                <textarea name="contentContact" placeholder="Vui lòng nhập nội dung" rows="3" class="form-control form-control-lg"=""></textarea>
                                             </fieldset>
                                         </div>
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -119,4 +125,36 @@
         </div>
     </div>
 </div>
+<script src="{{url('')}}/assets/admin/vendors/jquery/dist/jquery.min.js"></script>
+<script src="{{url('')}}/assets/admin/vendors/jquery/validation/jquery.validate.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+    
+          //Khi bàn phím được nhấn và thả ra thì sẽ chạy phương thức này
+          $("#formContact").validate({
+              rules: {
+                  txtContactName: "required",
+                  txtContactEmail: {
+                      required: true,
+                      email: true
+                  },
+                  txtContactPhone: {
+                      required: true,
+                      number: true
+                  }
+              },
+              messages: {
+                  txtContactName: "Tên không được bỏ trống",
+                  txtContactEmail: {
+                      required: "Địa chỉ Email không được bỏ trống",
+                      email: "Địa chỉ email không đúng định dạng"
+                  },
+                  txtContactPhone: {
+                      required: "Số điện thoại không được bỏ trống",
+                      number: "Chỉ cho phép nhập số"
+                  }
+              }
+          });
+      });
+</script>
 @stop
