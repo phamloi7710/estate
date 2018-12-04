@@ -66,6 +66,8 @@ Route::group(['prefix'=>'admin', 'middleware'=>'checkRoleAdmin'], function(){
 		Route::post('gioi-thieu.html', 'Admin\PagesController@postgioithieu')->name('postgioithieu');
 		Route::get('tuyen-dung.html', 'Admin\PagesController@tuyendung')->name('gettuyendung');
 		Route::post('tuyen-dung.html', 'Admin\PagesController@posttuyendung')->name('posttuyendung');
+		Route::get('lien-he.html', 'Admin\PagesController@lienhe')->name('getlienhe');
+		Route::post('lien-he.html', 'Admin\PagesController@postlienhe')->name('postlienhe');
 	});
 	Route::group(['prefix' => 'email-template'], function () {
 

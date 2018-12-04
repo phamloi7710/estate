@@ -92,12 +92,20 @@ class UserController extends Controller
     public function deleteUser($id)
     {
         $user = User::find($id);
-    	DB::table('model_has_roles')->where('model_id',$id)->delete();
-        $user->delete();
-        $notification = array(
-            'message' => __("Xóa Thành Viên Thành Công"), 
-            'alert-type' => 'success',
-        );
-        return redirect()->back()->with($notification);
+        if ($user->id=='1') {
+                $notification = array(
+                'message' => __("Không Thể Xóa Tài Khoản Này"), 
+                'alert-type' => 'error',
+            );
+            return redirect()->back()->with($notification);
+        }else{
+            DB::table('model_has_roles')->where('model_id',$id)->delete();
+            $user->delete();
+            $notification = array(
+                'message' => __("Xóa Thành Viên Thành Công"), 
+                'alert-type' => 'success',
+            );
+            return redirect()->back()->with($notification);
+        }
     }
 }
