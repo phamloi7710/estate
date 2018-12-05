@@ -122,4 +122,27 @@ class PagesController extends Controller
         );
         return redirect()->back()->with($notification);
     }
+    public function lienhe()
+    {
+        $lienhe = Page::where('url', 'lien-he.html')->first();
+        return view('admin.pages.pages.lienhe', ['lienhe'=>$lienhe]);
+    }
+    public function postlienhe(Request $request)
+    {
+        $datalienhe = Page::where('url', 'lien-he.html')->first();
+        if ($datalienhe) {
+            $lienhe = Page::where('url', 'lien-he.html')->first();
+            $lienhe->content = $request->content;
+        }else{
+            $lienhe = new Page();
+            $lienhe->url = 'lien-he.html';
+            $lienhe->content = $request->content;
+        }
+        $lienhe->save();
+        $notification = array(
+            'message' => 'Cập Nhật Nội Dung Thành Công!', 
+            'alert-type' => 'success',
+        );
+        return redirect()->back()->with($notification);
+    }
 }

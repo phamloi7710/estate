@@ -22,7 +22,8 @@ class NewsController extends Controller
     }
     public function getListCate()
     {
-    	$category = NewsCategory::orderBy('order','ASC')->get();
+    	$category = NewsCategory::orderBy('order','ASC');
+        
     	return view('admin.pages.news.cate.list', ['category'=>$category]);
     }
     public function postAddCate(Request $request)
@@ -73,12 +74,13 @@ class NewsController extends Controller
     }
     public function getList()
     {
-        $news = News::all();
+        $news = News::where('id', '>', '0')->orderBy('id','DESC');
         $category = array();
         foreach($news as $key=>$value)
         {
             $category[$value->cate_id] = $value;
         }
+        $news = $news->paginate(10)->setPath('');
         return view('admin.pages.news.list', ['news'=>$news, 'category'=>$category]);
     }
     public function getAdd()

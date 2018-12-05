@@ -500,7 +500,7 @@ $(document).ready(function(){
                         <h2 class="module-title libra-health___title-index">
                             <a href="#">
                             <span>
-                            Đối Tác Chiến Lược
+                            Đối Tác Và Khách Hàng
                             </span>
                             </a>
                         </h2>
@@ -544,7 +544,7 @@ $(document).ready(function(){
                                 <div class="product-box">
                                     <div class="product-thumbnail">
                                     	<a href="{{route('getChiTietTinTucFrontend', ['slug'=>$tintuc->slug])}}">
-                                    		<img class="img-responsive" src="{{url('')}}{{$tintuc->image}}" data-lazyload="{{url('')}}{{$tintuc->image}}" alt="{{$tintuc->title}}">
+                                    		<img style="height: 144px; width: 204px" class="img-responsive" src="{{url('')}}{{$tintuc->image}}" data-lazyload="{{url('')}}{{$tintuc->image}}" alt="{{$tintuc->title}}">
                                     	</a>
                                     </div>
                                     <div class="product-info">

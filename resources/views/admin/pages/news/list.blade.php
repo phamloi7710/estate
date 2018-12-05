@@ -39,7 +39,7 @@ Quản Lý Tin Tức
                                     <td class="center">{{$value->id}}</td>
                                     <td>{{$value->title}}</td>
                                     <td class="center">{{$value->category->name}}</td>
-                                    <td class="center"><img width="200" src="{{url('')}}{{$value->image}}"></td>
+                                    <td class="center"><img width="auto" height="100" src="{{url('')}}{{$value->image}}"></td>
                                     <td>{{$value->tomtat}}</td>
                                     <td class="center">{{$value->order}}</td>
                                     <td class="center">
@@ -58,6 +58,7 @@ Quản Lý Tin Tức
                             </tbody>
                         </table>
                     </div>
+                    <div class="pull-right">{!! $news->render() !!}</div>
                 </div>
             </div>
         </div>

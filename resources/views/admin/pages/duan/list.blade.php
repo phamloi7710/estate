@@ -35,7 +35,7 @@ Quản Lý Dự Án
                                 <tr>
                                     <td class="center">{{$value->id}}</td>
                                     <td>{{$value->title}}</td>
-                                    <td class="center"><img width="200" src="{{url('')}}{{$value->image}}"></td>
+                                    <td class="center"><img width="200"height="100" src="{{url('')}}{{$value->image}}"></td>
                                     <td class="center">{{$value->order}}</td>
                                     <td class="center">
                                         @if($value->status=='active')
@@ -60,6 +60,7 @@ Quản Lý Dự Án
                             </tbody>
                         </table>
                     </div>
+                    <div class="pull-right">{!! $duan->render() !!}</div>
                 </div>
             </div>
         </div>

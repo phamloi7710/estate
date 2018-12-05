@@ -17,7 +17,8 @@ class FrontendController extends Controller
     public function getLienHe()
     {
         $info = WebInfomation::where('key', 'web-info')->first();
-    	return view('frontend.pages.lienhe', ['info'=>$info]);
+        $info1 = Page::where('url', 'lien-he.html')->first();
+    	return view('frontend.pages.lienhe', ['info'=>$info, 'info1'=>$info1]);
     }
     public function getChiTietDuAn()
     {

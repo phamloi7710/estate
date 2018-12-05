@@ -42,7 +42,7 @@
                             </div>
                             <div class="module-content">
                                 <div class="contact-page-info">
-                                    @if(isset($info))
+                                    <!-- @if(isset($info))
                                         @foreach (unserialize($info->phone) as $value)
                                             <div class="fw">
                                                 <label class="contact-info-title">{{$value['title']}}:</label>
@@ -69,10 +69,10 @@
                                                 @endforeach
                                                 @endif
                                             </span>
-                                    </div>
-                                    <div class="contact-info">
-                                                
-                                            </div>
+                                    </div> -->
+                                    @if(isset($info1))
+                                        {!!$info1->content!!}
+                                    @endif
                                 </div>
                             </div>
                         </div>
